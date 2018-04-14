@@ -12,7 +12,12 @@
 	box-shadow: 0 8px 15px black;
 }
 
+#body {
+	padding: 0;
+}
+
 #header {
-	width: 100%;
+	width: 800px;
+	height: 60px;
 	margin: 60px 60px 60px 0;
 }
