@@ -1,0 +1,18 @@
+.main-background-color {
+	background-color: #171717 !important;
+}
+
+.main-border {
+	border-style: solid;
+	border-width: 4px;
+	border-color: #5c433c;
+}
+
+.shadow {
+	box-shadow: 0 8px 15px black;
+}
+
+#header {
+	width: 100%;
+	margin: 60px 60px 60px 0;
+}
