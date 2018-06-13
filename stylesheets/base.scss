@@ -1,0 +1,48 @@
+/*$background-color: #171717;*/
+/*$base-color-1: #e3c2b3;*/
+$background-color: #171717;
+$base-color-1: #e3c2b3;
+$base-color-2: #5c433c;
+$base-color-3: #e96a81;
+$top-page-index: 1;
+
+@font-face {
+	font-family: 'terminess';
+	src: url('/fonts/terminess-webfont.woff2') /*format('woff2')*/;
+	src: url('/fonts/terminess-webfont.woff') /*format('woff')*/;
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+    background-color: $base-color-1;
+    font-family: 'terminess'
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+}
+
+/* Static */
+@import 'welcome';
+@import 'top';
+@import 'frame';
+@import 'sidebar';
+@import 'navigation';
+@import 'background';
+
+/* Animations */
+@import 'animationvariables';
+@import 'toppage_animations';

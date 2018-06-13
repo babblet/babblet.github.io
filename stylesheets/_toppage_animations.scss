@@ -1,0 +1,190 @@
+$animation_time: 10s;
+
+$step_1_start: 0%;
+$step_1_end: 10%;
+$diff1: calc(#{$step_1_end} - #{$step_1_start});
+
+$step_2_start: 10%;
+$step_2_end: 15%;
+$diff2: calc(#{$step_2_end} - #{$step_2_start});
+
+$step_3_start: 12%;
+$step_3_end: 22%;
+$diff3: calc(#{$step_3_end} - #{$step_3_start});
+
+$step_4_start: 22%;
+$step_4_end: 27%;
+$diff4: calc(#{$step_4_end} - #{$step_4_start});
+
+// Setup
+.top_page {
+    animation-fill-mode: backwards;
+}
+
+// Define Animations
+@keyframes top_page_slide_left {
+    0% { transform: translateX(100%);}
+    #{$step_1_start} { transform: translateX(100%);}
+    #{$step_1_end} { transform: translateX(0%);}
+}
+
+@keyframes sidebar_appear {
+    0% {transform: translate(-120%);}
+    #{$step_2_start} {transform: translate(-120%);}
+    #{$step_2_end} {transform: translate(0%);}
+}
+
+@keyframes corner_appear_top_left {
+    0% {transform: translateX(-100%) translateY(-100%);}
+    #{$step_2_start} {transform: translateX(-100%) translateY(-100%);}
+    #{$step_2_end} {transform: translateX(0%) translateY(0%);}
+}
+
+@keyframes corner_appear_top_right {
+    0% {transform: translateX(100%) translateY(-100%);}
+    #{$step_2_start} {transform: translateX(100%) translateY(-100%);}
+    #{$step_2_end} {transform: translateX(0%) translateY(0%);}
+}
+
+@keyframes corner_appear_bottom_left {
+    0% {transform: translateX(-100%) translateY(100%);}
+    #{$step_2_start} {transform: translateX(-100%) translateY(100%);}
+    #{$step_2_end} {transform: translateX(0%) translateY(0%);}
+}
+
+@keyframes corner_appear_bottom_right {
+    0% {transform: translateX(100%) translateY(100%);}
+    #{$step_2_start} {transform: translateX(100%) translateY(100%);}
+    #{$step_2_end} {transform: translateX(0%) translateY(0%);}
+}
+
+@keyframes navigation_circle_zoom {
+    0% {transform: scale(0); opacity: 0;}
+    #{$step_3_start} {transform: scale(0); opacity: 0;}
+    #{$step_3_end} {transform: scale(1); opacity: 1;}
+}
+
+@keyframes navigation_buttons1 {
+    //slide in
+    0% {
+        width: 120vw;
+        left: calc(-1 * 120vw / 2 + #{$nav_width} / 2);
+        opacity: 0;
+    }
+    #{$step_3_start} {
+        width: 120vw; 
+        left: calc(-1 * 120vw / 2 + #{$nav_width} / 2);
+        opacity: 0;
+    }
+    #{$step_3_end} {
+        width: $section_width; 
+        left: $section_middle_point;
+        opacity: 1;
+    }
+
+    //rotation
+    0% { transform: rotate(0deg);}
+    #{$step_4_start} { transform: rotate(0deg);}
+    #{$step_4_end} { transform: rotate(20deg);}
+
+}
+
+@keyframes navigation_buttons2 {
+    //slide in
+    0% {
+        width: 120vw;
+        left: calc(-1 * 120vw / 2 + #{$nav_width} / 2);
+        opacity: 0;
+    }
+    #{$step_3_start} {
+        width: 120vw; 
+        left: calc(-1 * 120vw / 2 + #{$nav_width} / 2);
+        opacity: 0;
+    }
+    #{$step_3_end} {
+        width: $section_width; 
+        left: $section_middle_point;
+        opacity: 1;
+    }
+
+    //rotation
+    0% { transform: rotate(0deg);}
+    #{$step_4_start} { transform: rotate(0deg);}
+    #{$step_4_end} { transform: rotate(-20deg);}
+}
+
+@keyframes navigation_buttons_content_opacity {
+    0% {opacity: 0;}
+    #{$step_4_start} {opacity: 0;}
+    #{$step_4_end} {opacity: 1;}
+}
+
+//Set animations
+.top_page {
+    animation-name: top_page_slide_left;
+    animation-duration: $animation_time;
+    animation-delay: $animation_top_page_start;
+}
+.top_page__sidebar {
+    .shadow {
+        animation-name: sidebar_appear;
+        animation-duration: $animation_time;
+        animation-delay: $animation_top_page_start;
+    }
+}
+
+.top_page__frame {
+    .border{
+        section:nth-child(1) {
+            animation-name: corner_appear_top_left; 
+            animation-duration: $animation_time;
+            animation-delay: $animation_top_page_start;
+        }
+        section:nth-child(2) {
+            animation-name: corner_appear_top_right;
+            animation-duration: $animation_time;
+            animation-delay: $animation_top_page_start;
+        }
+        section:nth-child(3) {
+            animation-name: corner_appear_bottom_left;
+            animation-duration: $animation_time;
+            animation-delay: $animation_top_page_start;
+        }
+        section:nth-child(4) {
+            animation-name: corner_appear_bottom_right;
+            animation-duration: $animation_time;
+            animation-delay: $animation_top_page_start;
+        }
+    }
+}
+
+.top_page__navigation {
+    nav {
+        section:nth-child(1) {
+            animation-name: navigation_buttons1;
+            animation-duration: $animation_time;
+            animation-delay: $animation_top_page_start;
+
+        }
+        section:nth-child(2) {
+            animation-name: navigation_buttons2;
+            animation-duration: $animation_time;
+            animation-delay: $animation_top_page_start;
+        }
+        section{
+            a{
+                span {
+                    animation-name: navigation_buttons_content_opacity;
+                    animation-duration: $animation_time;
+                    animation-delay: $animation_top_page_start;
+                }
+            }
+        }
+    }
+
+    div {
+        animation-name: navigation_circle_zoom;
+        animation-duration: $animation_time;
+        animation-delay: $animation_top_page_start;
+    }
+}

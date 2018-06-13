@@ -1,0 +1,19 @@
+$animation_time: calc(#{$animation_welcome_end - $animation_welcome_start});
+
+$step_1_start: 0%;
+$step_1_end: 20%;
+$step_2_start: 20%;
+$step_2_end: 
+
+
+//Setup
+.welcome {
+    .text {
+        animation-fill-mode: backwards;
+    }
+}
+
+@keyframes welcome_text_slide {
+    0% {transform: translateX(100%)}
+
+}

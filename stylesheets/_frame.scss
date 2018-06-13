@@ -1,0 +1,69 @@
+$frame-side-spacing: 19px;
+$frame-top-spacing: 15px;
+$frame-bottom-spacing: 23px;
+$frame-corner-size: 20px;
+$frame-corner-radius: $frame-corner-size;
+
+/* Static */
+.top_page__frame {
+    z-index: $top-page-index;
+
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 1;
+
+    section {
+        z-index: 2;
+        position: absolute;
+        width: $frame-corner-size;
+        height: $frame-corner-size;
+        background-color: $base-color-3;
+
+    }
+
+    .border {
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+
+        border: solid;
+        border-color: $base-color-3;
+        border-width: 1px;
+ 
+        background-color: $background-color;
+
+        top: $frame-top-spacing;
+        left: $frame-side-spacing;
+        /*box-shadow: 3px 7px 4px rgba(0, 0, 0, 0.7);
+
+        */
+        overflow: hidden;
+
+        section:nth-child(1) {
+            top: 0;
+            left: 0;
+            border-bottom-right-radius: $frame-corner-radius;
+        }
+        section:nth-child(2) {
+            top: 0;
+            right: 0;
+            border-bottom-left-radius: $frame-corner-radius;
+        }
+        section:nth-child(3) {
+            bottom: 0;
+            left: 0;
+            border-top-right-radius: $frame-corner-radius;
+        }
+        section:nth-child(4) {
+            bottom: 0;
+            right: 0;
+            border-top-left-radius: $frame-corner-radius;
+        }
+    }
+}
+
+/* Static Animations */

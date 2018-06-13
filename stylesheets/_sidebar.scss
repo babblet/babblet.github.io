@@ -1,0 +1,80 @@
+$sidebar_size: $frame-corner-size * 2.5;
+
+
+/* Static */
+.top_page__sidebar {
+    z-index: $top-page-index;
+    
+    width: calc(#{$sidebar_size});
+    height: $sidebar_size * 3;
+    
+    position: absolute;
+    top: calc(50% - #{$sidebar_size} * 3 / 2);
+    left: $frame-side-spacing;
+    
+    border-top-right-radius: calc(#{$sidebar_size} / 8); 
+    border-bottom-right-radius: calc(#{$sidebar_size} / 8); 
+
+    overflow: hidden;
+
+    .shadow {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+
+        width: 100%;
+        height: 100%;
+   
+        box-shadow: 3px 2px 5px 0px  rgba(0, 0, 0, 0.7);
+        
+        section {
+            width: $sidebar_size;
+            height: $sidebar_size;
+        
+            position: relative;
+            top: 0;
+            left: 0px;
+        
+            background-color: $base-color-3;
+            opacity: 1;
+
+            cursor: pointer;
+
+            i {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding-top: 15%;
+                width: 100%;
+                text-align: center; 
+                color: $background-color;
+            }
+        }
+    }
+}
+
+
+/* Static Animations */
+.top_page__sidebar {
+    section {
+        section::before {
+            content: "";
+            background-color: $base-color-1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%);
+            transition-property: all;
+            transition-delay: 0s;
+            transition-duration: 0.25s;
+            transition-timing-function: ease;
+        }
+    }
+    section {
+        section:hover::before {
+            transform: translateX(0%);
+        }
+    }
+}
