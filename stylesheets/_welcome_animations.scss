@@ -3,17 +3,77 @@ $animation_time: calc(#{$animation_welcome_end - $animation_welcome_start});
 $step_1_start: 0%;
 $step_1_end: 20%;
 $step_2_start: 20%;
-$step_2_end: 
+$step_2_end: 50%;
 
 
 //Setup
 .welcome {
-    .text {
         animation-fill-mode: backwards;
-    }
+        div, .frame, .text {
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        } 
+}
+// Keyframes
+@keyframes welcome_top_slide {
+    0%  {transform: translateY(0%)}
+    10% {transform: translateY(-20%)}
+    75% {transform: translateY(-20%)}
+    100%{transform: translateY(-100%)}
 }
 
-@keyframes welcome_text_slide {
-    0% {transform: translateX(100%)}
+@keyframes welcome_bottom_slide {
+    0%  {transform: translateY(0%)}
+    10% {transform: translateY(20%)}
+    75% {transform: translateY(20%)}
+    100%{transform: translateY(100%)}
+}
 
+@keyframes welcome_text_smooth_slide {
+    0%   {transform: translateX(10%);}
+    30%  {transform: translateX(10%);}
+   // 40%  {transform: translateX(0%);}
+   // 60%  {transform: translateX(0%);}
+    100% {transform: translateX(-10%);}
+}
+
+@keyframes welcome_letter_slide {
+    0%   {transform: translateX(2000%) rotateZ(360deg);}
+    10%  {transform: translateX(2000%) rotateZ(360deg);}
+    40%  {transform: translateX(0%) rotateZ(0deg);}
+    60%  {transform: translateX(0%) rotateZ(0deg);}
+    90%  {transform: translateX(-2000%) rotateZ(-360deg);}
+    100% {transform: translateX(-2000%) rotateZ(-360deg);}
+
+}
+
+// Animations
+.welcome {
+    .welcome_top {
+        div {
+            animation-delay: $animation_welcome_start;
+            animation-duration: $animation_time;
+            animation-name: welcome_top_slide;
+        }
+    }
+    
+    .welcome_bottom {
+        div {
+            animation-delay: $animation_welcome_start;
+            animation-duration: $animation_time;
+            animation-name: welcome_bottom_slide;
+        }
+    }
+
+
+    .text {
+        animation-delay: $animation_welcome_start;
+        animation-duration: $animation_time;
+        animation-name: welcome_text_smooth_slide;
+        .frame {
+            animation-delay: $animation_welcome_start;
+            animation-duration: $animation_time;
+            animation-name: welcome_letter_slide;
+        }
+    }
 }
