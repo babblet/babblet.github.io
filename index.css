@@ -47,7 +47,8 @@ main {
   height: 4vw;
   float: left;
   text-align: center;
-  color: #e3c2b3;
+  color: #171717;
+  background-color: #e3c2b3;
   border-style: solid;
   border-width: 3px;
   overflow: hidden;
@@ -61,7 +62,7 @@ main {
   border-color: #e96a81;
 }
 .welcome section div:nth-child(2), .welcome section div:nth-child(4), .welcome section div:nth-child(6) {
-  border-color: #e3c2b3;
+  border-color: #171717;
 }
 .welcome .welcome_top {
   width: 100%;
@@ -73,7 +74,7 @@ main {
 .welcome .welcome_top div {
   background-color: #171717;
   height: 100%;
-  widtht: 100%;
+  width: 100%;
 }
 .welcome .welcome_bottom {
   width: 100%;
@@ -344,7 +345,112 @@ main {
 }
 
 /* Static Animation */
+.top_page__fileupload {
+  position: absolute;
+  top: 10vh;
+  left: 50vw;
+  z-index: 1;
+}
+.top_page__fileupload input {
+  z-index: 2;
+  height: 30px;
+  width: 220px;
+  background: #e3c2b3;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  border-color: #e96a81;
+}
+
 /* Animations */
+.welcome {
+  animation-fill-mode: backwards;
+}
+.welcome div, .welcome .frame, .welcome .text {
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes welcome_top_slide {
+  0% {
+    transform: translateY(0%);
+  }
+  10% {
+    transform: translateY(-20%);
+  }
+  75% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes welcome_bottom_slide {
+  0% {
+    transform: translateY(0%);
+  }
+  10% {
+    transform: translateY(20%);
+  }
+  75% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes welcome_text_smooth_slide {
+  0% {
+    transform: translateX(10%);
+  }
+  30% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+@keyframes welcome_letter_slide {
+  0% {
+    transform: translateX(2000%) rotateZ(360deg);
+  }
+  10% {
+    transform: translateX(2000%) rotateZ(360deg);
+  }
+  40% {
+    transform: translateX(0%) rotateZ(0deg);
+  }
+  60% {
+    transform: translateX(0%) rotateZ(0deg);
+  }
+  90% {
+    transform: translateX(-2000%) rotateZ(-360deg);
+  }
+  100% {
+    transform: translateX(-2000%) rotateZ(-360deg);
+  }
+}
+.welcome .welcome_top div {
+  animation-delay: 0s;
+  animation-duration: calc(5s);
+  animation-name: welcome_top_slide;
+}
+.welcome .welcome_bottom div {
+  animation-delay: 0s;
+  animation-duration: calc(5s);
+  animation-name: welcome_bottom_slide;
+}
+.welcome .text {
+  animation-delay: 0s;
+  animation-duration: calc(5s);
+  animation-name: welcome_text_smooth_slide;
+}
+.welcome .text .frame {
+  animation-delay: 0s;
+  animation-duration: calc(5s);
+  animation-name: welcome_letter_slide;
+}
+
 .top_page {
   animation-fill-mode: backwards;
 }
