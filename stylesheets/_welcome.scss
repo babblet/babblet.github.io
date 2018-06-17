@@ -18,8 +18,8 @@ $welcome-margin-left: 40px;
         position: absolute;
         top: calc(50% - #{$welcome-box-width} / 2);
         left: calc(50% - #{$section_width} / 2);
-        
-        .frame {
+
+        .frame{
             width: $welcome-box-width;
             height: $welcome-box-width;
             float:left;
@@ -46,6 +46,20 @@ $welcome-margin-left: 40px;
         }
         div:nth-child(2), div:nth-child(4), div:nth-child(6){
             border-color: $background-color;
+        }
+    }
+
+    section:nth-child(3) {
+        top: calc(25% - #{$welcome-box-width} / 2);
+        .frame {
+
+        }
+    }
+
+    section:nth-child(5) {
+        top: calc(75% - #{$welcome-box-width} / 2);
+        .frame {
+
         }
     }
 
