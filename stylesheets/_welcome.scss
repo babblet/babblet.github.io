@@ -25,12 +25,13 @@ $welcome-margin-left: 40px;
             float:left;
             
             text-align: center;
-            color: $background-color;
+            color: $base-color-1;
 
-            background-color: $base-color-1;
+            background-color: $background-color;
 
             border-style: solid;
             border-width: 3px;
+            border-radius: 8%;
             
             overflow: hidden;
             
@@ -42,7 +43,7 @@ $welcome-margin-left: 40px;
             }
         }
         div:nth-child(1),  div:nth-child(3), div:nth-child(5), div:nth-child(7){
-            border-color: $base-color-3;
+            border-color: $background-color;
         }
         div:nth-child(2), div:nth-child(4), div:nth-child(6){
             border-color: $background-color;
@@ -52,14 +53,14 @@ $welcome-margin-left: 40px;
     section:nth-child(3) {
         top: calc(25% - #{$welcome-box-width} / 2);
         .frame {
-
+            background-color: $base-color-1;
         }
     }
 
     section:nth-child(5) {
         top: calc(75% - #{$welcome-box-width} / 2);
         .frame {
-
+            background-color: $base-color-1;
         }
     }
 

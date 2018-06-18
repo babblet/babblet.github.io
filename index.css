@@ -47,10 +47,11 @@ main {
   height: 4vw;
   float: left;
   text-align: center;
-  color: #171717;
-  background-color: #e3c2b3;
+  color: #e3c2b3;
+  background-color: #171717;
   border-style: solid;
   border-width: 3px;
+  border-radius: 8%;
   overflow: hidden;
   margin-left: 40px;
   margin-top: -3px;
@@ -59,7 +60,7 @@ main {
   position: absolute;
 }
 .welcome section div:nth-child(1), .welcome section div:nth-child(3), .welcome section div:nth-child(5), .welcome section div:nth-child(7) {
-  border-color: #e96a81;
+  border-color: #171717;
 }
 .welcome section div:nth-child(2), .welcome section div:nth-child(4), .welcome section div:nth-child(6) {
   border-color: #171717;
@@ -67,8 +68,14 @@ main {
 .welcome section:nth-child(3) {
   top: calc(25% - 4vw / 2);
 }
+.welcome section:nth-child(3) .frame {
+  background-color: #e3c2b3;
+}
 .welcome section:nth-child(5) {
   top: calc(75% - 4vw / 2);
+}
+.welcome section:nth-child(5) .frame {
+  background-color: #e3c2b3;
 }
 .welcome .welcome_top {
   width: 100%;
@@ -357,7 +364,10 @@ main {
 }
 .welcome div, .welcome .frame, .welcome .text {
   animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  animation-timing-function: ease-out;
+}
+.welcome .welcome_top, .welcome .welcome_bottom {
+  animation-timing-function: linear;
 }
 
 @keyframes welcome_top_slide {
@@ -673,55 +683,55 @@ main {
 .top_page {
   animation-name: top_page_slide_left;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 
 .top_page__sidebar .shadow {
   animation-name: sidebar_appear;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 
 .top_page__frame .border section:nth-child(1) {
   animation-name: corner_appear_top_left;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 .top_page__frame .border section:nth-child(2) {
   animation-name: corner_appear_top_right;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 .top_page__frame .border section:nth-child(3) {
   animation-name: corner_appear_bottom_left;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 .top_page__frame .border section:nth-child(4) {
   animation-name: corner_appear_bottom_right;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 
 .top_page__navigation nav section:nth-child(1) {
   animation-name: navigation_buttons1;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 .top_page__navigation nav section:nth-child(2) {
   animation-name: navigation_buttons2;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 .top_page__navigation nav section a span {
   animation-name: navigation_buttons_content_opacity;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 .top_page__navigation div {
   animation-name: navigation_circle_zoom;
   animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 4.8s;
 }
 
 /*# sourceMappingURL=index.css.map */

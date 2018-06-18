@@ -11,7 +11,11 @@ $step_2_end: 50%;
         animation-fill-mode: backwards;
         div, .frame, .text {
             animation-fill-mode: forwards;
-            animation-timing-function: ease;
+            animation-timing-function: ease-out;
+        }
+
+        .welcome_top, .welcome_bottom {
+            animation-timing-function: linear;
         }
 }
 
