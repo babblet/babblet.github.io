@@ -350,11 +350,102 @@ main {
 /* Static */
 .top_page__background {
   z-index: 1;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 15px;
+  left: 19px;
+  overflow: hidden;
+}
+.top_page__background section {
+  position: absolute;
+  border: 5px solid transparent;
+  border-radius: 50%;
+}
+.top_page__background section:nth-child(1),
+.top_page__background section:nth-child(3),
+.top_page__background section:nth-child(5),
+.top_page__background section:nth-child(7),
+.top_page__background section:nth-child(9) {
+  border-top-color: #e3c2b3;
+}
+.top_page__background section:nth-child(2),
+.top_page__background section:nth-child(4),
+.top_page__background section:nth-child(6),
+.top_page__background section:nth-child(8),
+.top_page__background section:nth-child(10) {
+  border-top-color: #e96a81;
+}
+.top_page__background section:nth-child(1) {
+  width: calc(300px + 120px * 1);
+  height: calc(300px + 120px * 1);
+  top: calc(50% - calc(300px + 120px * 1) / 2);
+  left: calc(50% - calc(300px + 120px * 1) / 2);
+  left: calc(50% - calc(300px + 120px * 1) / 2);
+  transform: rotate(227deg);
+}
+.top_page__background section:nth-child(2) {
+  width: calc(300px + 120px * 2);
+  height: calc(300px + 120px * 2);
+  top: calc(50% - calc(300px + 120px * 2) / 2);
+  left: calc(50% - calc(300px + 120px * 2) / 2);
+  transform: rotate(81deg);
+}
+.top_page__background section:nth-child(3) {
+  width: calc(300px + 120px * 3);
+  height: calc(300px + 120px * 3);
+  top: calc(50% - calc(300px + 120px * 3) / 2);
+  left: calc(50% - calc(300px + 120px * 3) / 2);
+  transform: rotate(109deg);
+}
+.top_page__background section:nth-child(4) {
+  width: calc(300px + 120px * 4);
+  height: calc(300px + 120px * 4);
+  top: calc(50% - calc(300px + 120px * 4) / 2);
+  left: calc(50% - calc(300px + 120px * 4) / 2);
+  transform: rotate(293deg);
+}
+.top_page__background section:nth-child(5) {
+  width: calc(300px + 120px * 5);
+  height: calc(300px + 120px * 5);
+  top: calc(50% - calc(300px + 120px * 5) / 2);
+  left: calc(50% - calc(300px + 120px * 5) / 2);
+  transform: rotate(102deg);
+}
+.top_page__background section:nth-child(6) {
+  width: calc(300px + 120px * 6);
+  height: calc(300px + 120px * 6);
+  top: calc(50% - calc(300px + 120px * 6) / 2);
+  left: calc(50% - calc(300px + 120px * 6) / 2);
+  transform: rotate(332deg);
+}
+.top_page__background section:nth-child(7) {
+  width: calc(300px + 120px * 7);
+  height: calc(300px + 120px * 7);
+  top: calc(50% - calc(300px + 120px * 7) / 2);
+  left: calc(50% - calc(300px + 120px * 7) / 2);
+  transform: rotate(36deg);
+}
+.top_page__background section:nth-child(8) {
+  width: calc(300px + 120px * 8);
+  height: calc(300px + 120px * 8);
+  top: calc(50% - calc(300px + 120px * 8) / 2);
+  left: calc(50% - calc(300px + 120px * 8) / 2);
+  transform: rotate(353deg);
+}
+.top_page__background section:nth-child(9) {
+  width: calc(300px + 120px * 9);
+  height: calc(300px + 120px * 9);
+  top: calc(50% - calc(300px + 120px * 9) / 2);
+  left: calc(50% - calc(300px + 120px * 9) / 2);
+  transform: rotate(104deg);
+}
+.top_page__background section:nth-child(10) {
+  width: calc(300px + 120px * 10);
+  height: calc(300px + 120px * 10);
+  top: calc(50% - calc(300px + 120px * 10) / 2);
+  left: calc(50% - calc(300px + 120px * 10) / 2);
+  transform: rotate(277deg);
 }
 
 /* Static Animation */
@@ -732,6 +823,50 @@ main {
   animation-name: navigation_circle_zoom;
   animation-duration: 10s;
   animation-delay: 4.8s;
+}
+
+@keyframes background-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.top_page__background section {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: background-rotation;
+}
+.top_page__background section:nth-child(1) {
+  animation-duration: 29.35s;
+}
+.top_page__background section:nth-child(2) {
+  animation-duration: 17.76s;
+}
+.top_page__background section:nth-child(3) {
+  animation-duration: 15.78s;
+}
+.top_page__background section:nth-child(4) {
+  animation-duration: 20.83s;
+}
+.top_page__background section:nth-child(5) {
+  animation-duration: 27.24s;
+}
+.top_page__background section:nth-child(6) {
+  animation-duration: 15.57s;
+}
+.top_page__background section:nth-child(7) {
+  animation-duration: 15.84s;
+}
+.top_page__background section:nth-child(8) {
+  animation-duration: 20.53s;
+}
+.top_page__background section:nth-child(9) {
+  animation-duration: 18.67s;
+}
+.top_page__background section:nth-child(10) {
+  animation-duration: 28.82s;
 }
 
 /*# sourceMappingURL=index.css.map */

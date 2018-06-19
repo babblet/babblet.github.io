@@ -1,0 +1,33 @@
+@keyframes background-rotation {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.top_page__background {
+    section {
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-name: background-rotation;
+    }
+
+    section:nth-child(1) {animation-duration: random(2000)/100 + 10 + s;}
+    section:nth-child(2) {animation-duration: random(2000)/100 + 10 + s;}
+    section:nth-child(3) {animation-duration: random(2000)/100 + 10 + s;}
+    section:nth-child(4) {animation-duration: random(2000)/100 + 10 + s;}
+    section:nth-child(5) {animation-duration: random(2000)/100 + 10 + s;}
+    section:nth-child(6) {animation-duration: random(2000)/100 + 10 + s;}
+    section:nth-child(7) {animation-duration: random(2000)/100 + 10 + s;}
+    section:nth-child(8) {animation-duration: random(2000)/100 + 10 + s;}
+    section:nth-child(9) {animation-duration: random(2000)/100 + 10 + s;}
+    section:nth-child(10) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(11) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(12) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(13) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(14) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(15) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(16) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(17) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(18) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(19) {animation-duration: random(2000)/100 + 10 + s;}
+    //section:nth-child(20) {animation-duration: random(2000)/100 + 10 + s;}
+}

@@ -2,14 +2,202 @@
 /* Static */
 .top_page__background {
     z-index: $top-page-index;
-
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
     
     position: absolute;
-    top: 0;
-    left: 0;
-    
+    top: $frame-top-spacing;
+    left: $frame-side-spacing;
+    overflow: hidden;
+
+    section {
+        position: absolute;
+        border: 5px solid transparent;
+        border-radius: 50%;
+
+    }
+
+    section:nth-child(1), 
+    section:nth-child(3), 
+    section:nth-child(5), 
+    section:nth-child(7), 
+    section:nth-child(9){ 
+    // section:nth-child(11),
+    // section:nth-child(13),
+    // section:nth-child(15),
+    // section:nth-child(17),
+    // section:nth-child(19){
+        border-top-color: $base-color-1;       
+    }
+
+    section:nth-child(2), 
+    section:nth-child(4), 
+    section:nth-child(6), 
+    section:nth-child(8), 
+    section:nth-child(10){
+    // section:nth-child(12),
+    // section:nth-child(14),
+    // section:nth-child(16),
+    // section:nth-child(18),
+    // section:nth-child(20){
+        border-top-color: $base-color-3;
+    }
+
+    $margin: 300px;
+    $spaceing: 120px;
+    section:nth-child(1) {
+        $height: calc(#{$margin} + #{$spaceing} * 1);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    section:nth-child(2) {
+        $height: calc(#{$margin} + #{$spaceing} * 2);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    section:nth-child(3) {
+        $height: calc(#{$margin} + #{$spaceing} * 3);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    section:nth-child(4) {
+        $height: calc(#{$margin} + #{$spaceing} * 4);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    section:nth-child(5) {
+        $height: calc(#{$margin} + #{$spaceing} * 5);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    section:nth-child(6) {
+        $height: calc(#{$margin} + #{$spaceing} * 6);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    section:nth-child(7) {
+        $height: calc(#{$margin} + #{$spaceing} * 7);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    section:nth-child(8) {
+        $height: calc(#{$margin} + #{$spaceing} * 8);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    section:nth-child(9) {
+        $height: calc(#{$margin} + #{$spaceing} * 9);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    section:nth-child(10) {
+        $height: calc(#{$margin} + #{$spaceing} * 10);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2);
+        transform: rotate(random(360) + deg);
+    }
+    // section:nth-child(11) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 11);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
+    // section:nth-child(12) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 12);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
+    // section:nth-child(13) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 13);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
+    // section:nth-child(14) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 14);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
+    // section:nth-child(15) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 15);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
+    // section:nth-child(16) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 16);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
+    // section:nth-child(17) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 17);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
+    // section:nth-child(18) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 18);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
+    // section:nth-child(19) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 19);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
+    // section:nth-child(20) {
+    //     $height: calc(#{$margin} + #{$spaceing} * 20);
+    //     width: $height;
+    //     height: $height;
+    //     top: calc(50% - #{$height} / 2);
+    //     left: calc(50% - #{$height} / 2);
+    // }
 }
+
+
 
 /* Static Animation */
