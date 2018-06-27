@@ -1,4 +1,4 @@
-$animation_time: calc(#{$animation_welcome_end - $animation_welcome_start});
+$animation_time: 5s;
 
 $step_1_start: 0%;
 $step_1_end: 20%;
@@ -70,11 +70,10 @@ $step_2_end: 50%;
 }
 
 // Animations
-.welcome {
+.welcome[data-state="start"] {
     .welcome_top {
         div {
             animation-duration: $animation_time;
-            animation-delay: $animation_welcome_start;
             animation-name: welcome_top_slide;
         }
     }
@@ -82,20 +81,13 @@ $step_2_end: 50%;
     .welcome_bottom {
         div {
             animation-duration: $animation_time;
-            animation-delay: $animation_welcome_start;
             animation-name: welcome_bottom_slide;
         }
     }
 
     .text {
-        animation-delay: $animation_welcome_start;
         animation-duration: $animation_time;
         animation-timing-function: linear;
-        
-        .frame {
-            animation-delay: $animation_welcome_start;
-        }
-
     }
 
     .text:nth-child(3), .text:nth-child(5) {
@@ -116,7 +108,7 @@ $step_2_end: 50%;
         .frame:nth-child(4) {
             animation-duration: calc(#{$animation_time} - (#{$gap} * 4));
         }       
-        .frame:nth-child(5) {
+        :nth-child(5) {
             animation-duration: calc(#{$animation_time} - (#{$gap} * 5));
         }       
         .frame:nth-child(6) {

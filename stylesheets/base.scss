@@ -39,14 +39,13 @@ main {
 
 /* Static */
 @import 'welcome';
-@import 'top';
-@import 'frame';
-@import 'sidebar';
-@import 'navigation';
-@import 'background';
+@import 'top_page';
+@import 'top_page-frame';
+@import 'top_page-sidebar';
+@import 'top_page-navigation';
+@import 'top_page-background';
 
 /* Animations */
-@import 'animationvariables';
-@import 'welcome_animations';
-@import 'toppage_animations';
-@import 'background_animations';
+@import 'animations/welcome-animations';
+@import 'animations/top_page-animations';
+@import 'animations/top_page-background-animations';

@@ -5,9 +5,9 @@
 
 .top_page__background {
     section {
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-name: background-rotation;
+//        animation-timing-function: linear;
+//        animation-iteration-count: infinite;
+//        animation-name: background-rotation;
     }
 
     section:nth-child(1) {animation-duration: random(1000)/100 + 30 + s;}

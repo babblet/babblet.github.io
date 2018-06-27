@@ -125,7 +125,7 @@ main {
   left: 0;
   opacity: 1;
 }
-.top_page__frame section {
+.top_page__frame div, .top_page__frame section {
   z-index: 2;
   position: absolute;
   width: 20px;
@@ -146,22 +146,22 @@ main {
   */
   overflow: hidden;
 }
-.top_page__frame .border section:nth-child(1) {
+.top_page__frame .border div:nth-child(1) {
   top: 0;
   left: 0;
   border-bottom-right-radius: 20px;
 }
-.top_page__frame .border section:nth-child(2) {
+.top_page__frame .border div:nth-child(2) {
   top: 0;
   right: 0;
   border-bottom-left-radius: 20px;
 }
-.top_page__frame .border section:nth-child(3) {
+.top_page__frame .border div:nth-child(3) {
   bottom: 0;
   left: 0;
   border-top-right-radius: 20px;
 }
-.top_page__frame .border section:nth-child(4) {
+.top_page__frame .border div:nth-child(4) {
   bottom: 0;
   right: 0;
   border-top-left-radius: 20px;
@@ -243,13 +243,13 @@ main {
   top: calc(50% - 40px / 2);
   left: calc(50% - 160px / 2);
 }
-.top_page__navigation nav section {
+.top_page__navigation nav div {
   width: calc(160px * 4);
   height: 40px;
   position: absolute;
   left: calc(-1 * calc(160px * 4) / 2 + 160px / 2);
 }
-.top_page__navigation nav section a {
+.top_page__navigation nav div a {
   display: block;
   cursor: pointer;
   width: 170px;
@@ -269,7 +269,7 @@ main {
   */
   overflow: hidden;
 }
-.top_page__navigation nav section a::before, .top_page__navigation nav section a::after {
+.top_page__navigation nav div a::before, .top_page__navigation nav div a::after {
   content: "";
   display: block;
   position: absolute;
@@ -281,29 +281,29 @@ main {
   transition-property: all;
   transition-timing-function: ease;
 }
-.top_page__navigation nav section a::before {
+.top_page__navigation nav div a::before {
   top: 4px;
   left: 5px;
   transform: translateX(-110%);
 }
-.top_page__navigation nav section a::after {
+.top_page__navigation nav div a::after {
   bottom: 4px;
   right: 5px;
   transform: translateX(110%);
 }
-.top_page__navigation nav section a:nth-child(1) {
+.top_page__navigation nav div a:nth-child(1) {
   left: 0;
 }
-.top_page__navigation nav section a:nth-child(2) {
+.top_page__navigation nav div a:nth-child(2) {
   right: 0;
 }
-.top_page__navigation nav section:nth-child(1) {
+.top_page__navigation nav div:nth-child(1) {
   transform: rotate(20deg);
 }
-.top_page__navigation nav section:nth-child(2) {
+.top_page__navigation nav div:nth-child(2) {
   transform: rotate(-20deg);
 }
-.top_page__navigation div {
+.top_page__navigation #nav-image {
   position: absolute;
   top: calc(50% - 200px / 2);
   left: calc(50% - 200px / 2);
@@ -318,7 +318,7 @@ main {
   */
   overflow: hidden;
 }
-.top_page__navigation div img {
+.top_page__navigation #nav-image img {
   filter: gray;
   /* IE6-9 */
   -webkit-filter: grayscale(1);
@@ -333,17 +333,17 @@ main {
 }
 
 /* Static Animation */
-.top_page__navigation nav section a {
+.top_page__navigation nav div a {
   transition-duration: 0.25s;
   transition-property: all;
   transition-delay: 0s;
   transition-timing-function: ease;
 }
-.top_page__navigation nav section a:hover {
+.top_page__navigation nav div a:hover {
   transform: scale(1.2);
   border-radius: 0;
 }
-.top_page__navigation nav section a:hover::before, .top_page__navigation nav section a:hover::after {
+.top_page__navigation nav div a:hover::before, .top_page__navigation nav div a:hover::after {
   transform: translateX(0);
 }
 
@@ -357,95 +357,95 @@ main {
   left: 19px;
   overflow: hidden;
 }
-.top_page__background section {
+.top_page__background div {
   position: absolute;
   border: 5px solid transparent;
   border-radius: 50%;
 }
-.top_page__background section:nth-child(1),
-.top_page__background section:nth-child(3),
-.top_page__background section:nth-child(5),
-.top_page__background section:nth-child(7),
-.top_page__background section:nth-child(9) {
+.top_page__background div:nth-child(1),
+.top_page__background div:nth-child(3),
+.top_page__background div:nth-child(5),
+.top_page__background div:nth-child(7),
+.top_page__background div:nth-child(9) {
   border-top-color: #e3c2b3;
 }
-.top_page__background section:nth-child(2),
-.top_page__background section:nth-child(4),
-.top_page__background section:nth-child(6),
-.top_page__background section:nth-child(8),
-.top_page__background section:nth-child(10) {
+.top_page__background div:nth-child(2),
+.top_page__background div:nth-child(4),
+.top_page__background div:nth-child(6),
+.top_page__background div:nth-child(8),
+.top_page__background div:nth-child(10) {
   border-top-color: #e96a81;
 }
-.top_page__background section:nth-child(1) {
+.top_page__background div:nth-child(1) {
   width: calc(180px + 120px * 1);
   height: calc(180px + 120px * 1);
   top: calc(50% - calc(180px + 120px * 1) / 2);
   left: calc(50% - calc(180px + 120px * 1) / 2);
   left: calc(50% - calc(180px + 120px * 1) / 2);
-  transform: rotate(108deg);
+  transform: rotate(53deg);
 }
-.top_page__background section:nth-child(2) {
+.top_page__background div:nth-child(2) {
   width: calc(180px + 120px * 2);
   height: calc(180px + 120px * 2);
   top: calc(50% - calc(180px + 120px * 2) / 2);
   left: calc(50% - calc(180px + 120px * 2) / 2);
-  transform: rotate(59deg);
+  transform: rotate(232deg);
 }
-.top_page__background section:nth-child(3) {
+.top_page__background div:nth-child(3) {
   width: calc(180px + 120px * 3);
   height: calc(180px + 120px * 3);
   top: calc(50% - calc(180px + 120px * 3) / 2);
   left: calc(50% - calc(180px + 120px * 3) / 2);
-  transform: rotate(17deg);
+  transform: rotate(200deg);
 }
-.top_page__background section:nth-child(4) {
+.top_page__background div:nth-child(4) {
   width: calc(180px + 120px * 4);
   height: calc(180px + 120px * 4);
   top: calc(50% - calc(180px + 120px * 4) / 2);
   left: calc(50% - calc(180px + 120px * 4) / 2);
-  transform: rotate(317deg);
+  transform: rotate(143deg);
 }
-.top_page__background section:nth-child(5) {
+.top_page__background div:nth-child(5) {
   width: calc(180px + 120px * 5);
   height: calc(180px + 120px * 5);
   top: calc(50% - calc(180px + 120px * 5) / 2);
   left: calc(50% - calc(180px + 120px * 5) / 2);
-  transform: rotate(126deg);
+  transform: rotate(77deg);
 }
-.top_page__background section:nth-child(6) {
+.top_page__background div:nth-child(6) {
   width: calc(180px + 120px * 6);
   height: calc(180px + 120px * 6);
   top: calc(50% - calc(180px + 120px * 6) / 2);
   left: calc(50% - calc(180px + 120px * 6) / 2);
-  transform: rotate(176deg);
+  transform: rotate(100deg);
 }
-.top_page__background section:nth-child(7) {
+.top_page__background div:nth-child(7) {
   width: calc(180px + 120px * 7);
   height: calc(180px + 120px * 7);
   top: calc(50% - calc(180px + 120px * 7) / 2);
   left: calc(50% - calc(180px + 120px * 7) / 2);
-  transform: rotate(326deg);
+  transform: rotate(276deg);
 }
-.top_page__background section:nth-child(8) {
+.top_page__background div:nth-child(8) {
   width: calc(180px + 120px * 8);
   height: calc(180px + 120px * 8);
   top: calc(50% - calc(180px + 120px * 8) / 2);
   left: calc(50% - calc(180px + 120px * 8) / 2);
-  transform: rotate(185deg);
+  transform: rotate(197deg);
 }
-.top_page__background section:nth-child(9) {
+.top_page__background div:nth-child(9) {
   width: calc(180px + 120px * 9);
   height: calc(180px + 120px * 9);
   top: calc(50% - calc(180px + 120px * 9) / 2);
   left: calc(50% - calc(180px + 120px * 9) / 2);
-  transform: rotate(327deg);
+  transform: rotate(326deg);
 }
-.top_page__background section:nth-child(10) {
+.top_page__background div:nth-child(10) {
   width: calc(180px + 120px * 10);
   height: calc(180px + 120px * 10);
   top: calc(50% - calc(180px + 120px * 10) / 2);
   left: calc(50% - calc(180px + 120px * 10) / 2);
-  transform: rotate(164deg);
+  transform: rotate(220deg);
 }
 
 /* Static Animation */
@@ -551,77 +551,71 @@ main {
     transform: translateX(-2000%) rotateZ(-360deg);
   }
 }
-.welcome .welcome_top div {
-  animation-duration: calc(5s);
-  animation-delay: 0s;
+.welcome[data-state=start] .welcome_top div {
+  animation-duration: 5s;
   animation-name: welcome_top_slide;
 }
-.welcome .welcome_bottom div {
-  animation-duration: calc(5s);
-  animation-delay: 0s;
+.welcome[data-state=start] .welcome_bottom div {
+  animation-duration: 5s;
   animation-name: welcome_bottom_slide;
 }
-.welcome .text {
-  animation-delay: 0s;
-  animation-duration: calc(5s);
+.welcome[data-state=start] .text {
+  animation-duration: 5s;
   animation-timing-function: linear;
 }
-.welcome .text .frame {
-  animation-delay: 0s;
-}
-.welcome .text:nth-child(3), .welcome .text:nth-child(5) {
+.welcome[data-state=start] .text:nth-child(3), .welcome[data-state=start] .text:nth-child(5) {
   animation-name: welcome_text_smooth_slide_right;
 }
-.welcome .text:nth-child(3) .frame, .welcome .text:nth-child(5) .frame {
+.welcome[data-state=start] .text:nth-child(3) .frame, .welcome[data-state=start] .text:nth-child(5) .frame {
   animation-name: welcome_letter_slide_right;
 }
-.welcome .text:nth-child(3) .frame:nth-child(1), .welcome .text:nth-child(5) .frame:nth-child(1) {
-  animation-duration: calc(calc(5s) - (0.2s * 1));
+.welcome[data-state=start] .text:nth-child(3) .frame:nth-child(1), .welcome[data-state=start] .text:nth-child(5) .frame:nth-child(1) {
+  animation-duration: calc(5s - (0.2s * 1));
 }
-.welcome .text:nth-child(3) .frame:nth-child(2), .welcome .text:nth-child(5) .frame:nth-child(2) {
-  animation-duration: calc(calc(5s) - (0.2s * 2));
+.welcome[data-state=start] .text:nth-child(3) .frame:nth-child(2), .welcome[data-state=start] .text:nth-child(5) .frame:nth-child(2) {
+  animation-duration: calc(5s - (0.2s * 2));
 }
-.welcome .text:nth-child(3) .frame:nth-child(3), .welcome .text:nth-child(5) .frame:nth-child(3) {
-  animation-duration: calc(calc(5s) - (0.2s * 3));
+.welcome[data-state=start] .text:nth-child(3) .frame:nth-child(3), .welcome[data-state=start] .text:nth-child(5) .frame:nth-child(3) {
+  animation-duration: calc(5s - (0.2s * 3));
 }
-.welcome .text:nth-child(3) .frame:nth-child(4), .welcome .text:nth-child(5) .frame:nth-child(4) {
-  animation-duration: calc(calc(5s) - (0.2s * 4));
+.welcome[data-state=start] .text:nth-child(3) .frame:nth-child(4), .welcome[data-state=start] .text:nth-child(5) .frame:nth-child(4) {
+  animation-duration: calc(5s - (0.2s * 4));
 }
-.welcome .text:nth-child(3) .frame:nth-child(5), .welcome .text:nth-child(5) .frame:nth-child(5) {
-  animation-duration: calc(calc(5s) - (0.2s * 5));
+.welcome[data-state=start] .text:nth-child(3) :nth-child(5), .welcome[data-state=start] .text:nth-child(5) :nth-child(5) {
+  animation-duration: calc(5s - (0.2s * 5));
 }
-.welcome .text:nth-child(3) .frame:nth-child(6), .welcome .text:nth-child(5) .frame:nth-child(6) {
-  animation-duration: calc(calc(5s) - (0.2s * 6));
+.welcome[data-state=start] .text:nth-child(3) .frame:nth-child(6), .welcome[data-state=start] .text:nth-child(5) .frame:nth-child(6) {
+  animation-duration: calc(5s - (0.2s * 6));
 }
-.welcome .text:nth-child(3) .frame:nth-child(7), .welcome .text:nth-child(5) .frame:nth-child(7) {
-  animation-duration: calc(calc(5s) - (0.2s * 7));
+.welcome[data-state=start] .text:nth-child(3) .frame:nth-child(7), .welcome[data-state=start] .text:nth-child(5) .frame:nth-child(7) {
+  animation-duration: calc(5s - (0.2s * 7));
 }
-.welcome .text:nth-child(4) {
+.welcome[data-state=start] .text:nth-child(4) {
   animation-name: welcome_text_smooth_slide_left;
 }
-.welcome .text:nth-child(4) .frame {
+.welcome[data-state=start] .text:nth-child(4) .frame {
   animation-name: welcome_letter_slide_left;
 }
-.welcome .text:nth-child(4) .frame:nth-child(1) {
-  animation-duration: calc(calc(5s) - (0.2s * 7));
+.welcome[data-state=start] .text:nth-child(4) .frame:nth-child(1) {
+  animation-duration: calc(5s - (0.2s * 7));
 }
-.welcome .text:nth-child(4) .frame:nth-child(2) {
-  animation-duration: calc(calc(5s) - (0.2s * 6));
+.welcome[data-state=start] .text:nth-child(4) .frame:nth-child(2) {
+  animation-duration: calc(5s - (0.2s * 6));
 }
-.welcome .text:nth-child(4) .frame:nth-child(3) {
-  animation-duration: calc(calc(5s) - (0.2s * 5));
+.welcome[data-state=start] .text:nth-child(4) .frame:nth-child(3) {
+  animation-duration: calc(5s - (0.2s * 5));
 }
-.welcome .text:nth-child(4) .frame:nth-child(4) {
-  animation-duration: calc(calc(5s) - (0.2s * 4));
+.welcome[data-state=start] .text:nth-child(4) .frame:nth-child(4) {
+  animation-duration: calc(5s - (0.2s * 4));
 }
-.welcome .text:nth-child(4) .frame:nth-child(5) {
-  animation-duration: calc(calc(5s) - (0.2s * 3));
+.welcome[data-state=start] .text:nth-child(4) .frame:nth-child(5) {
+  animation-duration: calc(5s - (0.2s * 3));
 }
-.welcome .text:nth-child(4) .frame:nth-child(6) {
-  animation-duration: calc(calc(5s) - (0.2s * 2));
+.welcome[data-state=start] .text:nth-child(4) .frame:nth-child(6) {
+  animation-duration: calc(5s - (0.2s * 2));
 }
-.welcome .text:nth-child(4) .frame:nth-child(7) {
-  animation-duration: calc(calc(5s) - (0.2s * 1));
+.welcome[data-state=start] .text:nth-child(4) .frame:nth-child(7) {
+  animation-duration: calc(5s - (0.2s * 1));
 }
 
 .top_page {
@@ -771,58 +765,45 @@ main {
     opacity: 1;
   }
 }
-.top_page {
+.top_page[data-state=start] {
   animation-name: top_page_slide_left;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
-
-.top_page__sidebar .shadow {
+.top_page[data-state=start] .top_page__sidebar .shadow {
   animation-name: sidebar_appear;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
-
-.top_page__frame .border section:nth-child(1) {
+.top_page[data-state=start] .top_page__frame .border section:nth-child(1) {
   animation-name: corner_appear_top_left;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
-.top_page__frame .border section:nth-child(2) {
+.top_page[data-state=start] .top_page__frame .border section:nth-child(2) {
   animation-name: corner_appear_top_right;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
-.top_page__frame .border section:nth-child(3) {
+.top_page[data-state=start] .top_page__frame .border section:nth-child(3) {
   animation-name: corner_appear_bottom_left;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
-.top_page__frame .border section:nth-child(4) {
+.top_page[data-state=start] .top_page__frame .border section:nth-child(4) {
   animation-name: corner_appear_bottom_right;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
-
-.top_page__navigation nav section:nth-child(1) {
+.top_page[data-state=start] .top_page__navigation nav div:nth-child(1) {
   animation-name: navigation_buttons1;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
-.top_page__navigation nav section:nth-child(2) {
+.top_page[data-state=start] .top_page__navigation nav div:nth-child(2) {
   animation-name: navigation_buttons2;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
-.top_page__navigation nav section a span {
+.top_page[data-state=start] .top_page__navigation nav div a span {
   animation-name: navigation_buttons_content_opacity;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
-.top_page__navigation div {
+.top_page[data-state=start] .top_page__navigation #nav-image {
   animation-name: navigation_circle_zoom;
   animation-duration: 10s;
-  animation-delay: 4.8s;
 }
 
 @keyframes background-rotation {
@@ -833,40 +814,35 @@ main {
     transform: rotate(360deg);
   }
 }
-.top_page__background section {
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-name: background-rotation;
-}
 .top_page__background section:nth-child(1) {
-  animation-duration: 31.9s;
+  animation-duration: 32.48s;
 }
 .top_page__background section:nth-child(2) {
-  animation-duration: 34.39s;
+  animation-duration: 37.54s;
 }
 .top_page__background section:nth-child(3) {
-  animation-duration: 33.34s;
+  animation-duration: 39.08s;
 }
 .top_page__background section:nth-child(4) {
-  animation-duration: 31.98s;
+  animation-duration: 33.81s;
 }
 .top_page__background section:nth-child(5) {
-  animation-duration: 30.48s;
+  animation-duration: 35.34s;
 }
 .top_page__background section:nth-child(6) {
-  animation-duration: 30.87s;
+  animation-duration: 37.62s;
 }
 .top_page__background section:nth-child(7) {
-  animation-duration: 36.49s;
+  animation-duration: 34.72s;
 }
 .top_page__background section:nth-child(8) {
-  animation-duration: 37.37s;
+  animation-duration: 36.98s;
 }
 .top_page__background section:nth-child(9) {
-  animation-duration: 30.87s;
+  animation-duration: 35.47s;
 }
 .top_page__background section:nth-child(10) {
-  animation-duration: 34.96s;
+  animation-duration: 38.79s;
 }
 
 /*# sourceMappingURL=index.css.map */

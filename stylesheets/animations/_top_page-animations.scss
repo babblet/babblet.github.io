@@ -120,71 +120,61 @@ $diff4: calc(#{$step_4_end} - #{$step_4_start});
 }
 
 //Set animations
-.top_page {
+.top_page[data-state="start"] {
     animation-name: top_page_slide_left;
     animation-duration: $animation_time;
-    animation-delay: $animation_top_page_start;
-}
-.top_page__sidebar {
-    .shadow {
-        animation-name: sidebar_appear;
-        animation-duration: $animation_time;
-        animation-delay: $animation_top_page_start;
-    }
-}
-
-.top_page__frame {
-    .border{
-        section:nth-child(1) {
-            animation-name: corner_appear_top_left; 
+    .top_page__sidebar {
+        .shadow {
+            animation-name: sidebar_appear;
             animation-duration: $animation_time;
-            animation-delay: $animation_top_page_start;
-        }
-        section:nth-child(2) {
-            animation-name: corner_appear_top_right;
-            animation-duration: $animation_time;
-            animation-delay: $animation_top_page_start;
-        }
-        section:nth-child(3) {
-            animation-name: corner_appear_bottom_left;
-            animation-duration: $animation_time;
-            animation-delay: $animation_top_page_start;
-        }
-        section:nth-child(4) {
-            animation-name: corner_appear_bottom_right;
-            animation-duration: $animation_time;
-            animation-delay: $animation_top_page_start;
         }
     }
-}
 
-.top_page__navigation {
-    nav {
-        section:nth-child(1) {
-            animation-name: navigation_buttons1;
-            animation-duration: $animation_time;
-            animation-delay: $animation_top_page_start;
-
-        }
-        section:nth-child(2) {
-            animation-name: navigation_buttons2;
-            animation-duration: $animation_time;
-            animation-delay: $animation_top_page_start;
-        }
-        section{
-            a{
-                span {
-                    animation-name: navigation_buttons_content_opacity;
-                    animation-duration: $animation_time;
-                    animation-delay: $animation_top_page_start;
-                }
+    .top_page__frame {
+        .border{
+            section:nth-child(1) {
+                animation-name: corner_appear_top_left; 
+                animation-duration: $animation_time;
+            }
+            section:nth-child(2) {
+                animation-name: corner_appear_top_right;
+                animation-duration: $animation_time;
+            }
+            section:nth-child(3) {
+                animation-name: corner_appear_bottom_left;
+                animation-duration: $animation_time;
+            }
+            section:nth-child(4) {
+                animation-name: corner_appear_bottom_right;
+                animation-duration: $animation_time;
             }
         }
     }
 
-    div {
-        animation-name: navigation_circle_zoom;
-        animation-duration: $animation_time;
-        animation-delay: $animation_top_page_start;
+    .top_page__navigation {
+        nav {
+            div:nth-child(1) {
+                animation-name: navigation_buttons1;
+                animation-duration: $animation_time;
+
+            }
+            div:nth-child(2) {
+                animation-name: navigation_buttons2;
+                animation-duration: $animation_time;
+            }
+            div{
+                a{
+                    span {
+                        animation-name: navigation_buttons_content_opacity;
+                        animation-duration: $animation_time;
+                    }
+                }
+            }
+        }
+
+        #nav-image {
+            animation-name: navigation_circle_zoom;
+            animation-duration: $animation_time;
+        }
     }
 }

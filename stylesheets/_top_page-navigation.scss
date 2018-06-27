@@ -26,7 +26,7 @@ $button_width: 170px;
         top: calc(50% - #{$nav_height} / 2);
         left: calc(50% - #{$nav_width} / 2);
 
-        section {
+        div {
             width: $section_width;
             height: $nav_height;
 
@@ -95,15 +95,15 @@ $button_width: 170px;
             }
         }
 
-        section:nth-child(1) {
+        div:nth-child(1) {
             transform: rotate(20deg);
         }
-        section:nth-child(2) {
+        div:nth-child(2) {
             transform: rotate(-20deg);
         }
     }
 
-    div {
+    #nav-image {
         position: absolute;
         top: calc(50% - #{$mascot_frame_height} / 2);
         left: calc(50% - #{$mascot_frame_width} / 2);
@@ -143,7 +143,7 @@ $button_width: 170px;
 /* Static Animation */
 .top_page__navigation {
     nav {
-        section {
+        div {
             a {
                 transition-duration: 0.25s;
                 transition-property: all;

@@ -11,13 +11,14 @@
 	<body class="main-background-color">
         <main>
             <!------------------------------------------loading page------------------------------------------------>
-            <section class="welcome">
+            <section class="welcome" data-state="start">
                 <section class="welcome_top">
                     <div></div>
                 </section>
                 <section class="welcome_bottom">
                     <div></div>
                 </section>
+                <!-- fix with javascript-->
                 <section class="text">
                     <div class="frame">
                         <div></div>
@@ -161,47 +162,47 @@
             <!--------------------------------------------top page-------------------------------------------------->
             <section class="top_page">
                 <section class="top_page__frame">
-                    <section class="border">
-                        <section></section>
-                        <section></section>
-                        <section></section>
-                        <section></section>
-                    </section>
+                    <div class="border">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </section>
                 <section class="top_page__background">
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <!-- <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section>
-                    <section class="circle"></section> -->
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <!-- <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div> -->
                 </section>
                 <section class="top_page__navigation">
                     <nav>
-                        <section>
+                        <div>
                             <a><span>Projects<span></a>
                             <a><span>Guides<span></a>
-                        </section>
-                        <section>
+                        </div>
+                        <div>
                             <a><span>Blog<span></a>
                             <a><span>Archive<span></a>
-                        </section>
+                        </div>
                     </nav>
-                    <div>
+                    <div id="nav-image">
                         <img src="rakbanana_crop.png"/>
                     </div>
                 </section>            
@@ -219,7 +220,8 @@
                     </section>
             </section>
             <!----------------------------------------------page---------------------------------------------------->
-            </div>
+            
         </main>
+        <script type="text/javascript" src="/scripts/init.js"></script>
 	</body>
 </html>
