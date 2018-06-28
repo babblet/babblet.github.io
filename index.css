@@ -382,70 +382,70 @@ main {
   top: calc(50% - calc(180px + 120px * 1) / 2);
   left: calc(50% - calc(180px + 120px * 1) / 2);
   left: calc(50% - calc(180px + 120px * 1) / 2);
-  transform: rotate(53deg);
+  transform: rotate(311deg);
 }
 .top_page__background div:nth-child(2) {
   width: calc(180px + 120px * 2);
   height: calc(180px + 120px * 2);
   top: calc(50% - calc(180px + 120px * 2) / 2);
   left: calc(50% - calc(180px + 120px * 2) / 2);
-  transform: rotate(232deg);
+  transform: rotate(13deg);
 }
 .top_page__background div:nth-child(3) {
   width: calc(180px + 120px * 3);
   height: calc(180px + 120px * 3);
   top: calc(50% - calc(180px + 120px * 3) / 2);
   left: calc(50% - calc(180px + 120px * 3) / 2);
-  transform: rotate(200deg);
+  transform: rotate(25deg);
 }
 .top_page__background div:nth-child(4) {
   width: calc(180px + 120px * 4);
   height: calc(180px + 120px * 4);
   top: calc(50% - calc(180px + 120px * 4) / 2);
   left: calc(50% - calc(180px + 120px * 4) / 2);
-  transform: rotate(143deg);
+  transform: rotate(225deg);
 }
 .top_page__background div:nth-child(5) {
   width: calc(180px + 120px * 5);
   height: calc(180px + 120px * 5);
   top: calc(50% - calc(180px + 120px * 5) / 2);
   left: calc(50% - calc(180px + 120px * 5) / 2);
-  transform: rotate(77deg);
+  transform: rotate(48deg);
 }
 .top_page__background div:nth-child(6) {
   width: calc(180px + 120px * 6);
   height: calc(180px + 120px * 6);
   top: calc(50% - calc(180px + 120px * 6) / 2);
   left: calc(50% - calc(180px + 120px * 6) / 2);
-  transform: rotate(100deg);
+  transform: rotate(26deg);
 }
 .top_page__background div:nth-child(7) {
   width: calc(180px + 120px * 7);
   height: calc(180px + 120px * 7);
   top: calc(50% - calc(180px + 120px * 7) / 2);
   left: calc(50% - calc(180px + 120px * 7) / 2);
-  transform: rotate(276deg);
+  transform: rotate(56deg);
 }
 .top_page__background div:nth-child(8) {
   width: calc(180px + 120px * 8);
   height: calc(180px + 120px * 8);
   top: calc(50% - calc(180px + 120px * 8) / 2);
   left: calc(50% - calc(180px + 120px * 8) / 2);
-  transform: rotate(197deg);
+  transform: rotate(26deg);
 }
 .top_page__background div:nth-child(9) {
   width: calc(180px + 120px * 9);
   height: calc(180px + 120px * 9);
   top: calc(50% - calc(180px + 120px * 9) / 2);
   left: calc(50% - calc(180px + 120px * 9) / 2);
-  transform: rotate(326deg);
+  transform: rotate(194deg);
 }
 .top_page__background div:nth-child(10) {
   width: calc(180px + 120px * 10);
   height: calc(180px + 120px * 10);
   top: calc(50% - calc(180px + 120px * 10) / 2);
   left: calc(50% - calc(180px + 120px * 10) / 2);
-  transform: rotate(220deg);
+  transform: rotate(137deg);
 }
 
 /* Static Animation */
@@ -551,6 +551,9 @@ main {
     transform: translateX(-2000%) rotateZ(-360deg);
   }
 }
+.welcome[data-state=start] {
+  animation-duration: 5s;
+}
 .welcome[data-state=start] .welcome_top div {
   animation-duration: 5s;
   animation-name: welcome_top_slide;
@@ -619,7 +622,8 @@ main {
 }
 
 .top_page {
-  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
+  transform: translateX(100%);
 }
 
 @keyframes top_page_slide_left {
@@ -630,6 +634,9 @@ main {
     transform: translateX(100%);
   }
   10% {
+    transform: translateX(0%);
+  }
+  100% {
     transform: translateX(0%);
   }
 }
@@ -815,34 +822,34 @@ main {
   }
 }
 .top_page__background section:nth-child(1) {
-  animation-duration: 32.48s;
+  animation-duration: 38.04s;
 }
 .top_page__background section:nth-child(2) {
-  animation-duration: 37.54s;
+  animation-duration: 38.15s;
 }
 .top_page__background section:nth-child(3) {
-  animation-duration: 39.08s;
+  animation-duration: 36.7s;
 }
 .top_page__background section:nth-child(4) {
-  animation-duration: 33.81s;
+  animation-duration: 37.66s;
 }
 .top_page__background section:nth-child(5) {
-  animation-duration: 35.34s;
+  animation-duration: 30.37s;
 }
 .top_page__background section:nth-child(6) {
-  animation-duration: 37.62s;
+  animation-duration: 30.24s;
 }
 .top_page__background section:nth-child(7) {
-  animation-duration: 34.72s;
+  animation-duration: 31.57s;
 }
 .top_page__background section:nth-child(8) {
-  animation-duration: 36.98s;
+  animation-duration: 35.66s;
 }
 .top_page__background section:nth-child(9) {
-  animation-duration: 35.47s;
+  animation-duration: 34.05s;
 }
 .top_page__background section:nth-child(10) {
-  animation-duration: 38.79s;
+  animation-duration: 38.93s;
 }
 
 /*# sourceMappingURL=index.css.map */

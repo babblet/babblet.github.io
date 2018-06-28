@@ -18,7 +18,8 @@ $diff4: calc(#{$step_4_end} - #{$step_4_start});
 
 // Setup
 .top_page {
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
+    transform: translateX(100%);
 }
 
 // Define Animations
@@ -26,6 +27,7 @@ $diff4: calc(#{$step_4_end} - #{$step_4_start});
     0% { transform: translateX(100%);}
     #{$step_1_start} { transform: translateX(100%);}
     #{$step_1_end} { transform: translateX(0%);}
+    100% {transform: translateX(0%);}
 }
 
 @keyframes sidebar_appear {

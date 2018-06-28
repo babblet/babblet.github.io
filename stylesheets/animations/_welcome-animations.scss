@@ -71,6 +71,7 @@ $step_2_end: 50%;
 
 // Animations
 .welcome[data-state="start"] {
+    animation-duration: $animation_time;
     .welcome_top {
         div {
             animation-duration: $animation_time;
