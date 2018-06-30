@@ -1,0 +1,36 @@
+// IN --------------------------------------------
+@keyframes page-transition-in-nav {
+    0%{transform: scale(1); opacity: 1;}
+    80%{opacity: 0;}
+    100% {transform: scale(0); opacity: 0;}
+}
+
+@keyframes page-transition-in-sidebar {
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(-120%);}
+}
+
+.button-page-transition[data-state="page-transition-in"] {
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.top_page__navigation[data-state="page-transition-in"], .top_page__background[data-state="page-transition-in"]{
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-name: page-transition-in-nav;
+}
+.top_page {
+    .top_page__sidebar[data-state="page-transition-in"] { 
+        .shadow {
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-duration: 0.5s;
+            animation-name: page-transition-in-sidebar;
+        }
+    }
+}
+
+
+// OUT --------------------------------------------

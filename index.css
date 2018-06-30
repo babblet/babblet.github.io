@@ -387,70 +387,70 @@ main {
   top: calc(50% - calc(180px + 120px * 1) / 2);
   left: calc(50% - calc(180px + 120px * 1) / 2);
   left: calc(50% - calc(180px + 120px * 1) / 2);
-  transform: rotate(266deg);
+  transform: rotate(171deg);
 }
 .top_page__background div:nth-child(2) {
   width: calc(180px + 120px * 2);
   height: calc(180px + 120px * 2);
   top: calc(50% - calc(180px + 120px * 2) / 2);
   left: calc(50% - calc(180px + 120px * 2) / 2);
-  transform: rotate(46deg);
+  transform: rotate(264deg);
 }
 .top_page__background div:nth-child(3) {
   width: calc(180px + 120px * 3);
   height: calc(180px + 120px * 3);
   top: calc(50% - calc(180px + 120px * 3) / 2);
   left: calc(50% - calc(180px + 120px * 3) / 2);
-  transform: rotate(207deg);
+  transform: rotate(345deg);
 }
 .top_page__background div:nth-child(4) {
   width: calc(180px + 120px * 4);
   height: calc(180px + 120px * 4);
   top: calc(50% - calc(180px + 120px * 4) / 2);
   left: calc(50% - calc(180px + 120px * 4) / 2);
-  transform: rotate(91deg);
+  transform: rotate(55deg);
 }
 .top_page__background div:nth-child(5) {
   width: calc(180px + 120px * 5);
   height: calc(180px + 120px * 5);
   top: calc(50% - calc(180px + 120px * 5) / 2);
   left: calc(50% - calc(180px + 120px * 5) / 2);
-  transform: rotate(82deg);
+  transform: rotate(292deg);
 }
 .top_page__background div:nth-child(6) {
   width: calc(180px + 120px * 6);
   height: calc(180px + 120px * 6);
   top: calc(50% - calc(180px + 120px * 6) / 2);
   left: calc(50% - calc(180px + 120px * 6) / 2);
-  transform: rotate(171deg);
+  transform: rotate(179deg);
 }
 .top_page__background div:nth-child(7) {
   width: calc(180px + 120px * 7);
   height: calc(180px + 120px * 7);
   top: calc(50% - calc(180px + 120px * 7) / 2);
   left: calc(50% - calc(180px + 120px * 7) / 2);
-  transform: rotate(275deg);
+  transform: rotate(179deg);
 }
 .top_page__background div:nth-child(8) {
   width: calc(180px + 120px * 8);
   height: calc(180px + 120px * 8);
   top: calc(50% - calc(180px + 120px * 8) / 2);
   left: calc(50% - calc(180px + 120px * 8) / 2);
-  transform: rotate(102deg);
+  transform: rotate(126deg);
 }
 .top_page__background div:nth-child(9) {
   width: calc(180px + 120px * 9);
   height: calc(180px + 120px * 9);
   top: calc(50% - calc(180px + 120px * 9) / 2);
   left: calc(50% - calc(180px + 120px * 9) / 2);
-  transform: rotate(325deg);
+  transform: rotate(107deg);
 }
 .top_page__background div:nth-child(10) {
   width: calc(180px + 120px * 10);
   height: calc(180px + 120px * 10);
   top: calc(50% - calc(180px + 120px * 10) / 2);
   left: calc(50% - calc(180px + 120px * 10) / 2);
-  transform: rotate(143deg);
+  transform: rotate(360deg);
 }
 
 /* Static Animation */
@@ -827,34 +827,74 @@ main {
   }
 }
 .top_page__background .circle:nth-child(1) {
-  animation-duration: 37.3s;
+  animation-duration: 30.68s;
 }
 .top_page__background .circle:nth-child(2) {
-  animation-duration: 30.55s;
+  animation-duration: 34.6s;
 }
 .top_page__background .circle:nth-child(3) {
-  animation-duration: 34.71s;
+  animation-duration: 36.34s;
 }
 .top_page__background .circle:nth-child(4) {
-  animation-duration: 31.21s;
+  animation-duration: 37.75s;
 }
 .top_page__background .circle:nth-child(5) {
-  animation-duration: 34.84s;
+  animation-duration: 36.01s;
 }
 .top_page__background .circle:nth-child(6) {
-  animation-duration: 37.13s;
+  animation-duration: 31.33s;
 }
 .top_page__background .circle:nth-child(7) {
-  animation-duration: 30.46s;
+  animation-duration: 32.39s;
 }
 .top_page__background .circle:nth-child(8) {
-  animation-duration: 37.42s;
+  animation-duration: 30.53s;
 }
 .top_page__background .circle:nth-child(9) {
-  animation-duration: 34s;
+  animation-duration: 36.87s;
 }
 .top_page__background .circle:nth-child(10) {
-  animation-duration: 38.9s;
+  animation-duration: 39.32s;
+}
+
+@keyframes page-transition-in-nav {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes page-transition-in-sidebar {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
+.button-page-transition[data-state=page-transition-in] {
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.top_page__navigation[data-state=page-transition-in], .top_page__background[data-state=page-transition-in] {
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-name: page-transition-in-nav;
+}
+
+.top_page .top_page__sidebar[data-state=page-transition-in] .shadow {
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-name: page-transition-in-sidebar;
 }
 
 /*# sourceMappingURL=index.css.map */
