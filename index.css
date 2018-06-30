@@ -243,17 +243,22 @@ main {
   top: calc(50% - 40px / 2);
   left: calc(50% - 160px / 2);
 }
-.top_page__navigation nav div {
+.top_page__navigation nav .nav-container-1, .top_page__navigation nav .nav-container-2 {
   width: calc(160px * 4);
   height: 40px;
   position: absolute;
   left: calc(-1 * calc(160px * 4) / 2 + 160px / 2);
 }
-.top_page__navigation nav div a {
-  display: block;
-  cursor: pointer;
+.top_page__navigation nav .nav-container-1 #project, .top_page__navigation nav .nav-container-1 #blog, .top_page__navigation nav .nav-container-1 #guides, .top_page__navigation nav .nav-container-1 #archive, .top_page__navigation nav .nav-container-2 #project, .top_page__navigation nav .nav-container-2 #blog, .top_page__navigation nav .nav-container-2 #guides, .top_page__navigation nav .nav-container-2 #archive {
   width: 170px;
   height: 40px;
+  position: absolute;
+  top: 0;
+}
+.top_page__navigation nav .nav-container-1 #project a, .top_page__navigation nav .nav-container-1 #blog a, .top_page__navigation nav .nav-container-1 #guides a, .top_page__navigation nav .nav-container-1 #archive a, .top_page__navigation nav .nav-container-2 #project a, .top_page__navigation nav .nav-container-2 #blog a, .top_page__navigation nav .nav-container-2 #guides a, .top_page__navigation nav .nav-container-2 #archive a {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   background-color: #e3c2b3;
@@ -269,7 +274,7 @@ main {
   */
   overflow: hidden;
 }
-.top_page__navigation nav div a::before, .top_page__navigation nav div a::after {
+.top_page__navigation nav .nav-container-1 #project a::before, .top_page__navigation nav .nav-container-1 #project a::after, .top_page__navigation nav .nav-container-1 #blog a::before, .top_page__navigation nav .nav-container-1 #blog a::after, .top_page__navigation nav .nav-container-1 #guides a::before, .top_page__navigation nav .nav-container-1 #guides a::after, .top_page__navigation nav .nav-container-1 #archive a::before, .top_page__navigation nav .nav-container-1 #archive a::after, .top_page__navigation nav .nav-container-2 #project a::before, .top_page__navigation nav .nav-container-2 #project a::after, .top_page__navigation nav .nav-container-2 #blog a::before, .top_page__navigation nav .nav-container-2 #blog a::after, .top_page__navigation nav .nav-container-2 #guides a::before, .top_page__navigation nav .nav-container-2 #guides a::after, .top_page__navigation nav .nav-container-2 #archive a::before, .top_page__navigation nav .nav-container-2 #archive a::after {
   content: "";
   display: block;
   position: absolute;
@@ -281,26 +286,26 @@ main {
   transition-property: all;
   transition-timing-function: ease;
 }
-.top_page__navigation nav div a::before {
+.top_page__navigation nav .nav-container-1 #project a::before, .top_page__navigation nav .nav-container-1 #blog a::before, .top_page__navigation nav .nav-container-1 #guides a::before, .top_page__navigation nav .nav-container-1 #archive a::before, .top_page__navigation nav .nav-container-2 #project a::before, .top_page__navigation nav .nav-container-2 #blog a::before, .top_page__navigation nav .nav-container-2 #guides a::before, .top_page__navigation nav .nav-container-2 #archive a::before {
   top: 4px;
   left: 5px;
   transform: translateX(-110%);
 }
-.top_page__navigation nav div a::after {
+.top_page__navigation nav .nav-container-1 #project a::after, .top_page__navigation nav .nav-container-1 #blog a::after, .top_page__navigation nav .nav-container-1 #guides a::after, .top_page__navigation nav .nav-container-1 #archive a::after, .top_page__navigation nav .nav-container-2 #project a::after, .top_page__navigation nav .nav-container-2 #blog a::after, .top_page__navigation nav .nav-container-2 #guides a::after, .top_page__navigation nav .nav-container-2 #archive a::after {
   bottom: 4px;
   right: 5px;
   transform: translateX(110%);
 }
-.top_page__navigation nav div a:nth-child(1) {
+.top_page__navigation nav .nav-container-1 #project, .top_page__navigation nav .nav-container-1 #archive, .top_page__navigation nav .nav-container-2 #project, .top_page__navigation nav .nav-container-2 #archive {
   left: 0;
 }
-.top_page__navigation nav div a:nth-child(2) {
+.top_page__navigation nav .nav-container-1 #guides, .top_page__navigation nav .nav-container-1 #blog, .top_page__navigation nav .nav-container-2 #guides, .top_page__navigation nav .nav-container-2 #blog {
   right: 0;
 }
-.top_page__navigation nav div:nth-child(1) {
+.top_page__navigation nav .nav-container-1 {
   transform: rotate(20deg);
 }
-.top_page__navigation nav div:nth-child(2) {
+.top_page__navigation nav .nav-container-2 {
   transform: rotate(-20deg);
 }
 .top_page__navigation #nav-image {
@@ -333,17 +338,17 @@ main {
 }
 
 /* Static Animation */
-.top_page__navigation nav div a {
+.top_page__navigation nav .nav-container-1 #project a, .top_page__navigation nav .nav-container-1 #blog a, .top_page__navigation nav .nav-container-1 #guides a, .top_page__navigation nav .nav-container-1 #archive a, .top_page__navigation nav .nav-container-2 #project a, .top_page__navigation nav .nav-container-2 #blog a, .top_page__navigation nav .nav-container-2 #guides a, .top_page__navigation nav .nav-container-2 #archive a {
   transition-duration: 0.25s;
   transition-property: all;
   transition-delay: 0s;
   transition-timing-function: ease;
 }
-.top_page__navigation nav div a:hover {
+.top_page__navigation nav .nav-container-1 #project a:hover, .top_page__navigation nav .nav-container-1 #blog a:hover, .top_page__navigation nav .nav-container-1 #guides a:hover, .top_page__navigation nav .nav-container-1 #archive a:hover, .top_page__navigation nav .nav-container-2 #project a:hover, .top_page__navigation nav .nav-container-2 #blog a:hover, .top_page__navigation nav .nav-container-2 #guides a:hover, .top_page__navigation nav .nav-container-2 #archive a:hover {
   transform: scale(1.2);
   border-radius: 0;
 }
-.top_page__navigation nav div a:hover::before, .top_page__navigation nav div a:hover::after {
+.top_page__navigation nav .nav-container-1 #project a:hover::before, .top_page__navigation nav .nav-container-1 #project a:hover::after, .top_page__navigation nav .nav-container-1 #blog a:hover::before, .top_page__navigation nav .nav-container-1 #blog a:hover::after, .top_page__navigation nav .nav-container-1 #guides a:hover::before, .top_page__navigation nav .nav-container-1 #guides a:hover::after, .top_page__navigation nav .nav-container-1 #archive a:hover::before, .top_page__navigation nav .nav-container-1 #archive a:hover::after, .top_page__navigation nav .nav-container-2 #project a:hover::before, .top_page__navigation nav .nav-container-2 #project a:hover::after, .top_page__navigation nav .nav-container-2 #blog a:hover::before, .top_page__navigation nav .nav-container-2 #blog a:hover::after, .top_page__navigation nav .nav-container-2 #guides a:hover::before, .top_page__navigation nav .nav-container-2 #guides a:hover::after, .top_page__navigation nav .nav-container-2 #archive a:hover::before, .top_page__navigation nav .nav-container-2 #archive a:hover::after {
   transform: translateX(0);
 }
 
@@ -382,94 +387,73 @@ main {
   top: calc(50% - calc(180px + 120px * 1) / 2);
   left: calc(50% - calc(180px + 120px * 1) / 2);
   left: calc(50% - calc(180px + 120px * 1) / 2);
-  transform: rotate(114deg);
+  transform: rotate(266deg);
 }
 .top_page__background div:nth-child(2) {
   width: calc(180px + 120px * 2);
   height: calc(180px + 120px * 2);
   top: calc(50% - calc(180px + 120px * 2) / 2);
   left: calc(50% - calc(180px + 120px * 2) / 2);
-  transform: rotate(275deg);
+  transform: rotate(46deg);
 }
 .top_page__background div:nth-child(3) {
   width: calc(180px + 120px * 3);
   height: calc(180px + 120px * 3);
   top: calc(50% - calc(180px + 120px * 3) / 2);
   left: calc(50% - calc(180px + 120px * 3) / 2);
-  transform: rotate(17deg);
+  transform: rotate(207deg);
 }
 .top_page__background div:nth-child(4) {
   width: calc(180px + 120px * 4);
   height: calc(180px + 120px * 4);
   top: calc(50% - calc(180px + 120px * 4) / 2);
   left: calc(50% - calc(180px + 120px * 4) / 2);
-  transform: rotate(181deg);
+  transform: rotate(91deg);
 }
 .top_page__background div:nth-child(5) {
   width: calc(180px + 120px * 5);
   height: calc(180px + 120px * 5);
   top: calc(50% - calc(180px + 120px * 5) / 2);
   left: calc(50% - calc(180px + 120px * 5) / 2);
-  transform: rotate(312deg);
+  transform: rotate(82deg);
 }
 .top_page__background div:nth-child(6) {
   width: calc(180px + 120px * 6);
   height: calc(180px + 120px * 6);
   top: calc(50% - calc(180px + 120px * 6) / 2);
   left: calc(50% - calc(180px + 120px * 6) / 2);
-  transform: rotate(120deg);
+  transform: rotate(171deg);
 }
 .top_page__background div:nth-child(7) {
   width: calc(180px + 120px * 7);
   height: calc(180px + 120px * 7);
   top: calc(50% - calc(180px + 120px * 7) / 2);
   left: calc(50% - calc(180px + 120px * 7) / 2);
-  transform: rotate(78deg);
+  transform: rotate(275deg);
 }
 .top_page__background div:nth-child(8) {
   width: calc(180px + 120px * 8);
   height: calc(180px + 120px * 8);
   top: calc(50% - calc(180px + 120px * 8) / 2);
   left: calc(50% - calc(180px + 120px * 8) / 2);
-  transform: rotate(80deg);
+  transform: rotate(102deg);
 }
 .top_page__background div:nth-child(9) {
   width: calc(180px + 120px * 9);
   height: calc(180px + 120px * 9);
   top: calc(50% - calc(180px + 120px * 9) / 2);
   left: calc(50% - calc(180px + 120px * 9) / 2);
-  transform: rotate(273deg);
+  transform: rotate(325deg);
 }
 .top_page__background div:nth-child(10) {
   width: calc(180px + 120px * 10);
   height: calc(180px + 120px * 10);
   top: calc(50% - calc(180px + 120px * 10) / 2);
   left: calc(50% - calc(180px + 120px * 10) / 2);
-  transform: rotate(224deg);
+  transform: rotate(143deg);
 }
 
 /* Static Animation */
-.page {
-  background-color: #e3c2b3;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-.page .page-frame {
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  position: absolute;
-  top: 15px;
-  left: 19px;
-  border-style: solid;
-  border-color: #e96a81;
-  border-width: 2px;
-  background-color: #171717;
-}
-
 /* Animations */
 .welcome {
   animation-fill-mode: backwards;
@@ -817,15 +801,15 @@ main {
   animation-name: corner_appear_bottom_right;
   animation-duration: 10s;
 }
-.top_page[data-state=start] .top_page__navigation nav div:nth-child(1) {
+.top_page[data-state=start] .top_page__navigation nav .nav-container-1 {
   animation-name: navigation_buttons1;
   animation-duration: 10s;
 }
-.top_page[data-state=start] .top_page__navigation nav div:nth-child(2) {
+.top_page[data-state=start] .top_page__navigation nav .nav-container-2 {
   animation-name: navigation_buttons2;
   animation-duration: 10s;
 }
-.top_page[data-state=start] .top_page__navigation nav div a span {
+.top_page[data-state=start] .top_page__navigation nav #project a span, .top_page[data-state=start] .top_page__navigation nav #archive a span, .top_page[data-state=start] .top_page__navigation nav #blog a span, .top_page[data-state=start] .top_page__navigation nav #guides a span {
   animation-name: navigation_buttons_content_opacity;
   animation-duration: 10s;
 }
@@ -843,34 +827,34 @@ main {
   }
 }
 .top_page__background .circle:nth-child(1) {
-  animation-duration: 38.94s;
+  animation-duration: 37.3s;
 }
 .top_page__background .circle:nth-child(2) {
-  animation-duration: 37.05s;
+  animation-duration: 30.55s;
 }
 .top_page__background .circle:nth-child(3) {
-  animation-duration: 38.49s;
+  animation-duration: 34.71s;
 }
 .top_page__background .circle:nth-child(4) {
-  animation-duration: 38.42s;
+  animation-duration: 31.21s;
 }
 .top_page__background .circle:nth-child(5) {
-  animation-duration: 38.44s;
+  animation-duration: 34.84s;
 }
 .top_page__background .circle:nth-child(6) {
-  animation-duration: 36.2s;
+  animation-duration: 37.13s;
 }
 .top_page__background .circle:nth-child(7) {
-  animation-duration: 30.82s;
+  animation-duration: 30.46s;
 }
 .top_page__background .circle:nth-child(8) {
-  animation-duration: 30.99s;
+  animation-duration: 37.42s;
 }
 .top_page__background .circle:nth-child(9) {
-  animation-duration: 35.48s;
+  animation-duration: 34s;
 }
 .top_page__background .circle:nth-child(10) {
-  animation-duration: 37.28s;
+  animation-duration: 38.9s;
 }
 
 /*# sourceMappingURL=index.css.map */

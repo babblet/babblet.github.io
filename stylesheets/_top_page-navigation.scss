@@ -26,79 +26,86 @@ $button_width: 170px;
         top: calc(50% - #{$nav_height} / 2);
         left: calc(50% - #{$nav_width} / 2);
 
-        div {
+        .nav-container-1, .nav-container-2 {
             width: $section_width;
             height: $nav_height;
 
             position: absolute;
             left: $section_middle_point;
-
-            a {
-                display: block;
-
-                cursor: pointer;
-
+            #project, #blog, #guides, #archive {
                 width: $button_width;
                 height: $nav_height;
-                
+
                 position: absolute;
                 top: 0;
+                a {
+                    //display: block;
 
-                background-color: $base-color-1;
-                border-style: solid;
-                border-width: 1px;
-                border-color: $base-color-3;
-                border-radius: $nav_height; 
-               
-                color: $background-color;
-                text-align: center;
-                font-size: 1.4em;
-                line-height: 38px;
+                    cursor: pointer;
 
-                /*box-shadow: 3px 7px 4px rgba(0, 0, 0, 0.7);
-                */
-                overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    
+                    position: absolute;
+                    top: 0;
+
+                    background-color: $base-color-1;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color: $base-color-3;
+                    border-radius: $nav_height; 
+                
+                    color: $background-color;
+                    text-align: center;
+                    font-size: 1.4em;
+                    line-height: 38px;
+
+                    /*box-shadow: 3px 7px 4px rgba(0, 0, 0, 0.7);
+                    */
+                    overflow: hidden;
+
+                }
+
+                a::before, a::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 60%;
+                    height: 1px;
+                    background-color: $base-color-3;
+
+                    transition-delay: 0.05s;
+                    transition-duration: 0.45s;
+                    transition-property: all;
+                    transition-timing-function: ease;
+                }
+
+                a::before {
+                    top: 4px;
+                    left: 5px;
+                    transform: translateX(-110%);
+                }
+
+                a::after {
+                    bottom: 4px;
+                    right: 5px;
+                    transform: translateX(110%);
+                }
 
             }
-
-            a::before, a::after {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 60%;
-                height: 1px;
-                background-color: $base-color-3;
-
-                transition-delay: 0.05s;
-                transition-duration: 0.45s;
-                transition-property: all;
-                transition-timing-function: ease;
-            }
-
-            a::before {
-                top: 4px;
-                left: 5px;
-                transform: translateX(-110%);
-            }
-
-            a::after {
-                bottom: 4px;
-                right: 5px;
-                transform: translateX(110%);
-            }
-
-            a:nth-child(1) {
+            
+            #project, #archive {
                 left: 0;
             }
-            a:nth-child(2) {
+            #guides, #blog  {
                 right: 0;
             }
         }
 
-        div:nth-child(1) {
+        .nav-container-1 {
             transform: rotate(20deg);
         }
-        div:nth-child(2) {
+        .nav-container-2 {
             transform: rotate(-20deg);
         }
     }
@@ -143,20 +150,22 @@ $button_width: 170px;
 /* Static Animation */
 .top_page__navigation {
     nav {
-        div {
-            a {
-                transition-duration: 0.25s;
-                transition-property: all;
-                transition-delay: 0s;
-                transition-timing-function: ease;
-            }
-            a:hover {
-                transform: scale(1.2);
-                border-radius: 0;
-            }
-                  a:hover::before, a:hover::after {
-                    transform: translateX(0);
+        .nav-container-1, .nav-container-2 {
+            #project, #blog, #guides, #archive {
+                a {
+                    transition-duration: 0.25s;
+                    transition-property: all;
+                    transition-delay: 0s;
+                    transition-timing-function: ease;
                 }
+                a:hover {
+                    transform: scale(1.2);
+                    border-radius: 0;
+                }
+                a:hover::before, a:hover::after {
+                        transform: translateX(0);
+                }
+            }
         }
     }
 }
