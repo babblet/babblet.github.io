@@ -10,17 +10,11 @@ const page_guides               = document.getElementById('guides');
 const page_archive              = document.getElementById('archive');
 const page_blog                 = document.getElementById('blog');
 
-export const startTransition = (state, id) => {
+export const startTransition = (state) => {
     top_page__navigation.setAttribute('data-state', state);
     top_page__background.setAttribute('data-state', state);
     top_page__sidebar.setAttribute('data-state', state);
     button_page__transition.setAttribute('data-state', state);
-
-    if      (id === 'project') page_project.setAttribute('data-state', state);
-    else if (id === 'guides') page_guides.setAttribute('data-state', state);
-    else if (id === 'archive') page_archive.setAttribute('data-state', state);
-    else if (id === 'blog') page_blog.setAttribute('data-state', state);
-    
 } 
 
 export const bindNavigationButtons = () => {
@@ -28,15 +22,14 @@ export const bindNavigationButtons = () => {
     buttons.forEach((nav, key) => {
         nav.addEventListener('click', e => {
             e.preventDefault();
-            const id = e.target.getAttribute('id');
-            startTransition('true', id);
+            startTransition('true');
+            console.log('hello');
         });
     });
 
     const backButton = document.getElementById('backButton');
     backButton.addEventListener('click', e => {
         e.preventDefault();
-        startTransition('false', '');
     });
 }
 
