@@ -10,19 +10,19 @@
     100%{transform: translateX(-120%);}
 }
 
-.button-page-transition[data-state="page-transition-in"] {
+.button-page-transition[data-state="true"] {
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
-.top_page__navigation[data-state="page-transition-in"], .top_page__background[data-state="page-transition-in"]{
+.top_page__navigation[data-state="true"], .top_page__background[data-state="true"]{
     animation-fill-mode: forwards;
     animation-timing-function: linear;
     animation-duration: 0.5s;
     animation-name: page-transition-in-nav;
 }
 .top_page {
-    .top_page__sidebar[data-state="page-transition-in"] { 
+    .top_page__sidebar[data-state="true"] { 
         .shadow {
             animation-fill-mode: forwards;
             animation-timing-function: linear;
