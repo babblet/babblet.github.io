@@ -1,3 +1,5 @@
+//TRY TO AUTOMATE WHEN IMPLEMENTING JAVASCRIPT
+
 
 /* Static */
 .top_page__background {
@@ -14,44 +16,52 @@
         position: absolute;
         border: 5px solid transparent;
         border-radius: 50%;
-
+        opacity: 0.1;
     }
 
     div:nth-child(1), 
     div:nth-child(3), 
     div:nth-child(5), 
     div:nth-child(7), 
-    div:nth-child(9){ 
-    // div:nth-child(11),
-    // div:nth-child(13),
-    // div:nth-child(15),
-    // div:nth-child(17),
-    // div:nth-child(19){
-        border-top-color: $base-color-1;       
+    div:nth-child(9),
+    div:nth-child(11),
+    div:nth-child(13),
+    div:nth-child(15),
+    div:nth-child(17),
+    div:nth-child(19),
+    div:nth-child(21),
+    div:nth-child(23),
+    div:nth-child(25),
+    {
+        border-top-color: $base-color-1;
+        border-bottom-color: $base-color-3;     
     }
 
     div:nth-child(2), 
     div:nth-child(4), 
     div:nth-child(6), 
     div:nth-child(8), 
-    div:nth-child(10){
-    // div:nth-child(12),
-    // div:nth-child(14),
-    // div:nth-child(16),
-    // div:nth-child(18),
-    // div:nth-child(20){
+    div:nth-child(10),
+    div:nth-child(12),
+    div:nth-child(14),
+    div:nth-child(16),
+    div:nth-child(18),
+    div:nth-child(20),
+    div:nth-child(22),
+    div:nth-child(24),
+    div:nth-child(26){
         border-top-color: $base-color-3;
+        border-bottom-color: $base-color-1;
     }
 
-    $margin: 180px;
-    $spaceing: 120px;
+    $margin: 200px;
+    $spaceing: 55px;
     div:nth-child(1) {
         $height: calc(#{$margin} + #{$spaceing} * 1);
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
     div:nth-child(2) {
@@ -59,7 +69,7 @@
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
     div:nth-child(3) {
@@ -67,7 +77,7 @@
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
     div:nth-child(4) {
@@ -75,7 +85,7 @@
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
     div:nth-child(5) {
@@ -83,7 +93,7 @@
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
     div:nth-child(6) {
@@ -91,7 +101,7 @@
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
     div:nth-child(7) {
@@ -99,7 +109,7 @@
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
     div:nth-child(8) {
@@ -107,7 +117,7 @@
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
     div:nth-child(9) {
@@ -115,7 +125,7 @@
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
     div:nth-child(10) {
@@ -123,79 +133,114 @@
         width: $height;
         height: $height;
         top: calc(50% - #{$height} / 2);
-        left: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
         transform: rotate(random(360) + deg);
     }
-    // div:nth-child(11) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 11);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
-    // div:nth-child(12) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 12);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
-    // div:nth-child(13) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 13);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
-    // div:nth-child(14) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 14);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
-    // div:nth-child(15) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 15);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
-    // div:nth-child(16) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 16);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
-    // div:nth-child(17) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 17);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
-    // div:nth-child(18) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 18);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
-    // div:nth-child(19) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 19);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
-    // div:nth-child(20) {
-    //     $height: calc(#{$margin} + #{$spaceing} * 20);
-    //     width: $height;
-    //     height: $height;
-    //     top: calc(50% - #{$height} / 2);
-    //     left: calc(50% - #{$height} / 2);
-    // }
+    div:nth-child(11) {
+        $height: calc(#{$margin} + #{$spaceing} * 11);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(12) {
+        $height: calc(#{$margin} + #{$spaceing} * 12);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(13) {
+        $height: calc(#{$margin} + #{$spaceing} * 13);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(14) {
+        $height: calc(#{$margin} + #{$spaceing} * 14);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(15) {
+        $height: calc(#{$margin} + #{$spaceing} * 15);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(16) {
+        $height: calc(#{$margin} + #{$spaceing} * 16);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(17) {
+        $height: calc(#{$margin} + #{$spaceing} * 17);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(18) {
+        $height: calc(#{$margin} + #{$spaceing} * 18);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(19) {
+        $height: calc(#{$margin} + #{$spaceing} * 19);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(20) {
+        $height: calc(#{$margin} + #{$spaceing} * 20);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(21) {
+        $height: calc(#{$margin} + #{$spaceing} * 21);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(22) {
+        $height: calc(#{$margin} + #{$spaceing} * 22);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(23) {
+        $height: calc(#{$margin} + #{$spaceing} * 23);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(24) {
+        $height: calc(#{$margin} + #{$spaceing} * 24);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
+    div:nth-child(25) {
+        $height: calc(#{$margin} + #{$spaceing} * 25);
+        width: $height;
+        height: $height;
+        top: calc(50% - #{$height} / 2);
+        left: calc(50% - #{$height} / 2 - 5px);
+    }
 }
 
 
