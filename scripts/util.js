@@ -5,6 +5,7 @@ const top_page__navigation      = document.querySelector('.top_page__navigation'
 const top_page__background      = document.querySelector('.top_page__background');
 const top_page__sidebar         = document.querySelector('.top_page__sidebar');
 const button_page__transition   = document.querySelector('.button-page-transition');
+const page                      = document.querySelector('.page');
 const page_project              = document.getElementById('project');
 const page_guides               = document.getElementById('guides');
 const page_archive              = document.getElementById('archive');
@@ -15,6 +16,7 @@ export const startTransition = (state) => {
     top_page__background.setAttribute('data-state', state);
     top_page__sidebar.setAttribute('data-state', state);
     button_page__transition.setAttribute('data-state', state);
+    page.setAttribute('data-state',state);
 } 
 
 export const bindNavigationButtons = () => {
