@@ -380,7 +380,12 @@ main {
 .top_page__background div:nth-child(19),
 .top_page__background div:nth-child(21),
 .top_page__background div:nth-child(23),
-.top_page__background div:nth-child(25) {
+.top_page__background div:nth-child(25),
+.top_page__background div:nth-child(27),
+.top_page__background div:nth-child(29),
+.top_page__background div:nth-child(31),
+.top_page__background div:nth-child(33),
+.top_page__background div:nth-child(35) {
   border-top-color: #e3c2b3;
   border-bottom-color: #e96a81;
 }
@@ -396,7 +401,12 @@ main {
 .top_page__background div:nth-child(20),
 .top_page__background div:nth-child(22),
 .top_page__background div:nth-child(24),
-.top_page__background div:nth-child(26) {
+.top_page__background div:nth-child(26),
+.top_page__background div:nth-child(28),
+.top_page__background div:nth-child(30),
+.top_page__background div:nth-child(32),
+.top_page__background div:nth-child(34),
+.top_page__background div:nth-child(36) {
   border-top-color: #e96a81;
   border-bottom-color: #e3c2b3;
 }
@@ -405,70 +415,70 @@ main {
   height: calc(200px + 55px * 1);
   top: calc(50% - calc(200px + 55px * 1) / 2);
   left: calc(50% - calc(200px + 55px * 1) / 2 - 5px);
-  transform: rotate(275deg);
+  transform: rotate(236deg);
 }
 .top_page__background div:nth-child(2) {
   width: calc(200px + 55px * 2);
   height: calc(200px + 55px * 2);
   top: calc(50% - calc(200px + 55px * 2) / 2);
   left: calc(50% - calc(200px + 55px * 2) / 2 - 5px);
-  transform: rotate(293deg);
+  transform: rotate(275deg);
 }
 .top_page__background div:nth-child(3) {
   width: calc(200px + 55px * 3);
   height: calc(200px + 55px * 3);
   top: calc(50% - calc(200px + 55px * 3) / 2);
   left: calc(50% - calc(200px + 55px * 3) / 2 - 5px);
-  transform: rotate(300deg);
+  transform: rotate(2deg);
 }
 .top_page__background div:nth-child(4) {
   width: calc(200px + 55px * 4);
   height: calc(200px + 55px * 4);
   top: calc(50% - calc(200px + 55px * 4) / 2);
   left: calc(50% - calc(200px + 55px * 4) / 2 - 5px);
-  transform: rotate(322deg);
+  transform: rotate(84deg);
 }
 .top_page__background div:nth-child(5) {
   width: calc(200px + 55px * 5);
   height: calc(200px + 55px * 5);
   top: calc(50% - calc(200px + 55px * 5) / 2);
   left: calc(50% - calc(200px + 55px * 5) / 2 - 5px);
-  transform: rotate(239deg);
+  transform: rotate(191deg);
 }
 .top_page__background div:nth-child(6) {
   width: calc(200px + 55px * 6);
   height: calc(200px + 55px * 6);
   top: calc(50% - calc(200px + 55px * 6) / 2);
   left: calc(50% - calc(200px + 55px * 6) / 2 - 5px);
-  transform: rotate(16deg);
+  transform: rotate(71deg);
 }
 .top_page__background div:nth-child(7) {
   width: calc(200px + 55px * 7);
   height: calc(200px + 55px * 7);
   top: calc(50% - calc(200px + 55px * 7) / 2);
   left: calc(50% - calc(200px + 55px * 7) / 2 - 5px);
-  transform: rotate(130deg);
+  transform: rotate(244deg);
 }
 .top_page__background div:nth-child(8) {
   width: calc(200px + 55px * 8);
   height: calc(200px + 55px * 8);
   top: calc(50% - calc(200px + 55px * 8) / 2);
   left: calc(50% - calc(200px + 55px * 8) / 2 - 5px);
-  transform: rotate(327deg);
+  transform: rotate(51deg);
 }
 .top_page__background div:nth-child(9) {
   width: calc(200px + 55px * 9);
   height: calc(200px + 55px * 9);
   top: calc(50% - calc(200px + 55px * 9) / 2);
   left: calc(50% - calc(200px + 55px * 9) / 2 - 5px);
-  transform: rotate(7deg);
+  transform: rotate(341deg);
 }
 .top_page__background div:nth-child(10) {
   width: calc(200px + 55px * 10);
   height: calc(200px + 55px * 10);
   top: calc(50% - calc(200px + 55px * 10) / 2);
   left: calc(50% - calc(200px + 55px * 10) / 2 - 5px);
-  transform: rotate(58deg);
+  transform: rotate(1deg);
 }
 .top_page__background div:nth-child(11) {
   width: calc(200px + 55px * 11);
@@ -555,6 +565,72 @@ main {
   left: calc(50% - calc(200px + 55px * 24) / 2 - 5px);
 }
 .top_page__background div:nth-child(25) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(26) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(27) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(28) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(29) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(30) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(31) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(32) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(33) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(34) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(35) {
+  width: calc(200px + 55px * 25);
+  height: calc(200px + 55px * 25);
+  top: calc(50% - calc(200px + 55px * 25) / 2);
+  left: calc(50% - calc(200px + 55px * 25) / 2 - 5px);
+}
+.top_page__background div:nth-child(36) {
   width: calc(200px + 55px * 25);
   height: calc(200px + 55px * 25);
   top: calc(50% - calc(200px + 55px * 25) / 2);
@@ -1096,82 +1172,112 @@ main {
   animation-name: background-rotation;
 }
 .top_page__background .circle:nth-child(1) {
-  animation-duration: 31.49s;
+  animation-duration: 38s;
 }
 .top_page__background .circle:nth-child(2) {
-  animation-duration: 31.27s;
+  animation-duration: 37.23s;
 }
 .top_page__background .circle:nth-child(3) {
-  animation-duration: 36.56s;
+  animation-duration: 34.71s;
 }
 .top_page__background .circle:nth-child(4) {
-  animation-duration: 35.34s;
+  animation-duration: 32.98s;
 }
 .top_page__background .circle:nth-child(5) {
-  animation-duration: 36.87s;
+  animation-duration: 31.26s;
 }
 .top_page__background .circle:nth-child(6) {
-  animation-duration: 39.26s;
+  animation-duration: 34.62s;
 }
 .top_page__background .circle:nth-child(7) {
-  animation-duration: 39.45s;
+  animation-duration: 35.96s;
 }
 .top_page__background .circle:nth-child(8) {
-  animation-duration: 38.39s;
+  animation-duration: 32.04s;
 }
 .top_page__background .circle:nth-child(9) {
-  animation-duration: 31.06s;
+  animation-duration: 33.55s;
 }
 .top_page__background .circle:nth-child(10) {
-  animation-duration: 34.2s;
+  animation-duration: 34.12s;
 }
 .top_page__background .circle:nth-child(11) {
-  animation-duration: 38.75s;
+  animation-duration: 30.58s;
 }
 .top_page__background .circle:nth-child(12) {
-  animation-duration: 31.91s;
+  animation-duration: 38.12s;
 }
 .top_page__background .circle:nth-child(13) {
-  animation-duration: 35.98s;
+  animation-duration: 30.35s;
 }
 .top_page__background .circle:nth-child(14) {
-  animation-duration: 33.21s;
+  animation-duration: 38.55s;
 }
 .top_page__background .circle:nth-child(15) {
-  animation-duration: 33.07s;
+  animation-duration: 38.95s;
 }
 .top_page__background .circle:nth-child(16) {
-  animation-duration: 38.32s;
+  animation-duration: 30.92s;
 }
 .top_page__background .circle:nth-child(17) {
-  animation-duration: 38.85s;
+  animation-duration: 38.1s;
 }
 .top_page__background .circle:nth-child(18) {
-  animation-duration: 38.5s;
+  animation-duration: 30.17s;
 }
 .top_page__background .circle:nth-child(19) {
-  animation-duration: 35.46s;
+  animation-duration: 31.42s;
 }
 .top_page__background .circle:nth-child(20) {
-  animation-duration: 31.49s;
+  animation-duration: 31.28s;
 }
 .top_page__background .circle:nth-child(21) {
-  animation-duration: 33.73s;
+  animation-duration: 33.6s;
 }
 .top_page__background .circle:nth-child(22) {
-  animation-duration: 30.59s;
+  animation-duration: 33.97s;
 }
 .top_page__background .circle:nth-child(23) {
-  animation-duration: 37.1s;
+  animation-duration: 34.26s;
 }
 .top_page__background .circle:nth-child(24) {
-  animation-duration: 39.56s;
+  animation-duration: 31.42s;
 }
 .top_page__background .circle:nth-child(25) {
-  animation-duration: 38.53s;
+  animation-duration: 37.98s;
 }
 .top_page__background .circle:nth-child(26) {
-  animation-duration: 34.92s;
+  animation-duration: 35.36s;
+}
+.top_page__background .circle:nth-child(27) {
+  animation-duration: 33.87s;
+}
+.top_page__background .circle:nth-child(28) {
+  animation-duration: 33.82s;
+}
+.top_page__background .circle:nth-child(29) {
+  animation-duration: 34.96s;
+}
+.top_page__background .circle:nth-child(30) {
+  animation-duration: 30.68s;
+}
+.top_page__background .circle:nth-child(31) {
+  animation-duration: 37.65s;
+}
+.top_page__background .circle:nth-child(32) {
+  animation-duration: 32.55s;
+}
+.top_page__background .circle:nth-child(33) {
+  animation-duration: 33.89s;
+}
+.top_page__background .circle:nth-child(34) {
+  animation-duration: 37.36s;
+}
+.top_page__background .circle:nth-child(35) {
+  animation-duration: 32.41s;
+}
+.top_page__background .circle:nth-child(36) {
+  animation-duration: 35.28s;
 }
 
 @keyframes page-transition-in-nav {
