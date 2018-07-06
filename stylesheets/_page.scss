@@ -6,6 +6,73 @@
     width: 200%;
     height: 200%;
     z-index: -1;
+    
+    .back {
+        opacity: 0;
+
+        z-index: 3;
+        position: absolute;
+        top: calc(50% + 15px);
+        right: calc(50% - 100px);
+
+        width: 80px;
+        height: 80px;
+
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 3px;
+        border-color: transparent;           
+
+        transform: rotate(10deg);
+      
+        background-color: $base-color-3;
+
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+
+        a {
+            z-index: 3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+    
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 3px;
+            border-color: transparent;
+
+            transform: rotate(-10deg);
+
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+
+            background-color: $base-color-1;
+        }
+
+        a::before, a::after{
+            position: absolute;
+            left: 0;
+
+            content: "";
+            width: 80px;
+            height: 0;
+            top: calc(50% - 2px);
+                
+            border-color: transparent;
+            border-top-style: solid;
+            border-top-color: $background-color;
+            border-width: 1px;
+
+        }
+
+        a::before {
+            transform: rotate(45deg);
+        }
+
+        a::after {
+            transform: rotate(-45deg);
+        }
+    }
 
     .hide-scroll {
         position: absolute;
@@ -55,7 +122,9 @@
         * {
             box-sizing: border-box;
         }
-	
+
+        
+
         .sub-section::before {
             content: "";
             display: block;

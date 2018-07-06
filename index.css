@@ -405,70 +405,70 @@ main {
   height: calc(200px + 55px * 1);
   top: calc(50% - calc(200px + 55px * 1) / 2);
   left: calc(50% - calc(200px + 55px * 1) / 2 - 5px);
-  transform: rotate(237deg);
+  transform: rotate(60deg);
 }
 .top_page__background div:nth-child(2) {
   width: calc(200px + 55px * 2);
   height: calc(200px + 55px * 2);
   top: calc(50% - calc(200px + 55px * 2) / 2);
   left: calc(50% - calc(200px + 55px * 2) / 2 - 5px);
-  transform: rotate(39deg);
+  transform: rotate(213deg);
 }
 .top_page__background div:nth-child(3) {
   width: calc(200px + 55px * 3);
   height: calc(200px + 55px * 3);
   top: calc(50% - calc(200px + 55px * 3) / 2);
   left: calc(50% - calc(200px + 55px * 3) / 2 - 5px);
-  transform: rotate(311deg);
+  transform: rotate(86deg);
 }
 .top_page__background div:nth-child(4) {
   width: calc(200px + 55px * 4);
   height: calc(200px + 55px * 4);
   top: calc(50% - calc(200px + 55px * 4) / 2);
   left: calc(50% - calc(200px + 55px * 4) / 2 - 5px);
-  transform: rotate(278deg);
+  transform: rotate(197deg);
 }
 .top_page__background div:nth-child(5) {
   width: calc(200px + 55px * 5);
   height: calc(200px + 55px * 5);
   top: calc(50% - calc(200px + 55px * 5) / 2);
   left: calc(50% - calc(200px + 55px * 5) / 2 - 5px);
-  transform: rotate(85deg);
+  transform: rotate(110deg);
 }
 .top_page__background div:nth-child(6) {
   width: calc(200px + 55px * 6);
   height: calc(200px + 55px * 6);
   top: calc(50% - calc(200px + 55px * 6) / 2);
   left: calc(50% - calc(200px + 55px * 6) / 2 - 5px);
-  transform: rotate(86deg);
+  transform: rotate(157deg);
 }
 .top_page__background div:nth-child(7) {
   width: calc(200px + 55px * 7);
   height: calc(200px + 55px * 7);
   top: calc(50% - calc(200px + 55px * 7) / 2);
   left: calc(50% - calc(200px + 55px * 7) / 2 - 5px);
-  transform: rotate(305deg);
+  transform: rotate(99deg);
 }
 .top_page__background div:nth-child(8) {
   width: calc(200px + 55px * 8);
   height: calc(200px + 55px * 8);
   top: calc(50% - calc(200px + 55px * 8) / 2);
   left: calc(50% - calc(200px + 55px * 8) / 2 - 5px);
-  transform: rotate(218deg);
+  transform: rotate(223deg);
 }
 .top_page__background div:nth-child(9) {
   width: calc(200px + 55px * 9);
   height: calc(200px + 55px * 9);
   top: calc(50% - calc(200px + 55px * 9) / 2);
   left: calc(50% - calc(200px + 55px * 9) / 2 - 5px);
-  transform: rotate(357deg);
+  transform: rotate(325deg);
 }
 .top_page__background div:nth-child(10) {
   width: calc(200px + 55px * 10);
   height: calc(200px + 55px * 10);
   top: calc(50% - calc(200px + 55px * 10) / 2);
   left: calc(50% - calc(200px + 55px * 10) / 2 - 5px);
-  transform: rotate(241deg);
+  transform: rotate(49deg);
 }
 .top_page__background div:nth-child(11) {
   width: calc(200px + 55px * 11);
@@ -569,6 +569,55 @@ main {
   width: 200%;
   height: 200%;
   z-index: -1;
+}
+.page .back {
+  opacity: 0;
+  z-index: 3;
+  position: absolute;
+  top: calc(50% + 15px);
+  right: calc(50% - 100px);
+  width: 80px;
+  height: 80px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: transparent;
+  transform: rotate(10deg);
+  background-color: #e96a81;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.page .back a {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: transparent;
+  transform: rotate(-10deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  background-color: #e3c2b3;
+}
+.page .back a::before, .page .back a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 80px;
+  height: 0;
+  top: calc(50% - 2px);
+  border-color: transparent;
+  border-top-style: solid;
+  border-top-color: #171717;
+  border-width: 1px;
+}
+.page .back a::before {
+  transform: rotate(45deg);
+}
+.page .back a::after {
+  transform: rotate(-45deg);
 }
 .page .hide-scroll {
   position: absolute;
@@ -1047,82 +1096,82 @@ main {
   animation-name: background-rotation;
 }
 .top_page__background .circle:nth-child(1) {
-  animation-duration: 33.05s;
+  animation-duration: 31.13s;
 }
 .top_page__background .circle:nth-child(2) {
-  animation-duration: 33.29s;
+  animation-duration: 36.58s;
 }
 .top_page__background .circle:nth-child(3) {
-  animation-duration: 32.48s;
+  animation-duration: 30.54s;
 }
 .top_page__background .circle:nth-child(4) {
-  animation-duration: 38.3s;
+  animation-duration: 36.94s;
 }
 .top_page__background .circle:nth-child(5) {
-  animation-duration: 34.84s;
+  animation-duration: 34.67s;
 }
 .top_page__background .circle:nth-child(6) {
-  animation-duration: 35.33s;
+  animation-duration: 34.99s;
 }
 .top_page__background .circle:nth-child(7) {
-  animation-duration: 38.17s;
+  animation-duration: 33.68s;
 }
 .top_page__background .circle:nth-child(8) {
-  animation-duration: 35.4s;
+  animation-duration: 39.78s;
 }
 .top_page__background .circle:nth-child(9) {
-  animation-duration: 36.44s;
+  animation-duration: 30.72s;
 }
 .top_page__background .circle:nth-child(10) {
-  animation-duration: 30.04s;
+  animation-duration: 37.19s;
 }
 .top_page__background .circle:nth-child(11) {
-  animation-duration: 34.03s;
+  animation-duration: 37.36s;
 }
 .top_page__background .circle:nth-child(12) {
-  animation-duration: 37.38s;
+  animation-duration: 30.51s;
 }
 .top_page__background .circle:nth-child(13) {
-  animation-duration: 39.74s;
+  animation-duration: 34.25s;
 }
 .top_page__background .circle:nth-child(14) {
-  animation-duration: 38.28s;
+  animation-duration: 30.45s;
 }
 .top_page__background .circle:nth-child(15) {
-  animation-duration: 31.14s;
+  animation-duration: 38.12s;
 }
 .top_page__background .circle:nth-child(16) {
-  animation-duration: 36.96s;
+  animation-duration: 32.38s;
 }
 .top_page__background .circle:nth-child(17) {
-  animation-duration: 37.93s;
+  animation-duration: 36.77s;
 }
 .top_page__background .circle:nth-child(18) {
-  animation-duration: 38.13s;
+  animation-duration: 35.99s;
 }
 .top_page__background .circle:nth-child(19) {
-  animation-duration: 32.8s;
+  animation-duration: 30.56s;
 }
 .top_page__background .circle:nth-child(20) {
-  animation-duration: 37.45s;
+  animation-duration: 32.14s;
 }
 .top_page__background .circle:nth-child(21) {
-  animation-duration: 32.78s;
+  animation-duration: 34.16s;
 }
 .top_page__background .circle:nth-child(22) {
-  animation-duration: 39.84s;
+  animation-duration: 32.04s;
 }
 .top_page__background .circle:nth-child(23) {
-  animation-duration: 37.72s;
+  animation-duration: 34.5s;
 }
 .top_page__background .circle:nth-child(24) {
-  animation-duration: 37.13s;
+  animation-duration: 35.36s;
 }
 .top_page__background .circle:nth-child(25) {
-  animation-duration: 32.18s;
+  animation-duration: 35.19s;
 }
 .top_page__background .circle:nth-child(26) {
-  animation-duration: 35.21s;
+  animation-duration: 39.55s;
 }
 
 @keyframes page-transition-in-nav {
@@ -1160,6 +1209,16 @@ main {
   }
   100% {
     z-index: 2;
+  }
+}
+@keyframes back-button-slide-in {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-115px) rotate(5deg);
+    opacity: 1;
   }
 }
 @keyframes page-transition-out-nav {
@@ -1202,6 +1261,14 @@ main {
     z-index: -1;
   }
 }
+@keyframes back-button-slide-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .button-page-transition[data-state=true] {
   animation-fill-mode: forwards;
   opacity: 0;
@@ -1225,6 +1292,13 @@ main {
   animation-name: index-change-in;
   animation-duration: 0.001s;
   animation-fill-mode: forwards;
+}
+.page[data-state=true] .back {
+  animation-fill-mode: forwards;
+  animation-name: back-button-slide-in;
+  animation-delay: 0.6s;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
 }
 .page[data-state=true] .page-transition-rotation {
   animation-fill-mode: forwards;
@@ -1260,9 +1334,15 @@ main {
 
 .page[data-state=false] {
   animation-name: index-change-out;
-  animation-delay: 0.6s;
+  animation-delay: 0.7s;
   animation-duration: 0.001s;
   animation-fill-mode: backwards;
+}
+.page[data-state=false] .back {
+  animation-fill-mode: forwards;
+  animation-name: back-button-slide-out;
+  animation-duration: 0.1s;
+  animation-timing-function: ease;
 }
 .page[data-state=false] .page-transition-rotation {
   animation-fill-mode: forwards;
