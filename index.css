@@ -405,70 +405,70 @@ main {
   height: calc(200px + 55px * 1);
   top: calc(50% - calc(200px + 55px * 1) / 2);
   left: calc(50% - calc(200px + 55px * 1) / 2 - 5px);
-  transform: rotate(149deg);
+  transform: rotate(224deg);
 }
 .top_page__background div:nth-child(2) {
   width: calc(200px + 55px * 2);
   height: calc(200px + 55px * 2);
   top: calc(50% - calc(200px + 55px * 2) / 2);
   left: calc(50% - calc(200px + 55px * 2) / 2 - 5px);
-  transform: rotate(126deg);
+  transform: rotate(171deg);
 }
 .top_page__background div:nth-child(3) {
   width: calc(200px + 55px * 3);
   height: calc(200px + 55px * 3);
   top: calc(50% - calc(200px + 55px * 3) / 2);
   left: calc(50% - calc(200px + 55px * 3) / 2 - 5px);
-  transform: rotate(295deg);
+  transform: rotate(127deg);
 }
 .top_page__background div:nth-child(4) {
   width: calc(200px + 55px * 4);
   height: calc(200px + 55px * 4);
   top: calc(50% - calc(200px + 55px * 4) / 2);
   left: calc(50% - calc(200px + 55px * 4) / 2 - 5px);
-  transform: rotate(11deg);
+  transform: rotate(178deg);
 }
 .top_page__background div:nth-child(5) {
   width: calc(200px + 55px * 5);
   height: calc(200px + 55px * 5);
   top: calc(50% - calc(200px + 55px * 5) / 2);
   left: calc(50% - calc(200px + 55px * 5) / 2 - 5px);
-  transform: rotate(241deg);
+  transform: rotate(58deg);
 }
 .top_page__background div:nth-child(6) {
   width: calc(200px + 55px * 6);
   height: calc(200px + 55px * 6);
   top: calc(50% - calc(200px + 55px * 6) / 2);
   left: calc(50% - calc(200px + 55px * 6) / 2 - 5px);
-  transform: rotate(106deg);
+  transform: rotate(130deg);
 }
 .top_page__background div:nth-child(7) {
   width: calc(200px + 55px * 7);
   height: calc(200px + 55px * 7);
   top: calc(50% - calc(200px + 55px * 7) / 2);
   left: calc(50% - calc(200px + 55px * 7) / 2 - 5px);
-  transform: rotate(115deg);
+  transform: rotate(29deg);
 }
 .top_page__background div:nth-child(8) {
   width: calc(200px + 55px * 8);
   height: calc(200px + 55px * 8);
   top: calc(50% - calc(200px + 55px * 8) / 2);
   left: calc(50% - calc(200px + 55px * 8) / 2 - 5px);
-  transform: rotate(355deg);
+  transform: rotate(178deg);
 }
 .top_page__background div:nth-child(9) {
   width: calc(200px + 55px * 9);
   height: calc(200px + 55px * 9);
   top: calc(50% - calc(200px + 55px * 9) / 2);
   left: calc(50% - calc(200px + 55px * 9) / 2 - 5px);
-  transform: rotate(348deg);
+  transform: rotate(56deg);
 }
 .top_page__background div:nth-child(10) {
   width: calc(200px + 55px * 10);
   height: calc(200px + 55px * 10);
   top: calc(50% - calc(200px + 55px * 10) / 2);
   left: calc(50% - calc(200px + 55px * 10) / 2 - 5px);
-  transform: rotate(184deg);
+  transform: rotate(275deg);
 }
 .top_page__background div:nth-child(11) {
   width: calc(200px + 55px * 11);
@@ -565,30 +565,42 @@ main {
 .page {
   position: absolute;
   top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
+  right: -100%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
 }
 .page .hide-scroll {
   position: absolute;
-  right: calc(19px);
-  top: calc(15px + 2px);
-  height: calc(100% - 40px);
+  right: 50%;
+  bottom: 0%;
+  height: 50%;
   width: 18px;
   background-color: #e3c2b3;
 }
-.page .page-frame {
+.page .page-transition-rotation {
   position: absolute;
-  top: 15px;
-  left: 19px;
-  box-shadow: 0px 10px 15px 0px black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(90deg);
+}
+.page .page-transition-rotation:nth-child(1) .page-transition-frame {
+  background-color: #5c433c;
+}
+.page .page-transition-rotation:nth-child(2) .page-transition-frame {
+  background-color: #e96a81;
+}
+.page .page-frame, .page .page-transition-frame {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+}
+.page .page-frame {
   background-color: #e3c2b3;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #171717;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
   overflow-y: scroll;
 }
 .page .page-frame * {
@@ -1035,82 +1047,82 @@ main {
   animation-name: background-rotation;
 }
 .top_page__background .circle:nth-child(1) {
-  animation-duration: 33.62s;
+  animation-duration: 34.08s;
 }
 .top_page__background .circle:nth-child(2) {
-  animation-duration: 35.74s;
+  animation-duration: 35.45s;
 }
 .top_page__background .circle:nth-child(3) {
-  animation-duration: 36.09s;
+  animation-duration: 38.86s;
 }
 .top_page__background .circle:nth-child(4) {
-  animation-duration: 31.88s;
+  animation-duration: 32.28s;
 }
 .top_page__background .circle:nth-child(5) {
-  animation-duration: 34.84s;
+  animation-duration: 36.51s;
 }
 .top_page__background .circle:nth-child(6) {
-  animation-duration: 30.74s;
+  animation-duration: 37.77s;
 }
 .top_page__background .circle:nth-child(7) {
-  animation-duration: 34.38s;
+  animation-duration: 37.15s;
 }
 .top_page__background .circle:nth-child(8) {
-  animation-duration: 38.42s;
+  animation-duration: 35.95s;
 }
 .top_page__background .circle:nth-child(9) {
-  animation-duration: 31.76s;
+  animation-duration: 38.86s;
 }
 .top_page__background .circle:nth-child(10) {
-  animation-duration: 35.52s;
+  animation-duration: 38.36s;
 }
 .top_page__background .circle:nth-child(11) {
-  animation-duration: 38.51s;
+  animation-duration: 30.02s;
 }
 .top_page__background .circle:nth-child(12) {
-  animation-duration: 37.37s;
+  animation-duration: 34.24s;
 }
 .top_page__background .circle:nth-child(13) {
-  animation-duration: 38.73s;
+  animation-duration: 35.97s;
 }
 .top_page__background .circle:nth-child(14) {
-  animation-duration: 33.92s;
+  animation-duration: 33.1s;
 }
 .top_page__background .circle:nth-child(15) {
-  animation-duration: 34.51s;
+  animation-duration: 37.95s;
 }
 .top_page__background .circle:nth-child(16) {
-  animation-duration: 39.92s;
+  animation-duration: 39.81s;
 }
 .top_page__background .circle:nth-child(17) {
-  animation-duration: 33.87s;
+  animation-duration: 33.76s;
 }
 .top_page__background .circle:nth-child(18) {
-  animation-duration: 39.03s;
+  animation-duration: 33.87s;
 }
 .top_page__background .circle:nth-child(19) {
-  animation-duration: 33.16s;
+  animation-duration: 38.55s;
 }
 .top_page__background .circle:nth-child(20) {
-  animation-duration: 34.56s;
+  animation-duration: 31.79s;
 }
 .top_page__background .circle:nth-child(21) {
-  animation-duration: 34.36s;
+  animation-duration: 34.52s;
 }
 .top_page__background .circle:nth-child(22) {
-  animation-duration: 34.57s;
+  animation-duration: 35.96s;
 }
 .top_page__background .circle:nth-child(23) {
-  animation-duration: 32.09s;
+  animation-duration: 31.73s;
 }
 .top_page__background .circle:nth-child(24) {
-  animation-duration: 38.42s;
+  animation-duration: 35.14s;
 }
 .top_page__background .circle:nth-child(25) {
-  animation-duration: 37.5s;
+  animation-duration: 31.89s;
 }
 .top_page__background .circle:nth-child(26) {
-  animation-duration: 36.17s;
+  animation-duration: 33.03s;
 }
 
 @keyframes page-transition-in-nav {
@@ -1136,18 +1148,18 @@ main {
 }
 @keyframes page-transition-in-slide {
   0% {
-    transform: translateY(0%);
+    transform: rotate(90deg);
   }
   100% {
-    transform: translateY(100%);
+    transform: rotate(0deg);
   }
 }
-@keyframes page-transition-in-frame-dropdown {
+@keyframes index-change-in {
   0% {
-    box-shadow: 0px 10px 15px 0px black;
+    z-index: 2;
   }
   100% {
-    box-shadow: 0px 0px 0px 0px black;
+    z-index: 2;
   }
 }
 @keyframes page-transition-out-nav {
@@ -1173,18 +1185,21 @@ main {
 }
 @keyframes page-transition-out-slide {
   0% {
-    transform: translateY(100%);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translateY(0%);
+    transform: rotate(-90deg);
   }
 }
-@keyframes page-transition-out-frame-dropdown {
+@keyframes index-change-out {
   0% {
-    box-shadow: 0px 0px 0px 0px black;
+    z-index: 2;
+  }
+  99% {
+    z-index: 2;
   }
   100% {
-    box-shadow: 0px 10px 15px 0px black;
+    z-index: -1;
   }
 }
 .button-page-transition[data-state=true] {
@@ -1194,30 +1209,34 @@ main {
 
 .top_page__navigation[data-state=true], .top_page__background[data-state=true] {
   animation-fill-mode: forwards;
-  animation-timing-function: linear;
+  animation-timing-function: ease;
   animation-duration: 0.3s;
   animation-name: page-transition-in-nav;
 }
 
 .top_page .top_page__sidebar[data-state=true] .shadow {
   animation-fill-mode: forwards;
-  animation-timing-function: linear;
+  animation-timing-function: ease;
   animation-duration: 0.3s;
   animation-name: page-transition-in-sidebar;
 }
 
 .page[data-state=true] {
+  animation-name: index-change-in;
+  animation-duration: 0.001s;
+  animation-fill-mode: forwards;
+}
+.page[data-state=true] .page-transition-rotation {
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-duration: 0.6s;
+  animation-duration: 0.4s;
   animation-name: page-transition-in-slide;
 }
-.page[data-state=true] .page-frame {
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-duration: 0.25s;
-  animation-delay: 0.7s;
-  animation-name: page-transition-in-frame-dropdown;
+.page[data-state=true] .page-transition-rotation:nth-child(2) {
+  animation-delay: 0.06s;
+}
+.page[data-state=true] .page-transition-rotation:nth-child(3) {
+  animation-delay: 0.12s;
 }
 
 .button-page-transition[data-state=false] {
@@ -1227,30 +1246,35 @@ main {
 
 .top_page__navigation[data-state=false], .top_page__background[data-state=false] {
   animation-fill-mode: forwards;
-  animation-timing-function: linear;
+  animation-timing-function: ease;
   animation-duration: 0.3s;
   animation-name: page-transition-out-nav;
 }
 
 .top_page .top_page__sidebar[data-state=false] .shadow {
   animation-fill-mode: forwards;
-  animation-timing-function: linear;
+  animation-timing-function: ease;
   animation-duration: 0.3s;
   animation-name: page-transition-out-sidebar;
 }
 
 .page[data-state=false] {
+  animation-name: index-change-out;
+  animation-delay: 0.5s;
+  animation-duration: 0.001s;
+  animation-fill-mode: backwards;
+}
+.page[data-state=false] .page-transition-rotation {
   animation-fill-mode: forwards;
   animation-timing-function: ease;
-  animation-duration: 0.6s;
+  animation-duration: 0.5s;
   animation-name: page-transition-out-slide;
 }
-.page[data-state=false] .page-frame {
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-duration: 0.25s;
-  animation-delay: 0.7s;
-  animation-name: page-transition-out-frame-dropdown;
+.page[data-state=false] .page-transition-rotation:nth-child(2) {
+  animation-delay: 0.06s;
+}
+.page[data-state=false] .page-transition-rotation:nth-child(1) {
+  animation-delay: 0.12s;
 }
 
 /*# sourceMappingURL=index.css.map */

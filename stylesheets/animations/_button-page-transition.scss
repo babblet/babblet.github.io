@@ -11,13 +11,17 @@
 }
 
 @keyframes page-transition-in-slide {
-    0%   {transform: translateY(0%);}
-    100% {transform: translateY(100%);}
+    0%{
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
-@keyframes page-transition-in-frame-dropdown {
-    0%   {box-shadow: 0px 10px 15px 0px black;}
-    100% {box-shadow: 0px 0px 0px 0px black;}
+@keyframes index-change-in {
+    0%{z-index: 2;}
+    100%{z-index: 2;}
 }
 
 // OUT --------------------------------------------
@@ -33,14 +37,20 @@
 }
 
 @keyframes page-transition-out-slide {
-    0%{transform: translateY(100%);}
-    100%{transform: translateY(0%);}
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
 }
 
-@keyframes page-transition-out-frame-dropdown {
-    0%{box-shadow: 0px 0px 0px 0px black;}
-    100%{box-shadow: 0px 10px 15px 0px black;}
+@keyframes index-change-out {
+    0%{z-index: 2;}
+    99%{z-index: 2;}
+    100%{z-index: -1;}
 }
+
 .button-page-transition[data-state="true"] {
     animation-fill-mode: forwards;
     opacity: 0
@@ -48,15 +58,16 @@
 
 .top_page__navigation[data-state="true"], .top_page__background[data-state="true"]{
     animation-fill-mode: forwards;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
     animation-duration: 0.3s;
     animation-name: page-transition-in-nav;
 }
+
 .top_page {
     .top_page__sidebar[data-state="true"] { 
         .shadow {
             animation-fill-mode: forwards;
-            animation-timing-function: linear;
+            animation-timing-function: ease;
             animation-duration: 0.3s;
             animation-name: page-transition-in-sidebar;
         }
@@ -64,22 +75,27 @@
 }
 
 .page[data-state="true"] {
-       animation-fill-mode: forwards;
-       animation-timing-function: ease;
-       animation-duration: 0.6s;
-       animation-name: page-transition-in-slide;
+    animation-name: index-change-in;
+    animation-duration: 0.001s;
+    animation-fill-mode: forwards;
 
-       .page-frame{
-           animation-fill-mode: forwards;
-           animation-timing-function: ease-out;
-           animation-duration: 0.25s;
-           animation-delay: 0.7s;
-           animation-name: page-transition-in-frame-dropdown;
-       }
+    .page-transition-rotation{
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-duration: 0.4s;
+        animation-name: page-transition-in-slide;
+    }
+
+    .page-transition-rotation:nth-child(2) {
+        animation-delay: 0.06s;
+    }
+
+    .page-transition-rotation:nth-child(3) {
+        animation-delay: 0.12s;
+    }
 }
 
 //tmp reverse copy pasta
-
 .button-page-transition[data-state="false"] {
     animation-fill-mode: forwards;
     opacity: 1;
@@ -87,7 +103,7 @@
 
 .top_page__navigation[data-state="false"], .top_page__background[data-state="false"]{
     animation-fill-mode: forwards;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
     animation-duration: 0.3s;
     animation-name: page-transition-out-nav;
 }
@@ -95,24 +111,30 @@
     .top_page__sidebar[data-state="false"] { 
         .shadow {
             animation-fill-mode: forwards;
-            animation-timing-function: linear;
+            animation-timing-function: ease;
             animation-duration: 0.3s;
             animation-name: page-transition-out-sidebar;
         }
     }
 }
-
 .page[data-state="false"] {
-       animation-fill-mode: forwards;
-       animation-timing-function: ease;
-       animation-duration: 0.6s;
-       animation-name: page-transition-out-slide;
+    animation-name: index-change-out;
+    animation-delay: 0.5s;
+    animation-duration: 0.001s;
+    animation-fill-mode: backwards;
 
-       .page-frame{
-           animation-fill-mode: forwards;
-           animation-timing-function: ease-out;
-           animation-duration: 0.25s;
-           animation-delay: 0.7s;
-           animation-name: page-transition-out-frame-dropdown;
-       }
+    .page-transition-rotation {
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-duration: 0.5s;
+        animation-name: page-transition-out-slide;
+    }
+
+    .page-transition-rotation:nth-child(2) {
+        animation-delay: 0.06s;
+    }
+
+    .page-transition-rotation:nth-child(1) {
+        animation-delay: 0.12s;
+    }
 }
