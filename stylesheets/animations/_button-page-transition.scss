@@ -65,7 +65,7 @@
 
 .page[data-state="true"] {
        animation-fill-mode: forwards;
-       animation-timing-function: ease-out;
+       animation-timing-function: ease;
        animation-duration: 0.6s;
        animation-name: page-transition-in-slide;
 
@@ -104,7 +104,7 @@
 
 .page[data-state="false"] {
        animation-fill-mode: forwards;
-       animation-timing-function: ease-out;
+       animation-timing-function: ease;
        animation-duration: 0.6s;
        animation-name: page-transition-out-slide;
 
