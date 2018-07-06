@@ -11,7 +11,7 @@ const page_guides               = document.getElementById('guides');
 const page_archive              = document.getElementById('archive');
 const page_blog                 = document.getElementById('blog');
 
-export const startTransition = (state) => {
+export const startTransition = (state, id) => {
     top_page__navigation.setAttribute('data-state', state);
     top_page__background.setAttribute('data-state', state);
     top_page__sidebar.setAttribute('data-state', state);
@@ -24,14 +24,18 @@ export const bindNavigationButtons = () => {
     buttons.forEach((nav, key) => {
         nav.addEventListener('click', e => {
             e.preventDefault();
-            startTransition('true');
+            const id = e.target.getAttribute('id');
+            startTransition('true', id);
             console.log('hello');
         });
     });
 
-    const backButton = document.getElementById('backButton');
+    const backButton = document.querySelector('.back-button');
     backButton.addEventListener('click', e => {
         e.preventDefault();
+        const id = e.target.getAttribute('id');
+        startTransition('false', id);
+        console.log('second hello');
     });
 }
 

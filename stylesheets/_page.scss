@@ -6,16 +6,97 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    .hide-scroll {
+        position: absolute;
+        right: calc(#{$frame-side-spacing});
+        top: calc(#{$frame-top-spacing} + 2px);
+        height: calc(100% - 40px);
+        width: 18px;
+        background-color: $base-color-1;
+    }
+
     .page-frame {
         position: absolute;
         top: $frame-top-spacing;
         left: $frame-side-spacing;
         
         box-shadow: 0px 10px 15px 0px black;
-
+        
         background-color: $base-color-1;
+
+        border-style: solid;
+        border-width: 2px;
+        border-color: $background-color;
+
 
         width: calc(100% - 40px);
         height: calc(100% - 40px);
+
+        overflow-y: scroll;
+
+        * {
+            box-sizing: border-box;
+        }
+	
+	.sub-section::before {
+		content: "";
+		display: block;
+        position: absolute;
+        top:0;
+        left: 0;
+		width: 70%;
+		height: 2px;
+		background-color: $background-color;
+	}
+
+	.sub-section {
+        position: relative;
+		width: 800px;
+		height: 50px;
+		margin: 10px auto;
+        text-align: center;
+        font-size: 200%;
+        line-height: 50px;
+	}
+
+	.sub-section::after {
+		content: "";
+		display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+		width: 70%;
+		height: 2px;
+		background-color: $background-color;
+	}
+	
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 0;
+            width: 800px;
+            margin: 0 auto;
+            .column {
+                flex: 50%;
+                max-width: 50%;
+                div {
+                    position:relative;
+                    top: 0;
+                    left: 0;
+                    
+                    margin-bottom: 10px;
+                    height: 350px;
+                    background-color: $background-color;
+                    vertical-align: middle;
+                    box-shadow: 2px 2px 3px 0px black;
+                }
+            }
+            .column:nth-child(1) {
+                padding-right: 5px;
+            }
+            .column::nth-child(2) {
+                padding-left: 5px;
+            }
+        }
     }
 }

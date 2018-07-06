@@ -15,20 +15,41 @@
     100% {transform: translateY(100%);}
 }
 
-@keyframes page-transition-frame-dropdown {
+@keyframes page-transition-in-frame-dropdown {
     0%   {box-shadow: 0px 10px 15px 0px black;}
     100% {box-shadow: 0px 0px 0px 0px black;}
 }
 
+// OUT --------------------------------------------
+@keyframes page-transition-out-nav {
+    0%{transform: scale(0); opacity: 0;}
+    20%{opacity: 0;}
+    100%{transform: scale(1); opacity: 1;}
+}
+
+@keyframes page-transition-out-sidebar {
+    10%{transform: translateX(-120%);}
+    100%{transform: translateX(0%);}
+}
+
+@keyframes page-transition-out-slide {
+    0%{transform: translateY(100%);}
+    100%{transform: translateY(0%);}
+}
+
+@keyframes page-transition-out-frame-dropdown {
+    0%{box-shadow: 0px 0px 0px 0px black;}
+    100%{box-shadow: 0px 10px 15px 0px black;}
+}
 .button-page-transition[data-state="true"] {
     animation-fill-mode: forwards;
-    opacity: 0;
+    opacity: 0
 }
 
 .top_page__navigation[data-state="true"], .top_page__background[data-state="true"]{
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-name: page-transition-in-nav;
 }
 .top_page {
@@ -36,7 +57,7 @@
         .shadow {
             animation-fill-mode: forwards;
             animation-timing-function: linear;
-            animation-duration: 0.5s;
+            animation-duration: 0.3s;
             animation-name: page-transition-in-sidebar;
         }
     }
@@ -53,6 +74,45 @@
            animation-timing-function: ease-out;
            animation-duration: 0.25s;
            animation-delay: 0.7s;
-           animation-name: page-transition-frame-dropdown;
+           animation-name: page-transition-in-frame-dropdown;
+       }
+}
+
+//tmp reverse copy pasta
+
+.button-page-transition[data-state="false"] {
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+.top_page__navigation[data-state="false"], .top_page__background[data-state="false"]{
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-name: page-transition-out-nav;
+}
+.top_page {
+    .top_page__sidebar[data-state="false"] { 
+        .shadow {
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-duration: 0.3s;
+            animation-name: page-transition-out-sidebar;
+        }
+    }
+}
+
+.page[data-state="false"] {
+       animation-fill-mode: forwards;
+       animation-timing-function: ease-out;
+       animation-duration: 0.6s;
+       animation-name: page-transition-out-slide;
+
+       .page-frame{
+           animation-fill-mode: forwards;
+           animation-timing-function: ease-out;
+           animation-duration: 0.25s;
+           animation-delay: 0.7s;
+           animation-name: page-transition-out-frame-dropdown;
        }
 }

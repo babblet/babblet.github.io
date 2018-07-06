@@ -34,7 +34,9 @@ $welcome-margin-left: 40px;
             border-radius: 8%;
             
             overflow: hidden;
-            
+           
+            line-height: $welcome-box-width;
+
             margin-left: $welcome-margin-left;
             margin-top: -3px;
 
