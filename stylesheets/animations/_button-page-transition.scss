@@ -59,7 +59,7 @@
 .top_page__navigation[data-state="true"], .top_page__background[data-state="true"]{
     animation-fill-mode: forwards;
     animation-timing-function: ease;
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
     animation-name: page-transition-in-nav;
 }
 
@@ -68,7 +68,7 @@
         .shadow {
             animation-fill-mode: forwards;
             animation-timing-function: ease;
-            animation-duration: 0.3s;
+            animation-duration: 0.5s;
             animation-name: page-transition-in-sidebar;
         }
     }
@@ -82,16 +82,16 @@
     .page-transition-rotation{
         animation-fill-mode: forwards;
         animation-timing-function: ease;
-        animation-duration: 0.4s;
+        animation-duration: 0.6s;
         animation-name: page-transition-in-slide;
     }
 
     .page-transition-rotation:nth-child(2) {
-        animation-delay: 0.06s;
+        animation-delay: 0.08s;
     }
 
     .page-transition-rotation:nth-child(3) {
-        animation-delay: 0.12s;
+        animation-delay: 0.16s;
     }
 }
 
@@ -104,7 +104,7 @@
 .top_page__navigation[data-state="false"], .top_page__background[data-state="false"]{
     animation-fill-mode: forwards;
     animation-timing-function: ease;
-    animation-duration: 0.3s;
+    animation-duration: 0.4s;
     animation-name: page-transition-out-nav;
 }
 .top_page {
@@ -112,29 +112,29 @@
         .shadow {
             animation-fill-mode: forwards;
             animation-timing-function: ease;
-            animation-duration: 0.3s;
+            animation-duration: 0.4s;
             animation-name: page-transition-out-sidebar;
         }
     }
 }
 .page[data-state="false"] {
     animation-name: index-change-out;
-    animation-delay: 0.5s;
+    animation-delay: 0.6s;
     animation-duration: 0.001s;
     animation-fill-mode: backwards;
 
     .page-transition-rotation {
         animation-fill-mode: forwards;
         animation-timing-function: ease;
-        animation-duration: 0.5s;
+        animation-duration: 0.7s;
         animation-name: page-transition-out-slide;
     }
 
     .page-transition-rotation:nth-child(2) {
-        animation-delay: 0.06s;
+        animation-delay: 0.08s;
     }
 
     .page-transition-rotation:nth-child(1) {
-        animation-delay: 0.12s;
+        animation-delay: 0.16s;
     }
 }
