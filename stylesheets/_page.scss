@@ -180,9 +180,17 @@
             }
             .column:nth-child(1) {
                 padding-right: 5px;
+
+                div {
+                    opacity: 0;
+                }
             }
-            .column::nth-child(2) {
+            .column:nth-child(2) {
                 padding-left: 5px;
+
+                div {
+                    opacity: 0;
+                }
             }
         }
     }
