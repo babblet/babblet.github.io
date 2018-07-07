@@ -4,7 +4,6 @@ const top_page                  = document.querySelector('.top_page');
 const top_page__navigation      = document.querySelector('.top_page__navigation');
 const top_page__background      = document.querySelector('.top_page__background');
 const top_page__sidebar         = document.querySelector('.top_page__sidebar');
-const button_page__transition   = document.querySelector('.button-page-transition');
 const page                      = document.querySelector('.page');
 const page_project              = document.getElementById('project');
 const page_guides               = document.getElementById('guides');
@@ -15,18 +14,17 @@ export const startTransition = (state, id) => {
     top_page__navigation.setAttribute('data-state', state);
     top_page__background.setAttribute('data-state', state);
     top_page__sidebar.setAttribute('data-state', state);
-    button_page__transition.setAttribute('data-state', state);
     page.setAttribute('data-state',state);
+    if(id !== 'back-button') page.querySelector('.sub-section').innerHTML = id.toUpperCase();
 } 
 
 export const bindNavigationButtons = () => {
-    const buttons = document.querySelectorAll('.top_page__navigation a');
+    const buttons = document.querySelectorAll('.top_page__navigation .button');
     buttons.forEach((nav, key) => {
         nav.addEventListener('click', e => {
             e.preventDefault();
-            const id = e.target.getAttribute('id');
+            const id = e.target.parentElement.getAttribute('id');
             startTransition('true', id);
-            console.log('hello');
         });
     });
 
@@ -35,7 +33,6 @@ export const bindNavigationButtons = () => {
         e.preventDefault();
         const id = e.target.getAttribute('id');
         startTransition('false', id);
-        console.log('second hello');
     });
 }
 
