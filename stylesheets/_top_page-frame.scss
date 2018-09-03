@@ -45,10 +45,10 @@ $frame-corner-radius: $frame-corner-size;
 		
 
 	.background-image {
-		position: absolute;
-		bottom: -140px;
-		left: 0;
-		width: 100%;
+        position: absolute;
+        top: -17%;
+        height: 140%;
+        filter: blur(3px);
 	}
 	
 

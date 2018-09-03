@@ -38,10 +38,9 @@ export const bindNavigationButtons = () => {
 }
 
 export const setBackgroundImage = () => {
-    let height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    console.log("Viewport Height =", height);
-    console.log("Image Height =", background_image.height);
-    background_image.setAttribute("style", "width:" + width + "; height: " + height + ";");
+    let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    console.log(width, background_image.width);
+    background_image.setAttribute("style", "left:" + (((width - background_image.width)/2) - 20) + "px;");
 }
 
 export const listen = () => {
