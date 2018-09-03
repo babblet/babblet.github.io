@@ -9,6 +9,7 @@ const page_project              = document.getElementById('project');
 const page_guides               = document.getElementById('guides');
 const page_archive              = document.getElementById('archive');
 const page_blog                 = document.getElementById('blog');
+const background_image 		= document.querySelector('.background-image');
 
 export const startTransition = (state, id) => {
     top_page__navigation.setAttribute('data-state', state);
@@ -34,6 +35,11 @@ export const bindNavigationButtons = () => {
         const id = e.target.getAttribute('id');
         startTransition('false', id);
     });
+}
+
+export const setBackgroundImage = () => {
+    	var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	console.log("Viewport Height =", h);
 }
 
 export const listen = () => {
