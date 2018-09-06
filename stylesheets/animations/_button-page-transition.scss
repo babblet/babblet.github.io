@@ -61,6 +61,8 @@
     100%{opacity: 0;}
 }
 
+
+//Set Animations
 .button-page-transition[data-state="true"] {
     animation-fill-mode: forwards;
     opacity: 0

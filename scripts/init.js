@@ -2,4 +2,4 @@ import * as util from './util.js';
 
 util.listen();
 util.bindNavigationButtons();
-util.setBackgroundImage();
+setTimeout(util.setBackgroundImage(), 1000);

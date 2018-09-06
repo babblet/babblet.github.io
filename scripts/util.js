@@ -9,7 +9,6 @@ const page_project              = document.getElementById('project');
 const page_guides               = document.getElementById('guides');
 const page_archive              = document.getElementById('archive');
 const page_blog                 = document.getElementById('blog');
-const background_image 		    = document.querySelector('.background-image');
 
 export const startTransition = (state, id) => {
     top_page__navigation.setAttribute('data-state', state);
@@ -38,9 +37,10 @@ export const bindNavigationButtons = () => {
 }
 
 export const setBackgroundImage = () => {
+    const background_image = document.getElementById('background-image');
     let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    console.log(width, background_image.width);
-    background_image.setAttribute("style", "left:" + (((width - background_image.width)/2) - 20) + "px;");
+    console.log(width, 16*background_image.height/9)
+    background_image.setAttribute("style", "left:" + (((width - 16*(background_image.height/10))/2) - 20) + "px;"); //background is 16:9 ratio
 }
 
 export const listen = () => {
