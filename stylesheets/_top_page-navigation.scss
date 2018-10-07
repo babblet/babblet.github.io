@@ -32,7 +32,7 @@ $button_width: 170px;
 
             position: absolute;
             left: $section_middle_point;
-            #project, #blog, #guides, #archive {
+            #projects, #blog, #guides, #archive {
                 width: $button_width;
                 height: $nav_height;
 
@@ -94,7 +94,7 @@ $button_width: 170px;
 
             }
             
-            #project, #archive {
+            #projects, #archive {
                 left: 0;
             }
             #guides, #blog  {
@@ -151,7 +151,7 @@ $button_width: 170px;
 .top_page__navigation {
     nav {
         .nav-container-1, .nav-container-2 {
-            #project, #blog, #guides, #archive {
+            #projects, #blog, #guides, #archive {
                 a {
                     transition-duration: 0.25s;
                     transition-property: all;

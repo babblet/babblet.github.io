@@ -172,7 +172,7 @@
                     left: 0;
                     
                     margin-bottom: 10px;
-                    height: 350px;
+                    height: 80px;
                     background-color: $background-color;
                     vertical-align: middle;
                     box-shadow: 2px 2px 3px 0px black;
@@ -193,23 +193,62 @@
                 }
             }
 
-	    .column {
-	    	.content-frame {
-			color: $base-color-1;
-			
-			.content-header {
-				position: relative;
-				top: 0;
-				left: 0;
-				
-				box-shadow: 0;
-					
-				text-align: center;
-				width: 100%;
-				height: 20%;	
-			}
-		}
-	    }
+	        .column {
+	            .content-frame {
+		       	    color: $base-color-1;
+                    
+		    	    .content-header {
+		    	    	position: absolute;
+		    	    	top: 25px;
+		    	    	left: 0;
+                        
+                        width: calc(100% - 80px);
+		    	    	height: 80px;
+
+		    	    	box-shadow: 0;
+
+                        font-size: 160%;
+		    	    	text-align: center;
+                    }
+
+                    .content-expand-arrow {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 80px;
+                        height: 80px;
+                
+                        border-style: solid;
+                        border-width: 1px;
+                        border-color: transparent;
+                    }
+                    .content-expand-arrow::before, .content-expand-arrow::after {
+                        content: "";
+                        height: 0;
+
+                        position: absolute;
+                        top: calc(50% - 2px);
+
+                        border-color: transparent;
+                        border-top-style: solid;
+                        border-top-color: $base-color-1;
+                        border-width: 1px;
+                            
+                        background-color: $base-color-1;
+                    }
+
+                    .content-expand-arrow::before {
+                        left: 5px;
+                        width: 41px;
+                        transform: rotate(45deg);
+                    }
+                    .content-expand-arrow::after {
+                        right: 4px;
+                        width: 40px;
+                        transform: rotate(-45deg);
+                    }
+	            }
+	        }
         }
     }
 }
