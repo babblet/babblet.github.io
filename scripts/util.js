@@ -10,7 +10,7 @@ const page_guides               = document.getElementById('guides');
 const page_archive              = document.getElementById('archive');
 const page_blog                 = document.getElementById('blog');
 
-export const startTransition = (state, id) => {
+const startTransition = (state, id) => {
     top_page__navigation.setAttribute('data-state', state);
     top_page__background.setAttribute('data-state', state);
     top_page__sidebar.setAttribute('data-state', state);
@@ -18,7 +18,21 @@ export const startTransition = (state, id) => {
     if(id !== 'back-button') page.querySelector('.sub-section').innerHTML = id.toUpperCase();
 } 
 
+export const bindSidebarButtons = () => {
+    console.log("Binding sidebar buttons");
+    const buttons = document.querySelectorAll('.top_page__sidebar .shadow section');
+    buttons.forEach((nav, key)=> {
+        nav.addEventListener('click', e => {
+            e.preventDefault();
+            console.log(e.target.getAttribute("id"));
+            //window.location = e.target.id;
+        });
+    });
+    console.log("Binding complete");
+}
+
 export const bindNavigationButtons = () => {
+    console.log("Binding navigations buttons");
     const buttons = document.querySelectorAll('.top_page__navigation .button');
     buttons.forEach((nav, key) => {
         nav.addEventListener('click', e => {
@@ -34,6 +48,34 @@ export const bindNavigationButtons = () => {
         const id = e.target.getAttribute('id');
         startTransition('false', id);
     });
+    console.log("Binding complete");
+}
+
+export const bindContentButtons = () => {
+    console.log("Binding content buttons");
+    
+    const contentColumns = document.querySelectorAll('.page .page-frame .column');
+    console.log(contentColumns);
+
+    contentColumns.forEach((col, a) => {
+        let buttons = col.querySelectorAll('.content-frame .content-expand-arrow');
+        buttons.forEach((nav, b) => {
+            nav.addEventListener('click', e => {
+                e.preventDefault();
+                if(e.target.parentElement.getAttribute("data-state") == "closed"){
+                    e.target.parentElement.setAttribute("data-state","open");
+                } else {
+                    e.target.parentElement.setAttribute("data-state","open");
+                    if(a == 0){
+                        contentColumns[1].children[b].setAttribute("data-state", "under-open");
+                    } else {
+                        contentColumns[0].childElement[b].setAttribute("data-state", "under-open");
+                    }
+                }
+            });
+        });
+    });
+    console.log("Binding complete");
 }
 
 export const setBackgroundImage = () => {

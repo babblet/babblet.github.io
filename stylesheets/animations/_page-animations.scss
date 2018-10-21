@@ -45,3 +45,23 @@
         }
     }
 }
+
+.page{
+    .page-frame {
+        .row {
+            .column {
+                .content-frame[data-state="open"]{
+                    width: 800px;
+                }
+
+                .content-frame[data-state="under-open"]{
+                    margin-top: 100px;
+                }
+                
+                .content-frame:nth-child(1)[data-state="under-open"]{
+                    margin-top: 90px;
+                }
+            }
+        }
+    }
+}

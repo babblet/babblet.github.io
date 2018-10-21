@@ -4,6 +4,6 @@ module.exports = {
   entry: './scripts/init.js',
   output: {
     filename: 'init.min.js',
-    path: '/Users/Fabian/WebServer'
+    path: '/srv/http/scripts/'
   }
 };
