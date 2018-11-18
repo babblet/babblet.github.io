@@ -66,6 +66,15 @@
                 .content-frame:nth-child(1)[data-state="under-open"]{
                     margin-top: 90px;
                 }
+
+                .content-frame[data-state="open-right"], .content-frame[data-state="open-left"]{
+                    .content-expand-arrow::before {
+                        transform: rotate(-45deg) !important;   
+                    }
+                    .content-expand-arrow::after {
+                        transform: rotate(45deg) !important;
+                    }
+                }
             }
         }
     }
