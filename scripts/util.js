@@ -59,18 +59,27 @@ export const bindContentButtons = () => {
 
     contentColumns.forEach((col, a) => {
         let buttons = col.querySelectorAll('.content-frame .content-expand-arrow');
+        console.log(buttons);
         buttons.forEach((nav, b) => {
             nav.addEventListener('click', e => {
                 e.preventDefault();
-                if(e.target.parentElement.getAttribute("data-state") == "closed"){
-                    e.target.parentElement.setAttribute("data-state","open");
-                } else {
+                if(e.target.parentElement.getAttribute("data-state") != "open"){
                     e.target.parentElement.setAttribute("data-state","open");
                     if(a == 0){
                         contentColumns[1].children[b].setAttribute("data-state", "under-open");
                     } else {
                         contentColumns[0].childElement[b].setAttribute("data-state", "under-open");
                     }
+                    console.log("Opening content");
+                } else {
+                    e.target.parentElement.setAttribute("data-state","closed");
+                    if(a == 0) {
+                        contentColumns[1].children[b].setAttribute("data-state", "default");
+                    }
+                    else {
+                        contentColumns[0].childElement[b].setAttribute("data-state", "default");
+                    }
+                    console.log("Closing content")
                 }
             });
         });
