@@ -63,12 +63,14 @@ export const bindContentButtons = () => {
         buttons.forEach((nav, b) => {
             nav.addEventListener('click', e => {
                 e.preventDefault();
-                if(e.target.parentElement.getAttribute("data-state") != "open"){
-                    e.target.parentElement.setAttribute("data-state","open");
+                let open = (e.target.parentElement.parentElement.id == "column-left" ? "open-right" : "open-left");
+                console.log(open);
+                if(e.target.parentElement.getAttribute("data-state") != open){
+                    e.target.parentElement.setAttribute("data-state", open);
                     if(a == 0){
                         contentColumns[1].children[b].setAttribute("data-state", "under-open");
                     } else {
-                        contentColumns[0].childElement[b].setAttribute("data-state", "under-open");
+                        contentColumns[0].children[b].setAttribute("data-state", "under-open");
                     }
                     console.log("Opening content");
                 } else {
@@ -77,7 +79,7 @@ export const bindContentButtons = () => {
                         contentColumns[1].children[b].setAttribute("data-state", "default");
                     }
                     else {
-                        contentColumns[0].childElement[b].setAttribute("data-state", "default");
+                        contentColumns[0].children[b].setAttribute("data-state", "default");
                     }
                     console.log("Closing content")
                 }

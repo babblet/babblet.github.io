@@ -50,8 +50,13 @@
     .page-frame {
         .row {
             .column {
-                .content-frame[data-state="open"]{
+                .content-frame[data-state="open-right"]{
                     width: 800px;
+                }
+                
+                .content-frame[data-state="open-left"]{
+                    width: 800px;
+                    left: -405px;
                 }
 
                 .content-frame[data-state="under-open"]{
