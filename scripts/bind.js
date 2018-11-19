@@ -17,7 +17,7 @@ export const contentButtons = () => {
                 e.preventDefault();
                 let open = (e.target.parentElement.parentElement.id == "column-left" ? "open-right" : "open-left");
                 console.log(open);
-                if(e.target.parentElement.getAttribute("data-state") != "closed"){
+                if(e.target.parentElement.getAttribute("data-state") != open){
                     e.target.parentElement.setAttribute("data-state", open);
                     if(a == 0){
                         contentColumns[1].children[b].setAttribute("data-state", "under-open");
