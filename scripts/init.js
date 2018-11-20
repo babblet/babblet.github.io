@@ -12,7 +12,6 @@ export const backgroundImage = () => {
 
 _listener.listen();
 //bind.sidebarButtons();
+_bind.content();
 _bind.navigationButtons();
-_bind.contentButtons();
-//get.json("./content", content.insertContent());
 setTimeout(backgroundImage(), 1000);

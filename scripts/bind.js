@@ -3,40 +3,22 @@ import * as _content from "./content.js"
 import * as _get from "./get.js"
 
 //Make this shit more readable...
-export const contentButtons = () => {
-    console.log("Binding content buttons");
-    
-    const contentColumns = document.querySelectorAll(".page .page-frame .column");
-    console.log(contentColumns);
-
-    contentColumns.forEach((col, a) => {
-        let buttons = col.querySelectorAll(".content-frame .content-expand-arrow");
-        console.log(buttons);
-        buttons.forEach((nav, b) => {
-            nav.addEventListener("click", e => {
-                e.preventDefault();
-                let open = (e.target.parentElement.parentElement.id == "column-left" ? "open-right" : "open-left");
-                console.log(open);
-                if(e.target.parentElement.getAttribute("data-state") != open){
-                    e.target.parentElement.setAttribute("data-state", open);
-                    if(a == 0){
-                        contentColumns[1].children[b].setAttribute("data-state", "under-open");
-                    } else {
-                        contentColumns[0].children[b].setAttribute("data-state", "under-open");
-                    }
-                    console.log("Opening opening");
-                } else {
-                    e.target.parentElement.setAttribute("data-state","closed");
-                    if(a == 0) {
-                        contentColumns[1].children[b].setAttribute("data-state", "default");
-                    }
-                    else {
-                        contentColumns[0].children[b].setAttribute("data-state", "default");
-                    }
-                    console.log("Closing content")
-                }
-            });
-        });
+export const contentButton = (id) => {
+    console.log("Binding content button " + id);
+    document.getElementById(id).addEventListener("click", e => {
+        e.preventDefault();
+        let open = (e.target.parentElement.parentElement.id == "column-left" ? "open-right" : "open-left");
+        if(e.target.parentElement.getAttribute("data-state") != open){
+            e.target.parentElement.setAttribute("data-state", open);
+            if(a == 0) contentColumns[1].children[b].setAttribute("data-state", "under-open");
+            else       contentColumns[0].children[b].setAttribute("data-state", "under-open");
+            console.log("Opening opening");
+        } else {
+            e.target.parentElement.setAttribute("data-state","closed");
+            if(a == 0) contentColumns[1].children[b].setAttribute("data-state", "default");
+            else       contentColumns[0].children[b].setAttribute("data-state", "default");
+            console.log("Closing content")
+        }
     });
     console.log("Binding complete");
 }
