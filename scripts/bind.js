@@ -1,7 +1,6 @@
 import * as _animation from "./animation.js"
 import * as _content from "./content.js"
 import * as _get from "./get.js"
-
 //Make this shit more readable...
 export const contentButton = (id) => {
     console.log("Binding content button " + id);
@@ -29,16 +28,32 @@ export const navigationButtons = () => {
     buttons.forEach((nav, key) => {
         nav.addEventListener("click", e => {
             e.preventDefault();
-            const id = e.target.parentElement.getAttribute("id");
-            _animation.startTransition("true", id);
+            
+            _animation.startTransition("true");
+
+            let id = e.target.parentElement.getAttribute("id");
+            document.querySelector(".page").setAttribute("content", id);
+            document.getElementById(id + "-page").style.display = "block";
         });
     });
 
     const backButton = document.querySelector(".back-button");
     backButton.addEventListener("click", e => {
         e.preventDefault();
-        const id = e.target.getAttribute("id");
-        _animation.startTransition("false", id);
+        
+        _animation.startTransition("false");
+
+        let id = document.querySelector(".page").getAttribute("content");
+        let page = document.getElementById(id + "-page");
+        page.style.display = "none";
+
+        let content = page.querySelectorAll(".page .page-frame .content-frame");
+        for(let index in content){
+            console.log(content[index]);
+            content[index].setAttribute("data-state", "closed");
+        }
+
+        
     });
     console.log("Binding complete");
 }

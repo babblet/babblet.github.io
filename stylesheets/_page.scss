@@ -123,6 +123,9 @@
             box-sizing: border-box;
         }
 
+        #projects-page, #blog-page, #guides-page, #archive-page {
+            display: none;
+        }
         
 
         .sub-section::before {

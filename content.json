@@ -1,5 +1,5 @@
 {
-    "projects": ["Feed-Forward-Neural-Network","MachineLearning", "Tetris"],
-    "guides": ["HTC A9s root", "HLS livestreaming server usable with OBS"],
-    "blog": ["Creating a livestreaming server", "The road to gaming addiction"]
+    "projects": [{ "name":"Feed-Forward-Neural-Network", "ab":"FFNN"},{"name":"MachineLearning","ab":"M-Learning"}, {"name":"Tetris","ab":"Tetris"}],
+    "guides": [{"name":"How to root the HTC A9s", "ab":"Root HTC A9s"}, {"name":"HLS livestreaming server usable with OBS", "ab":"HLS and OBS"}],
+    "blog": [{"name":"Creating a livestreaming server", "ab":"Livestream server"}]
 }
