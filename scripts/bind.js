@@ -4,19 +4,31 @@ import * as _get from "./get.js"
 //Make this shit more readable...
 export const contentButton = (id) => {
     console.log("Binding content button " + id);
-    document.getElementById(id).addEventListener("click", e => {
+
+    document.getElementById(id).querySelector(".content-expand-arrow").addEventListener("click", e => {
         e.preventDefault();
+
         let open = (e.target.parentElement.parentElement.id == "column-left" ? "open-right" : "open-left");
+
         if(e.target.parentElement.getAttribute("data-state") != open){
-            e.target.parentElement.setAttribute("data-state", open);
-            if(a == 0) contentColumns[1].children[b].setAttribute("data-state", "under-open");
-            else       contentColumns[0].children[b].setAttribute("data-state", "under-open");
-            console.log("Opening opening");
+
+            if(true) {
+
+            } else {
+
+            }
+            e.target.parentElement.querySelector(".content-expanded").setAttribute("data-state" , "show");
+            e.target.parentElement.setAttribute("style", "height: 300px; width:800px;");
+
+            console.log("Opening content");
         } else {
             e.target.parentElement.setAttribute("data-state","closed");
-            if(a == 0) contentColumns[1].children[b].setAttribute("data-state", "default");
-            else       contentColumns[0].children[b].setAttribute("data-state", "default");
-            console.log("Closing content")
+            if(true) {
+            } else {
+            }
+            e.target.parentElement.querySelector(".content-expanded").setAttribute("data-state" , "hide");
+            
+            console.log("Closing content");
         }
     });
     console.log("Binding complete");
@@ -48,9 +60,10 @@ export const navigationButtons = () => {
         page.style.display = "none";
 
         let content = page.querySelectorAll(".page .page-frame .content-frame");
-        for(let index in content){
-            console.log(content[index]);
+        for(let index in content) {
             content[index].setAttribute("data-state", "closed");
+            content[index].setAttribute("style", "height: 80px; width: 400px;");
+            if(index == content.length - 1) break;
         }
 
         

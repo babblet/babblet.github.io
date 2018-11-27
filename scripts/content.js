@@ -7,9 +7,9 @@ function inserting(category, arr) {
         for(let index in arr){
 
             let html_temp = `
-                <div class="content-frame">
+                <div class="content-frame" id="` + arr[index].name + `">
                     <div class="content-header">` + arr[index].ab + `</div>
-                    <div class="content-expand-arrow" id="` + arr[index].name + `"></div>
+                    <div class="content-expand-arrow"></div>
                     <div class="content-expanded">
                     </div>
                 </div>
@@ -20,7 +20,7 @@ function inserting(category, arr) {
             else             side = "right";
             $.get("./" + category + "/" + arr[index].name + "/index.html", function(data) {
                 $("#" + category + "-page #column-" + side).append(html_temp);
-                $("#" + arr[index].name).append(data.toString());
+                $("#" + arr[index].name + " .content-expanded").append(data.toString());
                 _bind.contentButton(arr[index].name);
 
             });

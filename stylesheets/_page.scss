@@ -199,7 +199,8 @@
 	        .column {
 	            .content-frame {
 		       	    color: $base-color-1;
-                    
+                    width: 395px;
+                       
 		    	    .content-header {
 		    	    	position: absolute;
 		    	    	top: 25px;
@@ -249,6 +250,12 @@
                         right: 4px;
                         width: 40px;
                         transform: rotate(-45deg);
+                    }
+                    .content-expanded {
+                        position: absolute;
+                        top: 80px;
+                        left: 0;
+                        width: 100%;
                     }
 	            }
 	        }

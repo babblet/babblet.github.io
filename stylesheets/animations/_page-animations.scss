@@ -50,6 +50,10 @@
     .page-frame {
         .row {
             .column {
+                .content-frame {
+                    transition: height 0.3s ease, width 0.3s 0.3s ease;
+                }
+
                 .content-frame[data-state="open-right"]{
                     width: 800px;
                 }

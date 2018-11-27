@@ -1,5 +1,5 @@
 {
-    "projects": [{ "name":"Feed-Forward-Neural-Network", "ab":"FFNN"},{"name":"MachineLearning","ab":"M-Learning"}, {"name":"Tetris","ab":"Tetris"}],
+    "projects": [{ "name":"Feed-Forward-Neural-Network", "ab":"FFNN"},{"name":"bubdm","ab":"bubdm"}, {"name":"Tetris","ab":"Tetris"}],
     "guides": [{"name":"How to root the HTC A9s", "ab":"Root HTC A9s"}, {"name":"HLS livestreaming server usable with OBS", "ab":"HLS and OBS"}],
     "blog": [{"name":"Creating a livestreaming server", "ab":"Livestream server"}]
 }
