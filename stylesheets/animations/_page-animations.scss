@@ -50,23 +50,12 @@
     .page-frame {
         .row {
             .column {
-                .content-frame[data-state="open-right"]{
-                    width: 800px;
+                .content-frame[data-state="down"] {
+                    transition: margin-top 0.3s ease;        
                 }
-                
-                .content-frame[data-state="open-left"]{
-                    width: 800px;
-                    left: -405px;
+                .content-frame[data-state="up"] {
+                    transition: margin-top 0.3s 0.3s ease;        
                 }
-
-                .content-frame[data-state="under-open"]{
-                    margin-top: 100px;
-                }
-                
-                .content-frame:nth-child(1)[data-state="under-open"]{
-                    margin-top: 90px;
-                }
-
                 .content-frame[data-state="open-right"], .content-frame[data-state="open-left"]{
                     .content-expand-arrow::before {
                         transform: rotate(-45deg) !important;   
@@ -77,7 +66,8 @@
                 }
             }
             #column-left {
-                .content-frame[data-state="open"] {
+                .content-frame[data-state="open"]{
+                    width: 800px;
                     transition: height 0.3s ease, width 0.3s 0.3s ease;
                 }
                 .content-frame[data-state="closed"] {
@@ -85,12 +75,15 @@
                 }
             }
             #column-right {
-                .content-frame[data-state="open"] {
-                    transition: height 0.3s ease, width 0.3s 0.3s ease, left 0.3s 0.3s ease;
+                .content-frame[data-state="open"]{
+                    width: 800px;
+                    left: -405px;
+                    transition: height 0.3s ease, width 0.3s 0.3s ease, left 0.3s 0.3s ease, margin-top 0.3s ease;
                 }
                 .content-frame[data-state="closed"] {
-                    transition: height 0.3s 0.3s ease, width 0.3s ease, left 0.3s ease;
+                    transition: height 0.3s 0.3s ease, width 0.3s ease, left 0.3s ease, margin-top 0.3s 0.3s ease;
                 }
+
             }
         }
     }

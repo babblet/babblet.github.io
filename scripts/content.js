@@ -2,7 +2,6 @@ import * as _bind from "./bind.js"
 
 function inserting(category, arr) {
 
-
     $(document).ready(function(){
         for(let index in arr){
 
