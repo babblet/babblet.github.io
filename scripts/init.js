@@ -9,7 +9,7 @@ export const backgroundImage = () => {
     background_image.setAttribute("style", "left:" + (((width - 16*(background_image.height/10))/2) - 20) + "px;"); //16:9 ratio
 }
 
-
+window.onresize = backgroundImage;
 _listener.listen();
 //bind.sidebarButtons();
 _bind.content();
