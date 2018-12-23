@@ -2,6 +2,7 @@ import * as _animation from "./animation.js"
 import * as _content from "./content.js"
 import * as _get from "./get.js"
 //Make this shit more readable...
+//Move css away from js
 export const contentButton = (id) => {
     console.log("Binding content button " + id);
     
@@ -21,17 +22,20 @@ export const contentButton = (id) => {
         let side_element_column = parent.parentElement.id == "column-right" ? "#column-left" :  "#column-right";
         let side_element = parent.parentElement.parentElement.querySelector(side_element_column).querySelectorAll(".content-frame")[element_index];
 
-        if(parent.getAttribute("data-state") != "open"){
+        if(parent.getAttribute("data-state") != "open") {
             parent.setAttribute("data-state","open");
             parent.querySelector(".content-expanded").setAttribute("data-state" , "show");
             if(parent.parentElement.id == "column-left"){
-                parent.setAttribute("style", "height: 300px; width:800px;");
+                parent.setAttribute("style", "height: " + (parent.querySelector(".content-expanded").offsetHeight + 80) + "px; width:800px; z-index: 1001;");
             } else {
-                parent.setAttribute("style", "height: 300px; width:800px; left: -405px;");
+                parent.setAttribute("style", "height: " + (parent.querySelector(".content-expanded").offsetHeight + 80) + "px; width:800px; z-index: 1001; left: -405px;");
             }
-            side_element.setAttribute("data-state", "down");
-            side_element.setAttribute("style", "margin-top: 310px");
-            console.log("Opening content");
+            if(side_element != null) {
+                side_element.setAttribute("data-state", "down");
+                side_element.setAttribute("style", "margin-top: " + (parent.querySelector(".content-expanded").offsetHeight + 90) +"px");
+            }
+            parent.querySelector(".content-expanded").setAttribute("style", "opacity: 1.0 !important;");
+            console.log("Opening content")
         } else {
             parent.setAttribute("data-state","closed");
             parent.querySelector(".content-expanded").setAttribute("data-state" , "hide");
@@ -41,8 +45,11 @@ export const contentButton = (id) => {
             } else {
                 parent.setAttribute("style", "height: 80px; width:100%; left: 0px;");
             }
-            side_element.setAttribute("data-state", "up");
-            side_element.setAttribute("style", "margin-top: 0px");
+            if(side_element != null) {
+                side_element.setAttribute("data-state", "up");
+                side_element.setAttribute("style", "margin-top: 0px");
+            }
+            parent.querySelector(".content-expanded").setAttribute("style", "opacity: 0.0 !important;");
             console.log("Closing content");
         }
     });

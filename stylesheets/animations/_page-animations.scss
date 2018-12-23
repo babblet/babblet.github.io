@@ -50,6 +50,10 @@
     .page-frame {
         .row {
             .column {
+                .content-frame {
+                    z-index: 1000;
+                }
+
                 .content-frame[data-state="down"] {
                     transition: margin-top 0.3s ease;        
                 }
@@ -63,6 +67,10 @@
                     .content-expand-arrow::after {
                         transform: rotate(45deg) !important;
                     }
+                }
+                .content-expanded {
+                    display: block;
+                    opacity: 0 !important;
                 }
             }
             #column-left {
