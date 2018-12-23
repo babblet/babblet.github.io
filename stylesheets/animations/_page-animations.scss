@@ -50,10 +50,6 @@
     .page-frame {
         .row {
             .column {
-                .content-frame {
-                    transition: height 0.3s ease, width 0.3s 0.3s ease;
-                }
-
                 .content-frame[data-state="open-right"]{
                     width: 800px;
                 }
@@ -78,6 +74,22 @@
                     .content-expand-arrow::after {
                         transform: rotate(45deg) !important;
                     }
+                }
+            }
+            #column-left {
+                .content-frame[data-state="open"] {
+                    transition: height 0.3s ease, width 0.3s 0.3s ease;
+                }
+                .content-frame[data-state="closed"] {
+                    transition: height 0.3s 0.3s ease, width 0.3s ease;
+                }
+            }
+            #column-right {
+                .content-frame[data-state="open"] {
+                    transition: height 0.3s ease, width 0.3s 0.3s ease, left 0.3s 0.3s ease;
+                }
+                .content-frame[data-state="closed"] {
+                    transition: height 0.3s 0.3s ease, width 0.3s ease, left 0.3s ease;
                 }
             }
         }

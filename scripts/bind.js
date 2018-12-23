@@ -8,25 +8,24 @@ export const contentButton = (id) => {
     document.getElementById(id).querySelector(".content-expand-arrow").addEventListener("click", e => {
         e.preventDefault();
 
-        let open = (e.target.parentElement.parentElement.id == "column-left" ? "open-right" : "open-left");
 
-        if(e.target.parentElement.getAttribute("data-state") != open){
+        if(e.target.parentElement.getAttribute("data-state") != "open"){
 
-            if(true) {
-
-            } else {
-
-            }
+            e.target.parentElement.setAttribute("data-state","open");
             e.target.parentElement.querySelector(".content-expanded").setAttribute("data-state" , "show");
-            e.target.parentElement.setAttribute("style", "height: 300px; width:800px;");
-
+            if(e.target.parentElement.parentElement.id == "column-left")
+                e.target.parentElement.setAttribute("style", "height: 300px; width:800px;");
+            else 
+                e.target.parentElement.setAttribute("style", "height: 300px; width:800px; left: -405px;");
             console.log("Opening content");
         } else {
             e.target.parentElement.setAttribute("data-state","closed");
-            if(true) {
-            } else {
-            }
             e.target.parentElement.querySelector(".content-expanded").setAttribute("data-state" , "hide");
+            e.target.parentElement.setAttribute("style", "height: 80px; width:100%;");
+            if(e.target.parentElement.parentElement.id == "column-left")
+                e.target.parentElement.setAttribute("style", "height: 80px; width:100%;");
+            else 
+                e.target.parentElement.setAttribute("style", "height: 80px; width:100%; left: 0px;");
             
             console.log("Closing content");
         }
