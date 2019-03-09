@@ -1,0 +1,23 @@
+General Specifications
+	All variables to use lower_case_naming
+	All funtions use camelCaseNaming
+
+General Content
+	Check how Github API works
+	Check if Github Markup has to be implemented for Projects with Github README.md Content
+	Implement fetching of github repos (AJAX GET), how to get repo list from users: https://developer.github.com/v3/repos/#list-your-repositories
+	Get content of file from repo by formating the repo name and file name into https://raw.githubusercontent.com/bablet/{repo name}/master/{file}
+
+Get.js
+	Modify json implementation to get github README.md instead of hard json
+
+Content.js
+	insert:
+		Remove json implementation, Fix for README.md implementation from get.js
+
+	insertContent: 
+		Remove json implementation, Fix for inserting README.md content
+
+Bind.js 
+	content:
+		Remove json implementation, Add raw README.md link

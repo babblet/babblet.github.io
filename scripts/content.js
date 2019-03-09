@@ -1,5 +1,6 @@
 import * as _bind from "./bind.js"
 
+// ### Check get.js
 function inserting(category, arr) {
     $(document).ready(function(){
         for(let index in arr){
@@ -27,6 +28,8 @@ function inserting(category, arr) {
     return true;
 }
 
+
+//### Check get.js, remove json implementation to use raw github README.md file
 export const insert = (json) => {
      for(let category in json) {
         console.log("Inserting", category);
