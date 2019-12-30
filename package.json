@@ -1,0 +1,23 @@
+{
+  "name": "babblet.github.io",
+  "version": "0.0.1",
+  "description": "In Progress",
+  "dependencies": {
+    "http-server": "^0.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node_modules/http-server/bin/http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/babblet/babblet.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/babblet/babblet.github.io/issues"
+  },
+  "homepage": "https://github.com/babblet/babblet.github.io#readme"
+}
