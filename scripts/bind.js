@@ -63,13 +63,13 @@ export const navigationButtons = () => {
 	const buttons = document.querySelectorAll(".top_page__navigation .button");
 	buttons.forEach((nav, key) => {
 		nav.addEventListener("click", e => {
+			console.log("pressed navigation button");
 			e.preventDefault();
-
 			_animation.startTransition("true");
-
 			let id = e.target.parentElement.getAttribute("id");
 			document.querySelector(".page").setAttribute("content", id);
 			document.getElementById(id + "-page").style.display = "block";
+			get_root_content(id)
 		});
 	});
 
@@ -82,15 +82,9 @@ export const navigationButtons = () => {
 		let id = document.querySelector(".page").getAttribute("content");
 		let page = document.getElementById(id + "-page");
 		page.style.display = "none";
-
-		let content = page.querySelectorAll(".page .page-frame .content-frame");
-		for(let index in content) {
-			content[index].setAttribute("data-state", "closed");
-			content[index].setAttribute("style", "height: 80px; width: 100%;");
-			if(index == content.length - 1) break;
-		}
-
-
+		
+		page.querySelector(`#${id}-page .row #column-left`).innerHTML = "";
+		page.querySelector(`#${id}-page .row #column-right`).innerHTML = "";
 	});
 	console.log("Binding complete");
 }
@@ -110,10 +104,10 @@ export const sidebarButtons = () => {
 
 
 // ### Check get.js
-export const content = () => {
+export const get_root_content = (id) => {
 	console.log("Binding content");
 
 	//Get README file instead of json to get live updates from github repo
-	_get.json("./content.json", _content.insert);
+	_get.json(`/content/${id}/map.json`, "json", _content.insert);
 	console.log("Complete binding");
 }

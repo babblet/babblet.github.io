@@ -12,6 +12,5 @@ export const backgroundImage = () => {
 window.onresize = backgroundImage;
 _listener.listen();
 //bind.sidebarButtons();
-_bind.content();
 _bind.navigationButtons();
 setTimeout(backgroundImage(), 1000);

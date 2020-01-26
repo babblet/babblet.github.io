@@ -1,10 +1,10 @@
 //Url example to GET file content: https://raw.githubusercontent.com/bablet/bubdm/master/README.md
 
-export const json = (file_name, data_type, callback) => {
+export const json = (path, data_type, callback) => {
 	$.ajax({
-		async: false,
+		async: true,
 		dataType: data_type,
-		url: file_name,
+		url: path,
 		success: function(data) {
 			console.log("Falling back")
 			callback(data);

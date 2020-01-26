@@ -5,9 +5,13 @@
   "dependencies": {
     "http-server": "^0.12.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
   "scripts": {
-    "start": "node_modules/http-server/bin/http-server",
+    "start": "http-server",
+    "compile": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

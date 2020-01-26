@@ -1,0 +1,17 @@
+{
+    "map": [
+        {
+            "type": "map",
+            "data": {
+                "id": "projects",
+                "path": "projects"
+            }
+        },{
+            "type": "map",
+            "data": {
+                "id": "guides",
+                "path": "guides"
+            }
+        }
+    ]
+}

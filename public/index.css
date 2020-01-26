@@ -430,70 +430,70 @@ main {
   height: calc(200px + 55px * 1);
   top: calc(50% - calc(200px + 55px * 1) / 2);
   left: calc(50% - calc(200px + 55px * 1) / 2 - 5px);
-  transform: rotate(274deg);
+  transform: rotate(307deg);
 }
 .top_page__background div:nth-child(2) {
   width: calc(200px + 55px * 2);
   height: calc(200px + 55px * 2);
   top: calc(50% - calc(200px + 55px * 2) / 2);
   left: calc(50% - calc(200px + 55px * 2) / 2 - 5px);
-  transform: rotate(12deg);
+  transform: rotate(59deg);
 }
 .top_page__background div:nth-child(3) {
   width: calc(200px + 55px * 3);
   height: calc(200px + 55px * 3);
   top: calc(50% - calc(200px + 55px * 3) / 2);
   left: calc(50% - calc(200px + 55px * 3) / 2 - 5px);
-  transform: rotate(188deg);
+  transform: rotate(252deg);
 }
 .top_page__background div:nth-child(4) {
   width: calc(200px + 55px * 4);
   height: calc(200px + 55px * 4);
   top: calc(50% - calc(200px + 55px * 4) / 2);
   left: calc(50% - calc(200px + 55px * 4) / 2 - 5px);
-  transform: rotate(60deg);
+  transform: rotate(134deg);
 }
 .top_page__background div:nth-child(5) {
   width: calc(200px + 55px * 5);
   height: calc(200px + 55px * 5);
   top: calc(50% - calc(200px + 55px * 5) / 2);
   left: calc(50% - calc(200px + 55px * 5) / 2 - 5px);
-  transform: rotate(165deg);
+  transform: rotate(3deg);
 }
 .top_page__background div:nth-child(6) {
   width: calc(200px + 55px * 6);
   height: calc(200px + 55px * 6);
   top: calc(50% - calc(200px + 55px * 6) / 2);
   left: calc(50% - calc(200px + 55px * 6) / 2 - 5px);
-  transform: rotate(289deg);
+  transform: rotate(35deg);
 }
 .top_page__background div:nth-child(7) {
   width: calc(200px + 55px * 7);
   height: calc(200px + 55px * 7);
   top: calc(50% - calc(200px + 55px * 7) / 2);
   left: calc(50% - calc(200px + 55px * 7) / 2 - 5px);
-  transform: rotate(2deg);
+  transform: rotate(224deg);
 }
 .top_page__background div:nth-child(8) {
   width: calc(200px + 55px * 8);
   height: calc(200px + 55px * 8);
   top: calc(50% - calc(200px + 55px * 8) / 2);
   left: calc(50% - calc(200px + 55px * 8) / 2 - 5px);
-  transform: rotate(99deg);
+  transform: rotate(64deg);
 }
 .top_page__background div:nth-child(9) {
   width: calc(200px + 55px * 9);
   height: calc(200px + 55px * 9);
   top: calc(50% - calc(200px + 55px * 9) / 2);
   left: calc(50% - calc(200px + 55px * 9) / 2 - 5px);
-  transform: rotate(96deg);
+  transform: rotate(170deg);
 }
 .top_page__background div:nth-child(10) {
   width: calc(200px + 55px * 10);
   height: calc(200px + 55px * 10);
   top: calc(50% - calc(200px + 55px * 10) / 2);
   left: calc(50% - calc(200px + 55px * 10) / 2 - 5px);
-  transform: rotate(19deg);
+  transform: rotate(29deg);
 }
 .top_page__background div:nth-child(11) {
   width: calc(200px + 55px * 11);
@@ -1247,112 +1247,112 @@ main {
   animation-name: background-rotation;
 }
 .top_page__background .circle:nth-child(1) {
-  animation-duration: 34.01s;
+  animation-duration: 32.15s;
 }
 .top_page__background .circle:nth-child(2) {
-  animation-duration: 38.01s;
+  animation-duration: 38.13s;
 }
 .top_page__background .circle:nth-child(3) {
-  animation-duration: 39.13s;
-}
-.top_page__background .circle:nth-child(4) {
-  animation-duration: 31.14s;
-}
-.top_page__background .circle:nth-child(5) {
-  animation-duration: 38.85s;
-}
-.top_page__background .circle:nth-child(6) {
-  animation-duration: 32.1s;
-}
-.top_page__background .circle:nth-child(7) {
-  animation-duration: 36.27s;
-}
-.top_page__background .circle:nth-child(8) {
-  animation-duration: 38.42s;
-}
-.top_page__background .circle:nth-child(9) {
-  animation-duration: 31.46s;
-}
-.top_page__background .circle:nth-child(10) {
-  animation-duration: 35.19s;
-}
-.top_page__background .circle:nth-child(11) {
-  animation-duration: 33.44s;
-}
-.top_page__background .circle:nth-child(12) {
-  animation-duration: 38.31s;
-}
-.top_page__background .circle:nth-child(13) {
-  animation-duration: 35.76s;
-}
-.top_page__background .circle:nth-child(14) {
-  animation-duration: 30.46s;
-}
-.top_page__background .circle:nth-child(15) {
-  animation-duration: 39.5s;
-}
-.top_page__background .circle:nth-child(16) {
-  animation-duration: 34.39s;
-}
-.top_page__background .circle:nth-child(17) {
-  animation-duration: 39.76s;
-}
-.top_page__background .circle:nth-child(18) {
-  animation-duration: 36.94s;
-}
-.top_page__background .circle:nth-child(19) {
-  animation-duration: 30.25s;
-}
-.top_page__background .circle:nth-child(20) {
-  animation-duration: 39.23s;
-}
-.top_page__background .circle:nth-child(21) {
-  animation-duration: 39.12s;
-}
-.top_page__background .circle:nth-child(22) {
-  animation-duration: 36.2s;
-}
-.top_page__background .circle:nth-child(23) {
-  animation-duration: 39.79s;
-}
-.top_page__background .circle:nth-child(24) {
-  animation-duration: 35.23s;
-}
-.top_page__background .circle:nth-child(25) {
-  animation-duration: 33.56s;
-}
-.top_page__background .circle:nth-child(26) {
-  animation-duration: 37.44s;
-}
-.top_page__background .circle:nth-child(27) {
-  animation-duration: 34.15s;
-}
-.top_page__background .circle:nth-child(28) {
-  animation-duration: 38.17s;
-}
-.top_page__background .circle:nth-child(29) {
-  animation-duration: 36.11s;
-}
-.top_page__background .circle:nth-child(30) {
-  animation-duration: 38.32s;
-}
-.top_page__background .circle:nth-child(31) {
-  animation-duration: 37.35s;
-}
-.top_page__background .circle:nth-child(32) {
-  animation-duration: 31.39s;
-}
-.top_page__background .circle:nth-child(33) {
   animation-duration: 30.07s;
 }
+.top_page__background .circle:nth-child(4) {
+  animation-duration: 31.96s;
+}
+.top_page__background .circle:nth-child(5) {
+  animation-duration: 37.01s;
+}
+.top_page__background .circle:nth-child(6) {
+  animation-duration: 36.78s;
+}
+.top_page__background .circle:nth-child(7) {
+  animation-duration: 30.45s;
+}
+.top_page__background .circle:nth-child(8) {
+  animation-duration: 34.93s;
+}
+.top_page__background .circle:nth-child(9) {
+  animation-duration: 34.23s;
+}
+.top_page__background .circle:nth-child(10) {
+  animation-duration: 35.3s;
+}
+.top_page__background .circle:nth-child(11) {
+  animation-duration: 32.91s;
+}
+.top_page__background .circle:nth-child(12) {
+  animation-duration: 37.8s;
+}
+.top_page__background .circle:nth-child(13) {
+  animation-duration: 30.05s;
+}
+.top_page__background .circle:nth-child(14) {
+  animation-duration: 36.87s;
+}
+.top_page__background .circle:nth-child(15) {
+  animation-duration: 36.93s;
+}
+.top_page__background .circle:nth-child(16) {
+  animation-duration: 36.69s;
+}
+.top_page__background .circle:nth-child(17) {
+  animation-duration: 34.08s;
+}
+.top_page__background .circle:nth-child(18) {
+  animation-duration: 39.81s;
+}
+.top_page__background .circle:nth-child(19) {
+  animation-duration: 37.95s;
+}
+.top_page__background .circle:nth-child(20) {
+  animation-duration: 34.55s;
+}
+.top_page__background .circle:nth-child(21) {
+  animation-duration: 37.54s;
+}
+.top_page__background .circle:nth-child(22) {
+  animation-duration: 36.61s;
+}
+.top_page__background .circle:nth-child(23) {
+  animation-duration: 30.68s;
+}
+.top_page__background .circle:nth-child(24) {
+  animation-duration: 38.96s;
+}
+.top_page__background .circle:nth-child(25) {
+  animation-duration: 34.6s;
+}
+.top_page__background .circle:nth-child(26) {
+  animation-duration: 30.25s;
+}
+.top_page__background .circle:nth-child(27) {
+  animation-duration: 32.95s;
+}
+.top_page__background .circle:nth-child(28) {
+  animation-duration: 37.61s;
+}
+.top_page__background .circle:nth-child(29) {
+  animation-duration: 37.71s;
+}
+.top_page__background .circle:nth-child(30) {
+  animation-duration: 37.78s;
+}
+.top_page__background .circle:nth-child(31) {
+  animation-duration: 35.38s;
+}
+.top_page__background .circle:nth-child(32) {
+  animation-duration: 34.98s;
+}
+.top_page__background .circle:nth-child(33) {
+  animation-duration: 33.62s;
+}
 .top_page__background .circle:nth-child(34) {
-  animation-duration: 31.99s;
+  animation-duration: 36.04s;
 }
 .top_page__background .circle:nth-child(35) {
-  animation-duration: 35.5s;
+  animation-duration: 36.42s;
 }
 .top_page__background .circle:nth-child(36) {
-  animation-duration: 38.46s;
+  animation-duration: 31.45s;
 }
 
 @keyframes page-transition-in-nav {
@@ -1601,7 +1601,6 @@ main {
 .page .page-frame .row .column .content-expanded {
   display: block;
   opacity: 0 !important;
-  transition: opacity 1s linear;
 }
 .page .page-frame .row #column-left .content-frame[data-state=open] {
   width: 800px;
