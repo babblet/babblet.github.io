@@ -1,0 +1,49 @@
+@keyframes background-rotation {
+    0%{transform: rotate(0deg) translateZ(0);}
+    100%{transform: rotate(360deg) translateZ(0);}
+}
+
+.top_page__background {
+    .circle {
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-name: background-rotation;
+    }
+
+    .circle:nth-child(1) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(2) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(3) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(4) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(5) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(6) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(7) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(8) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(9) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(10) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(11) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(12) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(13) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(14) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(15) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(16) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(17) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(18) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(19) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(20) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(21) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(22) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(23) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(24) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(25) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(26) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(27) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(28) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(29) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(30) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(31) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(32) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(33) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(34) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(35) {animation-duration: random(1000)/100 + 30 + s;}
+    .circle:nth-child(36) {animation-duration: random(1000)/100 + 30 + s;}
+}

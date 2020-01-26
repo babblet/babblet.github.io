@@ -1,0 +1,26 @@
+{
+    "projects": [
+        {
+            "type": "content",
+            "data": {
+                "name": "Feed-Forward-Neural-Network",
+                "abbreviation": "FFNN",
+                "path": "Feed-Forward-Neural-Network"
+            }
+        },{
+            "type": "content",
+            "data": {
+                "name": "bubdm",
+                "abbreviation": "bubdm",
+                "path": "bubdm"
+            }
+        },{
+            "type": "content",
+            "data": {
+                "name": "Tetris",
+                "abbreviation": "Tetris",
+                "path": "Tetris"
+            }
+        }
+    ]
+}

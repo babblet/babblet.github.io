@@ -1,0 +1,172 @@
+$mascot_frame_width: 200px;
+$mascot_frame_height: 200px;
+$mascot_width: $mascot_frame_width;
+$nav_width: 160px;
+$nav_height: $sidebar_size * 2 / 2.5;
+$section_width: calc(#{$nav_width} * 4);
+$section_middle_point: calc(-1 * #{$section_width} / 2 + #{$nav_width} / 2);
+$button_width: 170px;
+
+/* Static */
+.top_page__navigation {
+    z-index: $top-page-index;
+
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    
+    position: absolute;
+    top: $frame-top-spacing;
+    left: $frame-side-spacing;
+
+    nav {
+        width: $nav_width;
+        height: $nav_height;
+
+        position: absolute;
+        top: calc(50% - #{$nav_height} / 2);
+        left: calc(50% - #{$nav_width} / 2);
+
+        .nav-container-1, .nav-container-2 {
+            width: $section_width;
+            height: $nav_height;
+
+            position: absolute;
+            left: $section_middle_point;
+            #projects, #blog, #guides, #archive {
+                width: $button_width;
+                height: $nav_height;
+
+                position: absolute;
+                top: 0;
+                a {
+                    //display: block;
+
+                    cursor: pointer;
+
+                    width: 100%;
+                    height: 100%;
+                   
+                    position: absolute;
+                    top: 0;
+
+                    background-color: $base-color-1;
+                    //border-style: solid;
+                    //border-width: 1px;
+                    //border-color: $base-color-3;
+                    border-radius: $nav_height; 
+                
+                    color: $background-color;
+                    text-align: center;
+                    font-size: 1.4em;
+                    line-height: 41px;
+
+                    /*box-shadow: 3px 7px 4px rgba(0, 0, 0, 0.7);
+                    */
+                    overflow: hidden;
+
+                }
+
+                a::before, a::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 60%;
+                    height: 1px;
+                    background-color: $base-color-3;
+
+                    transition-delay: 0.05s;
+                    transition-duration: 0.25s;
+                    transition-property: all;
+                    transition-timing-function: ease;
+                }
+
+                a::before {
+                    top: 4px;
+                    left: 5px;
+                    transform: translateX(-110%);
+                }
+
+                a::after {
+                    bottom: 4px;
+                    right: 5px;
+                    transform: translateX(110%);
+                }
+
+            }
+            
+            #projects, #archive {
+                left: 0;
+            }
+            #guides, #blog  {
+                right: 0;
+            }
+        }
+
+        .nav-container-1 {
+            transform: rotate(20deg);
+        }
+        .nav-container-2 {
+            transform: rotate(-20deg);
+        }
+    }
+
+    #nav-image {
+        position: absolute;
+        top: calc(50% - #{$mascot_frame_height} / 2);
+        left: calc(50% - #{$mascot_frame_width} / 2);
+
+        width: $mascot_frame_width;
+        height: $mascot_frame_height;
+
+        background-color: $base-color-1;
+
+        
+        //border-style: solid;
+        //border-width: 1px;
+        //border-color: $base-color-3;
+        border-radius: 100%;
+
+        /*box-shadow: 3px 7px 4px rgba(0, 0, 0, 0.7);
+        */
+        overflow: hidden;
+
+        img {
+
+            filter: gray; /* IE6-9 */
+            -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+            filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+    
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - #{$mascot_width} / 2);
+            
+            width: $mascot_width;
+            height: auto;  
+        }
+    }
+}
+
+
+/* Static Animation */
+.top_page__navigation {
+    nav {
+        .nav-container-1, .nav-container-2 {
+            #projects, #blog, #guides, #archive {
+                a {
+                    transition-duration: 0.25s;
+                    transition-property: all;
+                    transition-delay: 0s;
+                    transition-timing-function: ease;
+                }
+                a:hover {
+                    transform: scale(1.2);
+                    border-radius: 0;
+                }
+                a:hover::before, a:hover::after {
+                        transition-duration: 0.2s;
+                        transform: translateX(0);
+                }
+            }
+        }
+    }
+}

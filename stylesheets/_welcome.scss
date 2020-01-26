@@ -1,0 +1,100 @@
+$welcome-box-width: 4vw;
+$welcome-num-welcome: 8;
+$welcome-margin-left: 40px;
+
+.welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    font-size: 3.3vw;
+    section {
+        $section_width: calc( (#{$welcome-box-width} + #{$welcome-margin-left}) * #{$welcome-num-welcome});
+        width: $section_width;
+        height: $welcome-box-width;
+
+        position: absolute;
+        top: calc(50% - #{$welcome-box-width} / 2);
+        left: calc(50% - #{$section_width} / 2);
+
+        .frame{
+            width: $welcome-box-width;
+            height: $welcome-box-width;
+            float:left;
+            
+            text-align: center;
+            color: $base-color-1;
+
+            background-color: $background-color;
+
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 8%;
+            
+            overflow: hidden;
+           
+            line-height: $welcome-box-width;
+
+            margin-left: $welcome-margin-left;
+            margin-top: -3px;
+
+            div {
+                position: absolute;
+            }
+        }
+        div:nth-child(1),  div:nth-child(3), div:nth-child(5), div:nth-child(7){
+            border-color: $background-color;
+        }
+        div:nth-child(2), div:nth-child(4), div:nth-child(6){
+            border-color: $background-color;
+        }
+    }
+
+    section:nth-child(3) {
+        top: calc(25% - #{$welcome-box-width} / 2);
+        .frame {
+            background-color: $base-color-1;
+        }
+    }
+
+    section:nth-child(5) {
+        top: calc(75% - #{$welcome-box-width} / 2);
+        .frame {
+            background-color: $base-color-1;
+        }
+    }
+
+     .welcome_top {
+        width: 100%;
+        height: 50%;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        div {
+            background-color: $background-color;
+            height: 100%;
+            width: 100%;
+        }
+    }   
+    .welcome_bottom {
+        width: 100%;
+        height: 50%;
+
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+
+        overflow:hidden;
+
+        div {
+            background-color: $background-color;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

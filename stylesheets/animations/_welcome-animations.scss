@@ -1,0 +1,155 @@
+$animation_time: 3.8s;
+
+// $step_1_start: 0%;
+// $step_1_end: 20%;
+// $step_2_start: 20%;
+// $step_2_end: 50%;
+
+
+//Setup
+.welcome {
+        animation-fill-mode: backwards;
+        div, .frame, .text {
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+        }
+
+        .welcome_top, .welcome_bottom {
+            animation-timing-function: linear;
+        }
+}
+
+// Keyframes
+@keyframes welcome_top_slide {
+    0%  {transform: translateY(0%)}
+    10% {transform: translateY(-20%)}
+    75% {transform: translateY(-20%)}
+    90%{transform: translateY(-100%)}
+    100%{transform: translateY(-100%)}
+}
+
+@keyframes welcome_bottom_slide {
+    0%  {transform: translateY(0%)}
+    10% {transform: translateY(20%)}
+    75% {transform: translateY(20%)}
+    90%{transform: translateY(100%)}
+    100%{transform: translateY(100%)}
+}
+@keyframes welcome_text_smooth_slide_right {
+    0%  {transform: translateX(-30%);}
+   // 40%  {transform: translateX(0%);}
+   // 60%  {transform: translateX(0%);}
+   90% {transform: translateX(30%);}
+   100% {transform: translateX(30%);}
+}
+
+@keyframes welcome_letter_slide_right {
+    0%   {transform: translateX(-2000%) rotateZ(-360deg);}
+    10%  {transform: translateX(-2000%) rotateZ(-360deg);}
+    40%  {transform: translateX(0%) rotateZ(0deg);}
+    60%  {transform: translateX(0%) rotateZ(0deg);}
+    90%  {transform: translateX(2000%) rotateZ(360deg);}
+    100% {transform: translateX(2000%) rotateZ(360deg);}
+
+}
+
+@keyframes welcome_text_smooth_slide_left {
+    0%  {transform: translateX(30%);}
+   // 40%  {transform: translateX(0%);}
+   // 60%  {transform: translateX(0%);}
+   90% {transform: translateX(-30%);}
+   100% {transform: translateX(-30%);}
+}
+
+@keyframes welcome_letter_slide_left {
+    0%   {transform: translateX(2000%) rotateZ(360deg);}
+    10%  {transform: translateX(2000%) rotateZ(360deg);}
+    40%  {transform: translateX(0%) rotateZ(0deg);}
+    60%  {transform: translateX(0%) rotateZ(0deg);}
+    90%  {transform: translateX(-2000%) rotateZ(-360deg);}
+    100% {transform: translateX(-2000%) rotateZ(-360deg);}
+
+}
+
+// Animations
+.welcome[data-state="start"] {
+    animation-duration: $animation_time;
+    .welcome_top {
+        div {
+            animation-duration: $animation_time;
+            animation-name: welcome_top_slide;
+        }
+    }
+    
+    .welcome_bottom {
+        div {
+            animation-duration: $animation_time;
+            animation-name: welcome_bottom_slide;
+        }
+    }
+
+    .text {
+        animation-duration: $animation_time;
+        animation-timing-function: linear;
+    }
+
+    .text:nth-child(3), .text:nth-child(5) {
+        animation-name: welcome_text_smooth_slide_right;
+
+        .frame {
+            animation-name: welcome_letter_slide_right;
+        }        $gap: 0.2s;
+        .frame:nth-child(1) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 1));
+        }       
+        .frame:nth-child(2) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 2));
+        }       
+        .frame:nth-child(3) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 3));
+        }
+        .frame:nth-child(4) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 4));
+        }       
+        :nth-child(5) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 5));
+        }       
+        .frame:nth-child(6) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 6));
+        }       
+        .frame:nth-child(7) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 7));
+        }
+    }
+
+    .text:nth-child(4) {
+        animation-name: welcome_text_smooth_slide_left;
+
+        .frame {
+            animation-name: welcome_letter_slide_left;
+        }
+
+        $gap: 0.2s;
+        .frame:nth-child(1) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 7));
+        }       
+        .frame:nth-child(2) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 6));
+        }       
+        .frame:nth-child(3) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 5));
+        }
+        .frame:nth-child(4) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 4));
+        }       
+        .frame:nth-child(5) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 3));
+        }       
+        .frame:nth-child(6) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 2));
+        }       
+        .frame:nth-child(7) {
+            animation-duration: calc(#{$animation_time} - (#{$gap} * 1));
+        }
+    }
+}

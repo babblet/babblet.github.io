@@ -1,0 +1,264 @@
+.page {
+    position: absolute;
+    top: -100%;
+    right: -100%;
+
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+    
+    .back {
+        opacity: 0;
+
+        z-index: 3;
+        position: absolute;
+        top: calc(50% + 15px);
+        right: calc(50% - 100px);
+
+        width: 80px;
+        height: 80px;
+
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 3px;
+        border-color: transparent;           
+
+        transform: rotate(10deg);
+      
+        background-color: $base-color-3;
+
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+
+        a {
+            z-index: 3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+    
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 3px;
+            border-color: transparent;
+
+            transform: rotate(-10deg);
+
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+
+            background-color: $base-color-1;
+        }
+
+        a::before, a::after{
+            position: absolute;
+            left: 0;
+
+            content: "";
+            width: 80px;
+            height: 0;
+            top: calc(50% - 2px);
+                
+            border-color: transparent;
+            border-top-style: solid;
+            border-top-color: $background-color;
+            border-width: 1px;
+
+        }
+
+        a::before {
+            transform: rotate(45deg);
+        }
+
+        a::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .hide-scroll {
+        position: absolute;
+        right: 50%;
+        bottom: 0%;
+        height: 50%;
+        width: 18px;
+        background-color: $base-color-1;
+    }
+
+    .page-transition-rotation {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        transform: rotate(90deg);
+
+    }
+
+    .page-transition-rotation:nth-child(2) {
+        .page-transition-frame {
+            background-color: $base-color-2;
+        }
+    }
+    
+    .page-transition-rotation:nth-child(3) {
+        .page-transition-frame {
+            background-color: $base-color-3;
+        }
+    }
+
+    .page-frame, .page-transition-frame {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 50%;
+        height: 50%;
+    }
+
+    .page-frame {
+        background-color: $base-color-1;
+        overflow-y: scroll;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #projects-page, #blog-page, #guides-page, #archive-page {
+            display: none;
+        }
+        
+
+        .sub-section::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 70%;
+            height: 2px;
+            background-color: $background-color;
+        }
+
+        .sub-section {
+            position: relative;
+            width: 800px;
+            height: 50px;
+            margin: 10px auto;
+            text-align: center;
+            font-size: 200%;
+            line-height: 50px;
+        }
+
+        .sub-section::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            height: 2px;
+            background-color: $background-color;
+        }
+	
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 0;
+            width: 800px;
+            margin: 0 auto;
+            .column {
+                flex: 50%;
+                max-width: 50%;
+                .content-frame {
+                    position:relative;
+                    top: 0;
+                    left: 0;
+                    
+                    margin-bottom: 10px;
+                    height: 80px;
+                    background-color: $background-color;
+                    vertical-align: middle;
+                    box-shadow: 2px 2px 3px 0px black;
+                }
+            }
+            .column:nth-child(1) {
+                padding-right: 5px;
+
+                .content-frame {
+                    opacity: 0;
+                }
+            }
+            .column:nth-child(2) {
+                padding-left: 5px;
+
+                .content-frame {
+                    opacity: 0;
+                }
+            }
+
+	        .column {
+	            .content-frame {
+		       	    color: $base-color-1;
+                    width: 395px;
+                       
+		    	    .content-header {
+		    	    	position: absolute;
+		    	    	top: 25px;
+		    	    	left: 0;
+                        
+                        width: calc(100% - 80px);
+		    	    	height: 80px;
+
+		    	    	box-shadow: 0;
+
+                        font-size: 160%;
+		    	    	text-align: center;
+                    }
+
+                    .content-expand-arrow {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 80px;
+                        height: 80px;
+                
+                        border-style: solid;
+                        border-width: 1px;
+                        border-color: transparent;
+                    }
+                    .content-expand-arrow::before, .content-expand-arrow::after {
+                        content: "";
+                        height: 0;
+
+                        position: absolute;
+                        top: calc(50% - 2px);
+
+                        border-color: transparent;
+                        border-top-style: solid;
+                        border-top-color: $base-color-1;
+                        border-width: 1px;
+                            
+                        background-color: $base-color-1;
+                    }
+
+                    .content-expand-arrow::before {
+                        left: 5px;
+                        width: 41px;
+                        transform: rotate(45deg);
+                    }
+                    .content-expand-arrow::after {
+                        right: 4px;
+                        width: 40px;
+                        transform: rotate(-45deg);
+                    }
+                    .content-expanded {
+                        position: absolute;
+                        top: 80px;
+                        left: 0;
+                        width: 100%;
+                    }
+	            }
+	        }
+        }
+    }
+}
